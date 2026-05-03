@@ -1,0 +1,50 @@
+import numpy as np
+
+park_names = [
+    'Antietam NB',
+    'Arlington House The R.E. Lee MEM',
+    "Belmont-Paul Women's Equality NM",
+    'Carter G. Woodson Home NHS',
+    'Catoctin Mountain Park',
+    'Chesapeake & Ohio Canal NHP',
+    'Clara Barton NHS',
+    'Dwight D. Eisenhower MEM',
+    "Ford's Theatre NHS",
+    'Fort Washington Park',
+    'Franklin Delano Roosevelt MEM',
+    'Frederick Douglass NHS',
+    'George Washington MEM PKWY',
+    'Greenbelt Park',
+    'Harpers Ferry NHP',
+    'Korean War Veterans Memorial',
+    'LBJ Memorial Grove on the Potomac',
+    'Lincoln Memorial',
+    'Manassas NBP',
+    'Martin Luther King Jr. Memorial',
+    'Mary McLeod Bethune Council House NHS',
+    'Monocacy NB',
+    'National Capital Parks Central',
+    'National Capital Parks East',
+    'Pennsylvania Avenue NHS',
+    'Piscataway Park',
+    "President's Park",
+    'Prince William Forest Park',
+    'Rock Creek Park',
+    'Theodore Roosevelt Island',
+    'Thomas Jefferson MEM',
+    'Vietnam Veterans MEM',
+    'Washington Monument',
+    'White House',
+    'Wolf Trap NP for the Performing Arts',
+    'World War I Memorial',
+    'World War II Memorial'
+]
+
+park_visits = np.array(
+    [ 115619,  306686,       0,       0,  450322, 4286185,     673,
+    760603,  319596,  406917, 3291313,     211, 7397120,   60800,
+    407008, 4010009,  242325, 7825397,  532727, 3321897,    1995,
+    127111,  920643, 1267873,   56928,  243212,  714224,  294916,
+    2026156,  171500, 2975148, 4886254,  260317,  236380,  445497,
+    848634, 4815309]
+)

@@ -1,0 +1,415 @@
+transaction_year,house_age_yrs,distance_to_nearest_subway,number_of_convenience_stores,house_price_of_unit_area,total_price_USD
+2012,32,less than 10 min walk,10,37.9,324746
+2012,20,less than 10 min walk,9,42.2,379121
+2013,13,less than 10 min walk,5,47.3,475887
+2013,13,less than 10 min walk,5,54.8,667045
+2012,5,less than 10 min walk,5,43.1,559337
+2012,7,between 20 and 30 min walk,3,32.1,324110
+2012,34,less than 10 min walk,7,40.3,465558
+2013,20,less than 10 min walk,6,46.7,576928
+2013,32,more than 30 min walk,1,18.8,140711
+2013,18,between 10 and 20 min walk,3,22.1,159076
+2013,35,less than 10 min walk,1,41.4,413484
+2013,6,less than 10 min walk,9,58.1,423954
+2012,13,less than 10 min walk,5,39.3,386171
+2012,20,between 20 and 30 min walk,4,23.8,254942
+2013,13,between 10 and 20 min walk,4,34.3,348365
+2013,36,less than 10 min walk,2,50.5,533364
+2013,0,less than 10 min walk,6,70.1,847509
+2012,18,less than 10 min walk,1,37.4,498688
+2013,17,less than 10 min walk,8,42.3,365578
+2012,2,less than 10 min walk,7,47.7,512170
+2013,4,between 20 and 30 min walk,3,29.3,319466
+2013,10,less than 10 min walk,7,51.6,586888
+2012,15,between 10 and 20 min walk,1,24.6,233161
+2013,10,less than 10 min walk,7,47.9,473428
+2013,40,less than 10 min walk,4,38.8,362996
+2013,29,between 10 and 20 min walk,2,27.0,342159
+2012,3,less than 10 min walk,5,56.2,523051
+2013,10,less than 10 min walk,5,33.6,285145
+2013,19,less than 10 min walk,4,47.0,570713
+2013,7,less than 10 min walk,5,57.1,626220
+2013,26,more than 30 min walk,0,22.1,168737
+2012,30,less than 10 min walk,7,25.0,195026
+2012,38,less than 10 min walk,1,34.2,369346
+2013,16,less than 10 min walk,6,49.3,615072
+2012,15,less than 10 min walk,7,55.1,618382
+2013,14,more than 30 min walk,0,27.3,318823
+2012,15,between 10 and 20 min walk,2,22.9,161572
+2013,12,between 10 and 20 min walk,1,25.3,241653
+2012,3,less than 10 min walk,6,47.7,402922
+2013,16,less than 10 min walk,5,46.2,395351
+2013,14,more than 30 min walk,0,15.9,221260
+2013,17,more than 30 min walk,0,18.2,157233
+2013,36,less than 10 min walk,5,34.7,461768
+2012,34,less than 10 min walk,6,34.1,396078
+2013,3,less than 10 min walk,4,53.9,423449
+2013,37,less than 10 min walk,8,38.3,492899
+2013,22,less than 10 min walk,9,42.0,381153
+2013,36,less than 10 min walk,3,61.5,526698
+2013,24,more than 30 min walk,0,13.4,166728
+2012,29,more than 30 min walk,1,13.2,160611
+2013,22,less than 10 min walk,4,44.2,512204
+2013,31,between 10 and 20 min walk,1,20.7,159495
+2013,32,between 10 and 20 min walk,3,27.0,263505
+2013,13,less than 10 min walk,5,38.9,386150
+2013,16,less than 10 min walk,5,51.7,420657
+2012,32,between 10 and 20 min walk,0,13.7,133184
+2013,34,less than 10 min walk,8,41.9,392381
+2012,4,less than 10 min walk,7,53.5,702551
+2013,30,more than 30 min walk,1,22.6,198037
+2013,13,less than 10 min walk,5,42.4,331958
+2013,11,between 10 and 20 min walk,2,21.3,225732
+2013,5,less than 10 min walk,6,63.2,679092
+2012,17,between 20 and 30 min walk,3,27.7,337534
+2013,3,less than 10 min walk,4,55.0,645757
+2013,18,less than 10 min walk,0,25.3,183138
+2013,40,less than 10 min walk,8,44.3,424840
+2013,1,less than 10 min walk,6,50.7,602574
+2013,8,less than 10 min walk,5,56.8,597865
+2013,30,less than 10 min walk,6,36.2,456671
+2012,12,less than 10 min walk,5,42.0,439229
+2013,7,less than 10 min walk,9,59.0,779274
+2013,36,less than 10 min walk,3,40.8,467749
+2013,32,less than 10 min walk,8,36.3,343897
+2013,14,more than 30 min walk,0,20.0,269977
+2012,7,less than 10 min walk,10,54.4,660570
+2013,12,between 10 and 20 min walk,1,29.5,245896
+2013,36,less than 10 min walk,3,36.8,291146
+2012,20,between 20 and 30 min walk,3,25.6,340451
+2012,38,less than 10 min walk,2,29.8,347739
+2013,18,between 10 and 20 min walk,1,26.5,309279
+2013,12,less than 10 min walk,4,40.3,430964
+2013,31,less than 10 min walk,6,36.8,269520
+2013,13,less than 10 min walk,7,48.1,479565
+2012,25,between 20 and 30 min walk,3,17.7,202418
+2013,15,less than 10 min walk,7,43.7,557481
+2012,0,less than 10 min walk,9,50.8,566192
+2012,2,between 10 and 20 min walk,1,27.0,310776
+2013,17,more than 30 min walk,0,18.3,172748
+2012,9,between 10 and 20 min walk,0,48.0,486675
+2013,23,more than 30 min walk,0,25.3,237609
+2012,0,less than 10 min walk,1,45.4,528180
+2013,9,between 10 and 20 min walk,0,43.2,367342
+2012,21,between 20 and 30 min walk,4,21.8,265876
+2012,32,between 10 and 20 min walk,0,16.1,152770
+2012,41,less than 10 min walk,5,41.0,506475
+2012,8,less than 10 min walk,5,51.8,544917
+2013,6,less than 10 min walk,9,59.5,504874
+2013,28,less than 10 min walk,3,34.6,434531
+2013,16,less than 10 min walk,5,51.0,468035
+2013,6,less than 10 min walk,9,62.2,769358
+2013,18,less than 10 min walk,4,38.2,271757
+2012,13,less than 10 min walk,1,32.9,343658
+2013,1,less than 10 min walk,6,54.4,474884
+2012,0,less than 10 min walk,6,45.7,374361
+2012,33,less than 10 min walk,6,30.5,297314
+2012,0,less than 10 min walk,6,71.0,623699
+2013,17,less than 10 min walk,8,47.1,391043
+2013,12,between 10 and 20 min walk,1,26.6,197752
+2013,31,less than 10 min walk,2,34.1,296544
+2013,4,between 20 and 30 min walk,3,28.4,250658
+2013,8,less than 10 min walk,5,51.6,654791
+2013,33,less than 10 min walk,7,39.4,519061
+2013,10,between 20 and 30 min walk,3,23.1,295067
+2013,15,less than 10 min walk,6,7.6,72080
+2012,31,less than 10 min walk,8,53.3,414524
+2013,21,less than 10 min walk,2,46.4,627195
+2013,31,more than 30 min walk,1,12.2,129119
+2013,14,more than 30 min walk,0,13.0,119505
+2013,25,between 10 and 20 min walk,3,30.6,219640
+2013,17,less than 10 min walk,5,59.6,755452
+2013,13,less than 10 min walk,5,31.3,307554
+2013,14,less than 10 min walk,5,48.0,452473
+2013,32,less than 10 min walk,4,32.5,333164
+2013,0,less than 10 min walk,0,45.5,404297
+2012,10,less than 10 min walk,7,57.4,552309
+2013,1,less than 10 min walk,6,48.6,440726
+2013,39,less than 10 min walk,4,62.9,710842
+2013,4,less than 10 min walk,5,55.0,469900
+2013,41,less than 10 min walk,6,60.7,823560
+2013,38,less than 10 min walk,7,41.0,423088
+2013,30,less than 10 min walk,8,37.5,314457
+2013,4,between 20 and 30 min walk,3,30.7,308112
+2013,27,less than 10 min walk,5,37.5,369547
+2012,18,less than 10 min walk,8,39.5,361627
+2012,33,less than 10 min walk,6,42.2,419129
+2012,19,between 10 and 20 min walk,0,20.8,254635
+2012,11,less than 10 min walk,5,46.8,404177
+2013,14,less than 10 min walk,6,47.4,592112
+2013,10,less than 10 min walk,0,43.5,531934
+2012,13,less than 10 min walk,5,42.5,334336
+2013,16,less than 10 min walk,5,51.4,509779
+2013,5,between 10 and 20 min walk,3,28.9,301324
+2013,20,less than 10 min walk,5,37.5,469339
+2013,14,less than 10 min walk,5,40.1,470469
+2013,12,between 10 and 20 min walk,1,28.4,234607
+2012,2,less than 10 min walk,5,45.5,516847
+2012,0,less than 10 min walk,0,52.2,447764
+2012,3,less than 10 min walk,8,43.2,435167
+2013,16,more than 30 min walk,0,45.1,525510
+2012,35,less than 10 min walk,8,39.7,472128
+2013,36,less than 10 min walk,7,48.5,530934
+2013,5,less than 10 min walk,9,44.7,464280
+2013,12,between 10 and 20 min walk,1,28.9,401593
+2013,6,less than 10 min walk,6,40.9,526570
+2013,17,more than 30 min walk,0,20.7,249327
+2013,14,more than 30 min walk,0,15.6,156036
+2013,31,between 10 and 20 min walk,0,18.3,242400
+2013,16,less than 10 min walk,4,35.6,486856
+2013,12,less than 10 min walk,5,39.4,426116
+2012,16,less than 10 min walk,4,37.4,262100
+2012,4,less than 10 min walk,8,57.8,538565
+2013,19,less than 10 min walk,3,39.6,347272
+2012,16,more than 30 min walk,0,11.6,109134
+2013,8,less than 10 min walk,5,55.5,441399
+2012,0,less than 10 min walk,0,55.2,484419
+2012,14,between 10 and 20 min walk,1,30.6,394458
+2013,0,less than 10 min walk,6,73.6,649667
+2013,28,less than 10 min walk,8,43.4,366550
+2013,28,less than 10 min walk,5,37.4,505288
+2013,8,between 10 and 20 min walk,1,23.5,206851
+2013,24,more than 30 min walk,0,14.4,150217
+2013,4,less than 10 min walk,5,58.8,545724
+2013,7,less than 10 min walk,9,58.1,479209
+2013,41,less than 10 min walk,4,35.1,322451
+2013,4,less than 10 min walk,7,45.2,531300
+2013,30,less than 10 min walk,3,36.5,411951
+2012,14,more than 30 min walk,0,19.2,163311
+2013,33,less than 10 min walk,9,42.0,476726
+2013,13,between 10 and 20 min walk,4,36.7,387226
+2013,14,less than 10 min walk,1,42.6,456456
+2012,27,more than 30 min walk,0,15.5,215359
+2013,12,less than 10 min walk,8,55.9,560803
+2013,14,between 20 and 30 min walk,3,23.6,275833
+2013,17,more than 30 min walk,0,18.8,173040
+2012,14,between 20 and 30 min walk,0,21.8,277059
+2012,31,between 10 and 20 min walk,3,21.5,243975
+2013,21,between 20 and 30 min walk,3,25.7,299360
+2013,9,more than 30 min walk,0,22.0,175486
+2012,35,less than 10 min walk,8,44.3,492313
+2012,16,more than 30 min walk,0,20.5,232495
+2013,35,less than 10 min walk,8,42.3,414450
+2013,13,less than 10 min walk,2,37.8,315091
+2013,44,less than 10 min walk,7,42.7,488979
+2013,10,less than 10 min walk,5,49.3,657355
+2013,15,more than 30 min walk,0,29.3,300727
+2013,15,less than 10 min walk,5,34.6,263592
+2013,23,less than 10 min walk,2,36.6,322511
+2013,34,less than 10 min walk,8,48.2,403355
+2013,34,less than 10 min walk,7,39.1,412533
+2013,18,less than 10 min walk,8,31.6,382614
+2013,17,less than 10 min walk,0,25.5,342007
+2013,13,less than 10 min walk,5,45.9,364253
+2012,38,less than 10 min walk,3,31.5,417814
+2012,16,less than 10 min walk,5,46.1,462169
+2013,18,between 10 and 20 min walk,1,26.6,209256
+2013,13,between 10 and 20 min walk,3,21.4,164403
+2013,22,less than 10 min walk,10,44.0,414684
+2013,38,less than 10 min walk,3,34.2,294903
+2012,12,between 10 and 20 min walk,1,26.2,364701
+2012,35,less than 10 min walk,8,40.9,448601
+2013,5,less than 10 min walk,5,52.2,696047
+2013,0,less than 10 min walk,1,43.5,564972
+2013,18,between 10 and 20 min walk,2,31.1,355344
+2013,6,less than 10 min walk,9,58.0,705289
+2013,18,between 10 and 20 min walk,3,20.9,244421
+2013,19,less than 10 min walk,8,48.1,595079
+2013,38,less than 10 min walk,1,39.7,370565
+2012,28,less than 10 min walk,6,40.8,519229
+2013,14,less than 10 min walk,5,43.8,516047
+2012,29,less than 10 min walk,8,40.2,455800
+2013,37,less than 10 min walk,9,78.3,1067229
+2013,9,between 10 and 20 min walk,0,38.5,394584
+2013,31,less than 10 min walk,10,48.5,516661
+2013,9,between 10 and 20 min walk,0,42.3,561911
+2013,34,less than 10 min walk,6,46.0,409150
+2013,1,less than 10 min walk,6,49.0,363060
+2013,16,more than 30 min walk,0,12.8,144376
+2012,32,less than 10 min walk,8,40.2,419099
+2013,12,more than 30 min walk,0,46.6,502680
+2013,31,between 10 and 20 min walk,0,19.0,249079
+2013,4,between 20 and 30 min walk,3,33.4,324096
+2012,16,more than 30 min walk,0,14.7,108280
+2012,27,more than 30 min walk,1,17.4,174263
+2013,40,less than 10 min walk,9,32.4,358232
+2013,8,between 20 and 30 min walk,4,23.9,199951
+2012,13,less than 10 min walk,7,39.3,306695
+2013,4,less than 10 min walk,10,61.9,551587
+2013,13,less than 10 min walk,0,39.0,484541
+2013,13,less than 10 min walk,0,40.6,303179
+2013,18,less than 10 min walk,0,29.7,395423
+2013,11,between 10 and 20 min walk,2,28.8,322001
+2013,14,less than 10 min walk,7,41.4,500770
+2012,2,between 20 and 30 min walk,3,33.4,301789
+2013,33,less than 10 min walk,8,48.2,344807
+2013,5,between 10 and 20 min walk,3,21.7,184818
+2013,8,less than 10 min walk,5,40.8,378218
+2013,16,less than 10 min walk,6,40.6,298489
+2013,22,between 10 and 20 min walk,0,23.1,273694
+2013,19,between 10 and 20 min walk,0,22.3,162334
+2012,18,more than 30 min walk,1,15.0,144154
+2013,39,less than 10 min walk,7,30.0,389912
+2012,32,between 10 and 20 min walk,0,13.8,172235
+2012,6,less than 10 min walk,9,52.7,653377
+2012,30,between 10 and 20 min walk,2,25.9,302540
+2012,1,less than 10 min walk,5,51.8,703067
+2013,32,more than 30 min walk,1,17.4,204595
+2012,15,less than 10 min walk,1,26.5,204700
+2013,17,less than 10 min walk,1,43.9,462785
+2013,0,less than 10 min walk,6,63.3,758676
+2013,18,less than 10 min walk,0,28.8,322873
+2013,17,between 10 and 20 min walk,4,30.7,268182
+2013,16,between 20 and 30 min walk,3,24.4,207756
+2012,16,less than 10 min walk,5,53.0,548574
+2013,4,between 20 and 30 min walk,3,31.7,242838
+2013,33,less than 10 min walk,7,40.6,500789
+2012,16,less than 10 min walk,4,38.1,429118
+2013,18,between 10 and 20 min walk,3,23.7,167349
+2012,35,less than 10 min walk,5,41.1,300934
+2013,17,less than 10 min walk,5,40.1,338178
+2013,18,less than 10 min walk,0,23.0,216049
+2013,11,less than 10 min walk,1,117.5,953540
+2012,18,less than 10 min walk,8,26.5,361541
+2012,13,less than 10 min walk,5,40.5,384814
+2013,13,less than 10 min walk,1,29.3,373420
+2013,28,less than 10 min walk,7,41.0,561724
+2012,2,less than 10 min walk,7,49.7,596570
+2013,19,less than 10 min walk,5,34.0,334181
+2013,21,between 20 and 30 min walk,3,27.7,200875
+2012,0,less than 10 min walk,6,44.0,335301
+2013,3,between 10 and 20 min walk,3,31.1,372877
+2013,2,less than 10 min walk,6,45.4,453040
+2013,5,less than 10 min walk,9,44.8,376429
+2012,2,between 10 and 20 min walk,1,25.6,291130
+2013,34,between 10 and 20 min walk,2,23.5,310259
+2012,15,less than 10 min walk,7,34.4,471830
+2013,30,less than 10 min walk,3,55.3,733227
+2012,6,less than 10 min walk,9,56.3,423599
+2013,19,less than 10 min walk,5,32.9,379832
+2013,17,less than 10 min walk,6,51.0,537990
+2013,14,less than 10 min walk,5,44.5,537000
+2013,38,less than 10 min walk,0,37.0,310522
+2012,3,less than 10 min walk,7,54.4,508748
+2013,18,less than 10 min walk,5,24.5,330035
+2012,13,less than 10 min walk,7,42.5,485526
+2013,26,less than 10 min walk,6,38.1,509900
+2013,18,between 20 and 30 min walk,3,21.8,244931
+2012,12,between 10 and 20 min walk,4,34.1,362698
+2012,35,less than 10 min walk,4,28.5,397637
+2013,17,more than 30 min walk,0,16.7,208282
+2013,33,less than 10 min walk,10,46.1,343400
+2013,2,less than 10 min walk,4,36.9,375264
+2012,38,less than 10 min walk,0,35.7,297897
+2013,16,between 20 and 30 min walk,3,23.2,169582
+2013,38,less than 10 min walk,0,38.4,447794
+2013,20,between 10 and 20 min walk,3,29.4,382468
+2013,16,less than 10 min walk,5,55.0,753226
+2013,14,less than 10 min walk,1,50.2,602629
+2012,10,more than 30 min walk,0,24.7,232129
+2013,16,less than 10 min walk,5,53.0,651644
+2013,30,between 10 and 20 min walk,0,19.1,188350
+2013,16,between 10 and 20 min walk,2,24.7,180183
+2013,21,less than 10 min walk,4,42.2,406969
+2013,35,less than 10 min walk,9,78.0,812895
+2013,8,less than 10 min walk,5,42.8,381406
+2013,4,less than 10 min walk,6,41.6,477904
+2013,16,between 10 and 20 min walk,2,27.3,348639
+2013,13,less than 10 min walk,7,42.0,411981
+2012,16,less than 10 min walk,2,37.5,397294
+2013,7,less than 10 min walk,10,49.8,480398
+2013,35,less than 10 min walk,5,26.9,271818
+2012,14,more than 30 min walk,0,18.6,235765
+2012,17,less than 10 min walk,4,37.7,515030
+2013,13,less than 10 min walk,1,33.1,291733
+2013,29,less than 10 min walk,6,42.5,558377
+2012,12,between 10 and 20 min walk,2,31.3,244016
+2013,37,less than 10 min walk,8,38.1,463444
+2013,4,less than 10 min walk,7,62.1,652288
+2013,4,less than 10 min walk,3,36.7,487647
+2012,16,between 10 and 20 min walk,3,23.6,199320
+2013,14,more than 30 min walk,0,19.2,247601
+2013,32,between 10 and 20 min walk,0,12.8,90164
+2013,26,more than 30 min walk,0,15.6,186791
+2013,40,less than 10 min walk,2,39.6,371380
+2012,8,less than 10 min walk,5,38.4,329202
+2012,30,between 10 and 20 min walk,5,22.8,207653
+2013,27,less than 10 min walk,6,36.5,507903
+2012,5,between 10 and 20 min walk,2,35.6,430041
+2012,31,less than 10 min walk,5,30.9,391236
+2012,32,less than 10 min walk,9,36.3,254606
+2013,2,less than 10 min walk,5,50.4,561656
+2013,34,less than 10 min walk,0,42.9,356228
+2013,13,less than 10 min walk,2,37.0,452004
+2012,6,less than 10 min walk,9,53.5,636307
+2013,34,less than 10 min walk,8,46.6,331490
+2013,35,more than 30 min walk,0,41.2,307794
+2012,0,less than 10 min walk,0,37.9,509359
+2013,13,between 10 and 20 min walk,2,30.8,343028
+2013,17,more than 30 min walk,1,11.2,118777
+2012,5,less than 10 min walk,6,53.7,723090
+2012,8,less than 10 min walk,5,47.0,623898
+2013,13,less than 10 min walk,5,42.3,315362
+2012,4,between 20 and 30 min walk,3,28.6,375318
+2012,18,between 20 and 30 min walk,3,25.7,346392
+2013,4,between 20 and 30 min walk,3,31.3,316862
+2013,12,between 10 and 20 min walk,1,30.1,304667
+2013,4,less than 10 min walk,5,60.7,764279
+2012,10,less than 10 min walk,1,45.3,390133
+2013,0,less than 10 min walk,9,44.9,329365
+2013,1,less than 10 min walk,6,45.1,400801
+2013,6,between 20 and 30 min walk,0,24.7,274136
+2012,33,less than 10 min walk,10,47.1,339853
+2013,41,less than 10 min walk,8,63.3,583755
+2013,17,less than 10 min walk,4,40.0,507816
+2013,32,less than 10 min walk,10,48.0,593165
+2013,35,less than 10 min walk,7,33.1,457330
+2012,17,between 20 and 30 min walk,4,29.5,282559
+2012,14,between 10 and 20 min walk,1,24.8,306273
+2012,15,between 10 and 20 min walk,2,20.9,265037
+2013,18,less than 10 min walk,1,43.1,543773
+2012,20,between 20 and 30 min walk,3,22.8,287914
+2012,16,less than 10 min walk,5,42.1,569400
+2013,4,less than 10 min walk,5,51.7,369227
+2013,34,less than 10 min walk,7,41.5,424971
+2013,0,less than 10 min walk,1,52.2,690957
+2013,5,less than 10 min walk,5,49.5,528102
+2013,22,between 10 and 20 min walk,0,23.8,199590
+2013,15,between 10 and 20 min walk,2,30.5,223277
+2013,4,less than 10 min walk,8,56.8,411165
+2013,37,less than 10 min walk,8,37.4,294427
+2013,0,less than 10 min walk,6,69.7,498106
+2013,14,less than 10 min walk,5,53.3,458740
+2013,8,less than 10 min walk,9,47.3,413658
+2013,16,more than 30 min walk,0,29.3,227430
+2012,29,less than 10 min walk,4,40.3,544010
+2012,16,more than 30 min walk,0,12.9,112492
+2013,18,less than 10 min walk,10,46.6,478339
+2012,0,less than 10 min walk,0,55.3,663473
+2013,16,between 20 and 30 min walk,3,25.6,239904
+2013,10,between 20 and 30 min walk,4,27.3,207515
+2013,41,less than 10 min walk,8,67.7,913588
+2013,33,less than 10 min walk,9,38.6,451341
+2013,6,between 10 and 20 min walk,1,31.3,244616
+2013,43,less than 10 min walk,6,35.3,348061
+2013,17,less than 10 min walk,4,40.3,305049
+2013,33,more than 30 min walk,1,24.7,251582
+2012,21,less than 10 min walk,4,42.5,538082
+2012,37,less than 10 min walk,1,31.9,258479
+2013,13,between 10 and 20 min walk,4,32.2,341524
+2013,15,between 10 and 20 min walk,2,23.0,280737
+2012,13,less than 10 min walk,1,37.3,498746
+2013,27,less than 10 min walk,5,35.5,331806
+2013,8,between 20 and 30 min walk,3,27.7,275849
+2012,13,less than 10 min walk,1,28.5,210316
+2012,31,less than 10 min walk,9,39.7,384150
+2013,16,less than 10 min walk,5,41.2,495975
+2012,23,less than 10 min walk,6,37.2,307687
+2013,2,less than 10 min walk,7,40.5,564518
+2013,5,between 20 and 30 min walk,0,22.3,299134
+2013,18,between 20 and 30 min walk,3,28.1,360361
+2013,14,more than 30 min walk,0,15.4,164809
+2012,6,less than 10 min walk,9,50.0,526619
+2013,19,less than 10 min walk,7,40.6,408660
+2013,8,less than 10 min walk,5,52.5,461444
+2013,6,less than 10 min walk,9,63.9,500499
