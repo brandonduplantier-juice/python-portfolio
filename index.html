@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brandon Duplantier — Data Analyst Portfolio</title>
+<title>Brandon Duplantier - Data Analyst Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,7 +29,6 @@
     min-height: 100vh;
   }
 
-  /* ── NOISE OVERLAY ── */
   body::before {
     content: '';
     position: fixed;
@@ -39,7 +38,6 @@
     z-index: 0;
   }
 
-  /* ── HEADER ── */
   header {
     position: relative;
     z-index: 1;
@@ -98,7 +96,6 @@
     border-color: var(--accent2);
   }
 
-  /* ── INTRO STRIP ── */
   .intro {
     position: relative;
     z-index: 1;
@@ -147,7 +144,6 @@
     border-color: var(--accent);
   }
 
-  /* ── SECTION HEADER ── */
   .section-header {
     position: relative;
     z-index: 1;
@@ -173,7 +169,6 @@
     background: var(--rule);
   }
 
-  /* ── PROJECTS GRID ── */
   .projects {
     position: relative;
     z-index: 1;
@@ -183,7 +178,6 @@
     gap: 1.5rem;
   }
 
-  /* ── CARD ── */
   .card {
     background: var(--card-bg);
     border: 1px solid var(--rule);
@@ -284,7 +278,6 @@
     color: var(--mid);
   }
 
-  /* ── FOOTER ── */
   footer {
     position: relative;
     z-index: 1;
@@ -308,7 +301,6 @@
     border-bottom: 1px solid currentColor;
   }
 
-  /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -323,13 +315,11 @@
   .projects    { animation-delay: 0.2s; }
   footer       { animation-delay: 0.26s; }
 
-  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     header, .intro, .section-header, .projects, footer {
       padding-left: 2rem;
       padding-right: 2rem;
     }
-
     header { grid-template-columns: 1fr; padding-top: 3rem; }
     .header-meta { text-align: left; }
     .intro { flex-direction: column; }
@@ -359,16 +349,17 @@
 <div class="intro">
   <p class="intro-text">
     Data analyst with a focus on <strong>healthcare analytics</strong> and operational insights.
-    I build end-to-end projects — from raw data to dashboards — using Python, SQL, and BI tools
+    I build end-to-end projects from raw data to dashboards using Python, SQL, and BI tools
     to answer questions that drive decisions.
   </p>
   <div class="tags">
     <span class="tag highlight">Power BI</span>
+    <span class="tag highlight">Tableau</span>
     <span class="tag">Python</span>
     <span class="tag">SQL</span>
+    <span class="tag">DAX</span>
     <span class="tag">Pandas</span>
-    <span class="tag">Matplotlib</span>
-    <span class="tag">Jupyter</span>
+    <span class="tag">PostgreSQL</span>
   </div>
 </div>
 
@@ -378,14 +369,13 @@
 
 <div class="projects">
 
-  <!-- POWER BI — FEATURED -->
-  <a class="card featured" href="https://github.com/brandonduplantier-juice/hospital-readmission-dashboard" target="_blank">
+  <a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Hospital-Readmission-PowerBI" target="_blank">
     <div class="card-top">
       <span class="card-type">Power BI · Healthcare</span>
       <span class="card-badge">New</span>
     </div>
     <h3>Hospital 30-Day Readmission Analysis</h3>
-    <p>Interactive dashboard analyzing readmission patterns across 300 patients and 5 diagnoses. Heart Failure patients showed a 39% readmission rate — nearly 6× higher than surgical cases. Built with DAX measures and interactive slicers filtering by insurance type, department, and gender.</p>
+    <p>Interactive dashboard analyzing readmission patterns across 300 patients and 5 diagnoses. Heart Failure patients showed a 39% readmission rate, nearly 6x higher than surgical cases. Built with DAX measures and interactive slicers filtering by insurance type, department, and gender.</p>
     <div class="card-footer">
       <span class="pill">Power BI</span>
       <span class="pill">DAX</span>
@@ -394,7 +384,54 @@
     </div>
   </a>
 
-  <!-- GRAMMYS -->
+  <a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/HR-Attrition-PowerBI" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Python · Power BI · HR Analytics</span>
+      <span class="card-badge">New</span>
+    </div>
+    <h3>HR Attrition Risk Dashboard</h3>
+    <p>Python engineered a weighted attrition risk score per employee across 8 factors. Power BI dashboard built on the enriched dataset identifies Sales and Marketing at 28% attrition, 8 points above the 15% target. Features a scatter plot, department treemap, gauge, and interactive slicers.</p>
+    <div class="card-footer">
+      <span class="pill">Python</span>
+      <span class="pill">Power BI</span>
+      <span class="pill">DAX</span>
+      <span class="pill">CALCULATE</span>
+      <span class="pill">RANKX</span>
+      <span class="pill">HR Analytics</span>
+    </div>
+  </a>
+
+  <a class="card featured" href="https://public.tableau.com/views/global_happiness_dashboard/GlobalHappinessDashboard2019" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Tableau · Global Analytics</span>
+      <span class="card-badge">New</span>
+    </div>
+    <h3>Global Happiness Dashboard</h3>
+    <p>Interactive Tableau dashboard analyzing 2019 World Happiness Report data across 156 countries. Choropleth world map, GDP vs happiness scatter plot with trend line, top 20 countries bar chart, and happiness factors comparison. Live and interactive on Tableau Public.</p>
+    <div class="card-footer">
+      <span class="pill">Tableau</span>
+      <span class="pill">Choropleth Map</span>
+      <span class="pill">Trend Line</span>
+      <span class="pill">World Happiness</span>
+      <span class="pill">Python Prep</span>
+    </div>
+  </a>
+
+  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/SQL-Analytics-Portfolio" target="_blank">
+    <div class="card-top">
+      <span class="card-type">SQL · Multi-Domain Analysis</span>
+    </div>
+    <h3>SQL Analytics Portfolio</h3>
+    <p>6 queries across 4 real PostgreSQL databases demonstrating CTEs, window functions, conditional aggregation, subqueries, and date functions. Key finding: 210 whales generate 52% of game revenue despite being 9% of paying users. NYC Instacart issue rate 3x higher than Chicago.</p>
+    <div class="card-footer">
+      <span class="pill">PostgreSQL</span>
+      <span class="pill">CTEs</span>
+      <span class="pill">Window Functions</span>
+      <span class="pill">CASE</span>
+      <span class="pill">DATE_TRUNC</span>
+    </div>
+  </a>
+
   <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Grammys%20-%20Website%20Analytics%20Project" target="_blank">
     <div class="card-top">
       <span class="card-type">Python · Analytics</span>
@@ -409,7 +446,6 @@
     </div>
   </a>
 
-  <!-- LIVELAB -->
   <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/LiveLab" target="_blank">
     <div class="card-top">
       <span class="card-type">Python · Practice</span>
@@ -423,13 +459,12 @@
     </div>
   </a>
 
-  <!-- SKILLBUILDERS -->
   <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio" target="_blank">
     <div class="card-top">
       <span class="card-type">Python · Series</span>
     </div>
     <h3>SkillBuilder Series</h3>
-    <p>9-part project series covering progressively advanced analytics techniques — from data cleaning and aggregation through statistical analysis and visualization. Datasets include Dunder Mifflin sales, Nike/Adidas, and Lyft bike share data.</p>
+    <p>9-part project series covering progressively advanced analytics techniques from data cleaning and aggregation through statistical analysis and visualization. Datasets include Dunder Mifflin sales, Nike/Adidas, and Lyft bike share data.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">Pandas</span>
