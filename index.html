@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brandon Duplantier - Data Analyst Portfolio</title>
-<!-- v2 -->
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -240,6 +239,15 @@
     .projects { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
+
+  .tag-all { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .tag-all.inactive { background: transparent; color: var(--mid); border-color: var(--rule); }
+  .tag { cursor: pointer; transition: all 0.15s ease; user-select: none; }
+  .tag:hover { border-color: var(--accent); color: var(--accent); }
+  .tag.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .card.hidden { display: none; }
+  .filter-label { font-family: "DM Mono", monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.75rem; margin-top: 1.5rem; }
+  .no-results { display: none; grid-column: 1 / -1; text-align: center; padding: 3rem; font-family: "DM Mono", monospace; font-size: 0.8rem; color: var(--mid); }
 </style>
 </head>
 <body>
@@ -265,15 +273,18 @@
     I build end-to-end projects from raw data to dashboards using Python, SQL, and BI tools
     to answer questions that drive decisions.
   </p>
+  <p class="filter-label">Filter by skill</p>
   <div class="tags">
-    <span class="tag highlight">Power BI</span>
-    <span class="tag highlight">Tableau</span>
-    <span class="tag highlight">Looker Studio</span>
-    <span class="tag">Python</span>
-    <span class="tag">SQL</span>
-    <span class="tag">DAX</span>
-    <span class="tag">Pandas</span>
-    <span class="tag">PostgreSQL</span>
+    <span class="tag tag-all" data-filter="all">All Projects</span>
+    <span class="tag" data-filter="power-bi">Power BI</span>
+    <span class="tag" data-filter="tableau">Tableau</span>
+    <span class="tag" data-filter="looker">Looker Studio</span>
+    <span class="tag" data-filter="python">Python</span>
+    <span class="tag" data-filter="sql">SQL</span>
+    <span class="tag" data-filter="ml">Machine Learning</span>
+    <span class="tag" data-filter="sheets">Google Sheets</span>
+    <span class="tag" data-filter="healthcare">Healthcare</span>
+    <span class="tag" data-filter="dax">DAX</span>
   </div>
 </div>
 
@@ -283,7 +294,7 @@
 
 <div class="projects">
 
-  <a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Hospital-Readmission-PowerBI" target="_blank">
+  <a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Hospital-Readmission-PowerBI" data-tags="power-bi healthcare dax" target="_blank">
     <div class="card-top">
       <span class="card-type">Power BI - Healthcare</span>
       <span class="card-badge">New</span>
@@ -298,7 +309,7 @@
     </div>
   </a>
 
-  <a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/HR-Attrition-PowerBI" target="_blank">
+  <a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/HR-Attrition-PowerBI" data-tags="power-bi python dax" target="_blank">
     <div class="card-top">
       <span class="card-type">Python - Power BI - HR Analytics</span>
       <span class="card-badge">New</span>
@@ -315,7 +326,7 @@
     </div>
   </a>
 
-  <a class="card featured" href="https://public.tableau.com/views/global_happiness_dashboard/GlobalHappinessDashboard2019" target="_blank">
+  <a class="card featured" href="https://public.tableau.com/views/global_happiness_dashboard/GlobalHappinessDashboard2019" data-tags="tableau python" target="_blank">
     <div class="card-top">
       <span class="card-type">Tableau - Global Analytics</span>
       <span class="card-badge">New</span>
@@ -331,7 +342,7 @@
     </div>
   </a>
 
-  <a class="card" href="https://datastudio.google.com/reporting/7d8410ea-6d2c-4c91-9f24-ab16f2809e22" target="_blank">
+  <a class="card" href="https://datastudio.google.com/reporting/7d8410ea-6d2c-4c91-9f24-ab16f2809e22" data-tags="looker healthcare sheets" target="_blank">
     <div class="card-top">
       <span class="card-type">Looker Studio - Healthcare Analytics</span>
     </div>
@@ -345,7 +356,7 @@
     </div>
   </a>
 
-  <a class="card" href="https://docs.google.com/spreadsheets/d/15A3XCNeAAntAN3o3DH4Z97v85CsdN2afLzj7Zy2zYhY/edit?usp=sharing" target="_blank">
+  <a class="card" href="https://docs.google.com/spreadsheets/d/15A3XCNeAAntAN3o3DH4Z97v85CsdN2afLzj7Zy2zYhY/edit?usp=sharing" data-tags="sheets healthcare" target="_blank">
     <div class="card-top">
       <span class="card-type">Google Sheets - Healthcare Analytics</span>
     </div>
@@ -360,7 +371,7 @@
     </div>
   </a>
 
-  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/SQL-Analytics-Portfolio" target="_blank">
+  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/SQL-Analytics-Portfolio" data-tags="sql" target="_blank">
     <div class="card-top">
       <span class="card-type">SQL - Multi-Domain Analysis</span>
     </div>
@@ -375,7 +386,7 @@
     </div>
   </a>
 
-  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Grammys%20-%20Website%20Analytics%20Project" target="_blank">
+  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Grammys%20-%20Website%20Analytics%20Project" data-tags="python" target="_blank">
     <div class="card-top">
       <span class="card-type">Python - Analytics</span>
     </div>
@@ -389,7 +400,7 @@
     </div>
   </a>
 
-  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/LiveLab" target="_blank">
+  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/LiveLab" data-tags="python" target="_blank">
     <div class="card-top">
       <span class="card-type">Python - Practice</span>
     </div>
@@ -402,7 +413,7 @@
     </div>
   </a>
 
-  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio" target="_blank">
+  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio" data-tags="python" target="_blank">
     <div class="card-top">
       <span class="card-type">Python - Series</span>
     </div>
@@ -424,5 +435,25 @@
   <p><a href="https://github.com/brandonduplantier-juice" target="_blank">github.com/brandonduplantier-juice</a></p>
 </footer>
 
+
+<script>
+  const tags = document.querySelectorAll(".tag[data-filter]");
+  const cards = document.querySelectorAll(".card[data-tags]");
+  let active = "all";
+  tags.forEach(tag => {
+    tag.addEventListener("click", () => {
+      active = tag.dataset.filter;
+      tags.forEach(t => { t.classList.remove("active"); if(t.dataset.filter==="all") t.classList.add("inactive"); });
+      tag.classList.add("active");
+      if(tag.dataset.filter==="all") tag.classList.remove("inactive");
+      let visible = 0;
+      cards.forEach(card => {
+        const ct = card.dataset.tags.split(" ");
+        if(active==="all" || ct.includes(active)) { card.classList.remove("hidden"); visible++; }
+        else card.classList.add("hidden");
+      });
+    });
+  });
+</script>
 </body>
 </html>
