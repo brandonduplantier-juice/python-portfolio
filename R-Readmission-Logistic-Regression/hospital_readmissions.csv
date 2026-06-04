@@ -1,0 +1,301 @@
+Patient_ID,Age,Gender,Primary_Diagnosis,Department,Insurance_Type,Length_of_Stay_Days,Discharge_Disposition,Followup_Scheduled,Risk_Score_at_Discharge,Admission_Date,Discharge_Date,Readmitted_30_Days,Days_to_Readmission
+PT0001,46,Female,Heart Failure,Cardiology,Medicare,4,Home,Yes,27.7,2024-08-04,2024-08-08,Yes,5
+PT0002,59,Male,COPD,Pulmonology,Medicaid,13,Rehab Facility,Yes,24.2,2024-10-28,2024-11-10,No,
+PT0003,55,Female,Heart Failure,Cardiology,Medicare,4,Skilled Nursing Facility,No,26.2,2024-02-19,2024-02-23,No,
+PT0004,83,Female,Pneumonia,Orthopedics,Private,13,Rehab Facility,Yes,34.4,2024-07-12,2024-07-25,Yes,12
+PT0005,68,Male,Sepsis,Critical Care,Private,2,Skilled Nursing Facility,No,44.0,2024-02-21,2024-02-23,No,
+PT0006,85,Female,Hip/Knee Replacement,Internal Medicine,Medicare,7,Skilled Nursing Facility,Yes,18.5,2024-12-25,2025-01-01,No,
+PT0007,83,Male,Heart Failure,Cardiology,Medicaid,5,Skilled Nursing Facility,Yes,35.1,2024-12-18,2024-12-23,No,
+PT0008,48,Male,Pneumonia,Orthopedics,Private,14,Home Health,Yes,37.8,2024-02-03,2024-02-17,No,
+PT0009,65,Male,Sepsis,Critical Care,Medicaid,8,Rehab Facility,Yes,35.8,2024-10-02,2024-10-10,No,
+PT0010,72,Female,Sepsis,Critical Care,Medicare,4,Rehab Facility,Yes,39.8,2024-01-25,2024-01-29,No,
+PT0011,85,Male,COPD,Pulmonology,Private,8,Home,Yes,27.6,2024-05-08,2024-05-16,No,
+PT0012,88,Male,Heart Failure,Cardiology,Medicaid,10,Home Health,No,33.9,2024-06-23,2024-07-03,Yes,16
+PT0013,74,Male,COPD,Pulmonology,Uninsured,13,Home Health,No,32.0,2024-02-24,2024-03-08,No,
+PT0014,85,Male,Pneumonia,Orthopedics,Medicare,14,Skilled Nursing Facility,Yes,22.5,2024-09-28,2024-10-12,No,
+PT0015,65,Female,Sepsis,Critical Care,Medicare,7,Home Health,Yes,27.9,2024-02-10,2024-02-17,Yes,18
+PT0016,79,Male,Heart Failure,Cardiology,Medicare,9,Skilled Nursing Facility,Yes,46.3,2024-11-06,2024-11-15,No,
+PT0017,79,Male,COPD,Pulmonology,Private,8,Home Health,Yes,29.0,2024-04-25,2024-05-03,Yes,3
+PT0018,80,Male,Sepsis,Critical Care,Medicaid,2,Home,No,31.9,2024-01-31,2024-02-02,Yes,4
+PT0019,49,Male,Pneumonia,Orthopedics,Medicare,9,Skilled Nursing Facility,Yes,17.2,2024-10-22,2024-10-31,No,
+PT0020,71,Male,Hip/Knee Replacement,Internal Medicine,Medicare,12,Rehab Facility,Yes,10,2024-07-29,2024-08-10,No,
+PT0021,88,Male,Heart Failure,Cardiology,Medicare,13,Home Health,No,43.0,2024-10-01,2024-10-14,No,
+PT0022,56,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,3,Rehab Facility,No,13.6,2024-10-08,2024-10-11,Yes,23
+PT0023,45,Male,Sepsis,Critical Care,Private,5,Skilled Nursing Facility,Yes,10,2024-01-31,2024-02-05,Yes,3
+PT0024,61,Female,Hip/Knee Replacement,Internal Medicine,Medicare,13,Rehab Facility,Yes,13.9,2024-05-31,2024-06-13,No,
+PT0025,82,Male,Heart Failure,Cardiology,Private,2,Home,Yes,21.3,2024-03-21,2024-03-23,Yes,19
+PT0026,56,Male,Heart Failure,Cardiology,Medicaid,12,Skilled Nursing Facility,Yes,28.1,2024-10-18,2024-10-30,No,
+PT0027,47,Male,Sepsis,Critical Care,Medicare,11,Home Health,No,24.9,2024-05-02,2024-05-13,No,
+PT0028,87,Female,COPD,Pulmonology,Medicaid,14,Home,Yes,47.8,2024-11-14,2024-11-28,No,
+PT0029,49,Male,Heart Failure,Cardiology,Medicaid,4,Home Health,No,31.6,2024-03-21,2024-03-25,No,
+PT0030,64,Male,Sepsis,Critical Care,Medicaid,10,Home Health,No,21.7,2024-02-23,2024-03-04,No,
+PT0031,61,Male,COPD,Pulmonology,Private,13,Skilled Nursing Facility,Yes,16.9,2024-04-14,2024-04-27,No,
+PT0032,77,Female,Pneumonia,Orthopedics,Medicare,2,Home,Yes,21.5,2024-05-21,2024-05-23,Yes,13
+PT0033,85,Female,COPD,Pulmonology,Medicare,9,Rehab Facility,Yes,49.7,2024-12-19,2024-12-28,No,
+PT0034,47,Female,Sepsis,Critical Care,Medicaid,4,Rehab Facility,Yes,33.8,2024-06-06,2024-06-10,No,
+PT0035,67,Male,Heart Failure,Cardiology,Medicaid,12,Home,Yes,16.8,2024-11-13,2024-11-25,No,
+PT0036,55,Male,COPD,Pulmonology,Private,2,Skilled Nursing Facility,No,19.0,2024-06-19,2024-06-21,No,
+PT0037,87,Male,Hip/Knee Replacement,Internal Medicine,Medicare,14,Home,Yes,29.4,2024-04-12,2024-04-26,No,
+PT0038,67,Female,Hip/Knee Replacement,Internal Medicine,Private,5,Skilled Nursing Facility,Yes,16.2,2024-04-08,2024-04-13,No,
+PT0039,49,Female,Pneumonia,Orthopedics,Medicare,10,Rehab Facility,Yes,24.0,2024-01-15,2024-01-25,Yes,11
+PT0040,82,Female,COPD,Pulmonology,Medicare,11,Rehab Facility,Yes,28.0,2024-06-09,2024-06-20,No,
+PT0041,52,Female,Sepsis,Critical Care,Private,5,Home Health,Yes,14.1,2024-10-02,2024-10-07,No,
+PT0042,68,Female,COPD,Pulmonology,Medicare,12,Home Health,Yes,33.1,2024-12-05,2024-12-17,No,
+PT0043,77,Female,Pneumonia,Orthopedics,Medicaid,7,Rehab Facility,Yes,24.4,2024-12-06,2024-12-13,No,
+PT0044,84,Female,COPD,Pulmonology,Medicare,2,Home Health,Yes,32.9,2024-08-08,2024-08-10,No,
+PT0045,86,Female,Sepsis,Critical Care,Medicaid,9,Skilled Nursing Facility,Yes,39.8,2024-03-27,2024-04-05,No,
+PT0046,77,Female,Pneumonia,Orthopedics,Medicare,14,Skilled Nursing Facility,Yes,10,2024-04-25,2024-05-09,No,
+PT0047,46,Male,COPD,Pulmonology,Medicare,9,Home,Yes,29.9,2024-12-22,2024-12-31,No,
+PT0048,60,Male,Hip/Knee Replacement,Internal Medicine,Medicaid,2,Home,No,10,2024-04-22,2024-04-24,No,
+PT0049,74,Male,Sepsis,Critical Care,Medicaid,3,Rehab Facility,Yes,20.7,2024-10-13,2024-10-16,No,
+PT0050,84,Female,Hip/Knee Replacement,Internal Medicine,Private,10,Rehab Facility,No,21.8,2024-08-31,2024-09-10,No,
+PT0051,85,Female,COPD,Pulmonology,Private,10,Rehab Facility,Yes,34.5,2024-05-26,2024-06-05,No,
+PT0052,65,Male,Pneumonia,Orthopedics,Medicare,5,Rehab Facility,Yes,28.5,2024-12-27,2025-01-01,No,
+PT0053,71,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,8,Home,Yes,10,2024-10-26,2024-11-03,No,
+PT0054,81,Female,Heart Failure,Cardiology,Medicaid,7,Home Health,No,45.0,2024-08-02,2024-08-09,No,
+PT0055,83,Male,Sepsis,Critical Care,Medicaid,6,Rehab Facility,Yes,24.2,2024-07-26,2024-08-01,No,
+PT0056,53,Male,Hip/Knee Replacement,Internal Medicine,Private,11,Home,Yes,17.0,2024-08-07,2024-08-18,No,
+PT0057,56,Male,Hip/Knee Replacement,Internal Medicine,Medicare,7,Skilled Nursing Facility,Yes,10,2024-05-22,2024-05-29,No,
+PT0058,61,Male,Hip/Knee Replacement,Internal Medicine,Medicaid,13,Home,No,26.0,2024-06-28,2024-07-11,No,
+PT0059,86,Male,Heart Failure,Cardiology,Private,5,Skilled Nursing Facility,No,34.1,2024-08-30,2024-09-04,No,
+PT0060,58,Female,Sepsis,Critical Care,Medicaid,14,Home Health,Yes,20.9,2024-11-06,2024-11-20,No,
+PT0061,55,Female,Heart Failure,Cardiology,Medicare,2,Home Health,Yes,34.5,2024-04-11,2024-04-13,Yes,25
+PT0062,51,Female,COPD,Pulmonology,Private,11,Home,No,19.4,2024-10-16,2024-10-27,No,
+PT0063,79,Female,Pneumonia,Orthopedics,Medicaid,3,Home Health,Yes,21.9,2024-08-09,2024-08-12,No,
+PT0064,54,Female,Hip/Knee Replacement,Internal Medicine,Medicare,10,Home Health,Yes,14.1,2024-10-02,2024-10-12,No,
+PT0065,72,Female,Hip/Knee Replacement,Internal Medicine,Medicare,5,Home,Yes,10,2024-10-18,2024-10-23,No,
+PT0066,66,Male,Hip/Knee Replacement,Internal Medicine,Medicaid,7,Skilled Nursing Facility,Yes,17.7,2024-06-30,2024-07-07,No,
+PT0067,62,Female,Pneumonia,Orthopedics,Medicaid,10,Skilled Nursing Facility,Yes,22.6,2024-05-03,2024-05-13,No,
+PT0068,73,Male,Hip/Knee Replacement,Internal Medicine,Medicare,5,Rehab Facility,Yes,10,2024-06-05,2024-06-10,No,
+PT0069,75,Female,Pneumonia,Orthopedics,Medicare,13,Home Health,Yes,22.1,2024-04-28,2024-05-11,Yes,9
+PT0070,52,Male,Pneumonia,Orthopedics,Medicare,13,Rehab Facility,Yes,23.0,2024-10-28,2024-11-10,No,
+PT0071,83,Female,Sepsis,Critical Care,Uninsured,5,Home Health,Yes,33.9,2024-09-30,2024-10-05,Yes,4
+PT0072,80,Female,Heart Failure,Cardiology,Medicaid,4,Rehab Facility,Yes,37.6,2024-01-07,2024-01-11,No,
+PT0073,75,Female,Hip/Knee Replacement,Internal Medicine,Medicare,2,Home Health,No,10,2024-07-24,2024-07-26,No,
+PT0074,85,Male,Sepsis,Critical Care,Medicare,14,Home Health,Yes,36.1,2024-05-07,2024-05-21,Yes,27
+PT0075,83,Male,Hip/Knee Replacement,Internal Medicine,Private,8,Rehab Facility,No,16.2,2024-08-07,2024-08-15,No,
+PT0076,48,Male,Sepsis,Critical Care,Private,5,Skilled Nursing Facility,Yes,31.9,2024-02-11,2024-02-16,Yes,8
+PT0077,49,Male,Sepsis,Critical Care,Medicare,9,Rehab Facility,Yes,23.5,2024-12-25,2025-01-03,No,
+PT0078,88,Male,Heart Failure,Cardiology,Private,14,Skilled Nursing Facility,Yes,51.4,2024-10-05,2024-10-19,Yes,7
+PT0079,54,Male,Pneumonia,Orthopedics,Medicare,14,Home Health,Yes,29.8,2024-08-12,2024-08-26,Yes,25
+PT0080,89,Female,Pneumonia,Orthopedics,Private,10,Rehab Facility,Yes,17.2,2024-11-02,2024-11-12,Yes,16
+PT0081,83,Female,Pneumonia,Orthopedics,Medicare,5,Home,No,28.4,2024-01-21,2024-01-26,No,
+PT0082,75,Female,COPD,Pulmonology,Private,4,Rehab Facility,Yes,26.1,2024-09-08,2024-09-12,No,
+PT0083,67,Female,Hip/Knee Replacement,Internal Medicine,Medicare,12,Home,No,10,2024-05-27,2024-06-08,No,
+PT0084,80,Male,Hip/Knee Replacement,Internal Medicine,Medicaid,7,Home Health,Yes,29.1,2024-07-25,2024-08-01,No,
+PT0085,87,Female,Heart Failure,Cardiology,Medicare,5,Home Health,Yes,30.0,2024-01-27,2024-02-01,Yes,20
+PT0086,63,Female,COPD,Pulmonology,Private,9,Home,Yes,27.7,2024-11-18,2024-11-27,No,
+PT0087,55,Female,COPD,Pulmonology,Medicaid,10,Rehab Facility,Yes,42.7,2024-08-24,2024-09-03,No,
+PT0088,76,Female,COPD,Pulmonology,Medicaid,6,Rehab Facility,No,31.1,2024-08-29,2024-09-04,Yes,20
+PT0089,69,Male,COPD,Pulmonology,Private,10,Skilled Nursing Facility,No,27.3,2024-07-31,2024-08-10,No,
+PT0090,62,Male,Sepsis,Critical Care,Medicare,6,Rehab Facility,No,40.3,2024-08-16,2024-08-22,No,
+PT0091,66,Female,Pneumonia,Orthopedics,Medicaid,7,Skilled Nursing Facility,No,26.2,2024-07-29,2024-08-05,Yes,26
+PT0092,69,Female,Hip/Knee Replacement,Internal Medicine,Uninsured,14,Skilled Nursing Facility,Yes,22.5,2024-01-19,2024-02-02,No,
+PT0093,66,Male,Sepsis,Critical Care,Private,9,Home,Yes,15.3,2024-07-28,2024-08-06,No,
+PT0094,49,Female,COPD,Pulmonology,Private,6,Home Health,Yes,26.4,2024-07-22,2024-07-28,No,
+PT0095,88,Female,Pneumonia,Orthopedics,Uninsured,12,Rehab Facility,No,35.9,2024-11-19,2024-12-01,No,
+PT0096,59,Male,Pneumonia,Orthopedics,Medicare,3,Home,Yes,24.0,2024-12-21,2024-12-24,No,
+PT0097,47,Female,Heart Failure,Cardiology,Private,6,Home Health,Yes,31.3,2024-10-16,2024-10-22,No,
+PT0098,55,Male,COPD,Pulmonology,Medicare,8,Skilled Nursing Facility,Yes,32.8,2024-10-25,2024-11-02,Yes,17
+PT0099,74,Female,Pneumonia,Orthopedics,Medicaid,14,Rehab Facility,No,26.3,2024-08-14,2024-08-28,No,
+PT0100,64,Female,Sepsis,Critical Care,Medicaid,9,Home Health,Yes,22.8,2024-07-15,2024-07-24,No,
+PT0101,60,Female,Heart Failure,Cardiology,Medicaid,11,Home Health,No,23.5,2024-12-03,2024-12-14,No,
+PT0102,81,Male,Heart Failure,Cardiology,Private,13,Rehab Facility,No,57.9,2024-05-26,2024-06-08,No,
+PT0103,83,Female,COPD,Pulmonology,Medicare,5,Home Health,Yes,32.2,2024-03-11,2024-03-16,No,
+PT0104,64,Female,Heart Failure,Cardiology,Medicare,7,Skilled Nursing Facility,Yes,19.5,2024-05-31,2024-06-07,No,
+PT0105,56,Male,Hip/Knee Replacement,Internal Medicine,Medicare,10,Home Health,Yes,23.2,2024-05-11,2024-05-21,No,
+PT0106,63,Female,Hip/Knee Replacement,Internal Medicine,Private,9,Home,Yes,10,2024-04-25,2024-05-04,No,
+PT0107,80,Female,Hip/Knee Replacement,Internal Medicine,Medicare,8,Home,Yes,23.8,2024-12-10,2024-12-18,No,
+PT0108,85,Female,Hip/Knee Replacement,Internal Medicine,Medicare,5,Rehab Facility,Yes,25.4,2024-10-14,2024-10-19,No,
+PT0109,59,Male,Sepsis,Critical Care,Medicaid,9,Home Health,Yes,27.1,2024-01-20,2024-01-29,No,
+PT0110,52,Male,Hip/Knee Replacement,Internal Medicine,Medicare,10,Skilled Nursing Facility,Yes,10.6,2024-07-08,2024-07-18,No,
+PT0111,71,Male,Sepsis,Critical Care,Private,12,Home,No,15.2,2024-05-23,2024-06-04,Yes,14
+PT0112,73,Female,COPD,Pulmonology,Uninsured,7,Home,No,18.4,2024-07-07,2024-07-14,No,
+PT0113,48,Female,Pneumonia,Orthopedics,Medicare,3,Rehab Facility,Yes,22.4,2024-01-11,2024-01-14,Yes,13
+PT0114,53,Male,COPD,Pulmonology,Medicare,14,Skilled Nursing Facility,Yes,35.4,2024-04-29,2024-05-13,No,
+PT0115,83,Male,COPD,Pulmonology,Medicare,4,Skilled Nursing Facility,Yes,35.5,2024-01-14,2024-01-18,Yes,14
+PT0116,82,Female,COPD,Pulmonology,Medicare,6,Home,Yes,30.3,2024-08-03,2024-08-09,No,
+PT0117,75,Female,Heart Failure,Cardiology,Private,10,Home,Yes,36.6,2024-12-03,2024-12-13,No,
+PT0118,86,Male,Hip/Knee Replacement,Internal Medicine,Medicare,9,Rehab Facility,Yes,31.2,2024-02-25,2024-03-05,No,
+PT0119,49,Male,Hip/Knee Replacement,Internal Medicine,Medicare,4,Home,Yes,10,2024-12-30,2025-01-03,No,
+PT0120,78,Female,Sepsis,Critical Care,Medicaid,11,Rehab Facility,Yes,24.2,2024-12-25,2025-01-05,Yes,23
+PT0121,58,Female,Sepsis,Critical Care,Medicaid,5,Rehab Facility,Yes,17.1,2024-02-18,2024-02-23,No,
+PT0122,87,Female,Pneumonia,Orthopedics,Medicare,4,Rehab Facility,Yes,35.1,2024-02-13,2024-02-17,Yes,6
+PT0123,53,Male,Pneumonia,Orthopedics,Medicaid,10,Home Health,Yes,10,2024-08-04,2024-08-14,No,
+PT0124,63,Female,Heart Failure,Cardiology,Medicare,11,Skilled Nursing Facility,Yes,39.3,2024-09-03,2024-09-14,Yes,6
+PT0125,80,Female,Pneumonia,Orthopedics,Medicare,6,Skilled Nursing Facility,No,42.5,2024-11-14,2024-11-20,No,
+PT0126,46,Female,Sepsis,Critical Care,Medicare,6,Home Health,No,10,2024-06-28,2024-07-04,Yes,30
+PT0127,81,Female,COPD,Pulmonology,Medicare,13,Home,Yes,26.0,2024-08-20,2024-09-02,No,
+PT0128,64,Female,Pneumonia,Orthopedics,Private,11,Home,No,23.5,2024-03-20,2024-03-31,Yes,22
+PT0129,88,Male,Heart Failure,Cardiology,Medicare,12,Rehab Facility,Yes,33.0,2024-09-19,2024-10-01,Yes,16
+PT0130,63,Female,Heart Failure,Cardiology,Medicaid,6,Home,Yes,32.9,2024-11-02,2024-11-08,Yes,9
+PT0131,58,Male,Pneumonia,Orthopedics,Private,6,Home Health,Yes,14.5,2024-03-07,2024-03-13,No,
+PT0132,77,Female,COPD,Pulmonology,Medicare,13,Home,Yes,32.5,2024-08-23,2024-09-05,No,
+PT0133,81,Female,Pneumonia,Orthopedics,Medicaid,13,Rehab Facility,Yes,13.4,2024-03-28,2024-04-10,No,
+PT0134,74,Female,Sepsis,Critical Care,Medicare,3,Skilled Nursing Facility,Yes,42.0,2024-07-24,2024-07-27,No,
+PT0135,64,Female,Hip/Knee Replacement,Internal Medicine,Medicare,14,Skilled Nursing Facility,Yes,10,2024-04-09,2024-04-23,No,
+PT0136,67,Male,Pneumonia,Orthopedics,Medicare,4,Home Health,Yes,18.7,2024-11-04,2024-11-08,Yes,27
+PT0137,56,Female,Heart Failure,Cardiology,Medicaid,11,Rehab Facility,Yes,36.8,2024-11-15,2024-11-26,No,
+PT0138,54,Female,Pneumonia,Orthopedics,Medicare,9,Home Health,No,13.9,2024-10-29,2024-11-07,Yes,19
+PT0139,64,Female,Heart Failure,Cardiology,Medicaid,2,Home Health,No,45.2,2024-02-16,2024-02-18,No,
+PT0140,69,Female,Sepsis,Critical Care,Medicaid,14,Home,Yes,36.1,2024-10-19,2024-11-02,No,
+PT0141,83,Female,Pneumonia,Orthopedics,Medicaid,2,Rehab Facility,Yes,37.2,2024-02-13,2024-02-15,No,
+PT0142,47,Male,COPD,Pulmonology,Private,9,Skilled Nursing Facility,Yes,18.0,2024-05-24,2024-06-02,No,
+PT0143,88,Male,Pneumonia,Orthopedics,Private,12,Home Health,Yes,43.0,2024-05-25,2024-06-06,No,
+PT0144,54,Female,Sepsis,Critical Care,Medicare,12,Skilled Nursing Facility,No,30.4,2024-06-07,2024-06-19,No,
+PT0145,53,Male,Hip/Knee Replacement,Internal Medicine,Medicare,8,Home Health,No,10,2024-12-16,2024-12-24,No,
+PT0146,86,Female,Heart Failure,Cardiology,Medicaid,2,Home Health,Yes,25.2,2024-04-19,2024-04-21,No,
+PT0147,57,Male,Hip/Knee Replacement,Internal Medicine,Uninsured,4,Home,Yes,12.9,2024-10-03,2024-10-07,No,
+PT0148,47,Female,Sepsis,Critical Care,Private,11,Skilled Nursing Facility,Yes,12.1,2024-03-19,2024-03-30,Yes,29
+PT0149,55,Female,Sepsis,Critical Care,Medicare,7,Skilled Nursing Facility,No,13.7,2024-08-17,2024-08-24,Yes,10
+PT0150,75,Male,Pneumonia,Orthopedics,Medicare,11,Rehab Facility,Yes,20.1,2024-05-24,2024-06-04,No,
+PT0151,78,Female,Sepsis,Critical Care,Uninsured,5,Skilled Nursing Facility,No,40.3,2024-07-09,2024-07-14,No,
+PT0152,78,Male,Heart Failure,Cardiology,Medicare,14,Skilled Nursing Facility,Yes,38.6,2024-09-19,2024-10-03,Yes,16
+PT0153,59,Female,Heart Failure,Cardiology,Private,2,Rehab Facility,Yes,23.5,2024-02-11,2024-02-13,No,
+PT0154,65,Male,Heart Failure,Cardiology,Private,12,Home Health,No,31.3,2024-03-11,2024-03-23,Yes,29
+PT0155,89,Male,Hip/Knee Replacement,Internal Medicine,Private,9,Rehab Facility,Yes,22.6,2024-04-20,2024-04-29,No,
+PT0156,83,Female,Sepsis,Critical Care,Medicare,6,Skilled Nursing Facility,Yes,32.5,2024-01-25,2024-01-31,No,
+PT0157,74,Male,Sepsis,Critical Care,Medicare,9,Home,Yes,19.0,2024-05-29,2024-06-07,No,
+PT0158,67,Male,Sepsis,Critical Care,Medicaid,4,Home,Yes,22.2,2024-07-03,2024-07-07,Yes,19
+PT0159,77,Male,Sepsis,Critical Care,Medicare,9,Home,Yes,37.4,2024-01-09,2024-01-18,No,
+PT0160,67,Male,Heart Failure,Cardiology,Private,12,Home,No,31.3,2024-06-19,2024-07-01,Yes,14
+PT0161,66,Male,Sepsis,Critical Care,Private,12,Rehab Facility,No,22.6,2024-03-10,2024-03-22,Yes,27
+PT0162,47,Female,Hip/Knee Replacement,Internal Medicine,Medicare,14,Skilled Nursing Facility,No,10,2024-06-10,2024-06-24,No,
+PT0163,70,Female,Sepsis,Critical Care,Medicare,14,Skilled Nursing Facility,Yes,30.6,2024-12-01,2024-12-15,No,
+PT0164,68,Female,Heart Failure,Cardiology,Private,13,Rehab Facility,No,30.4,2024-07-16,2024-07-29,No,
+PT0165,76,Female,COPD,Pulmonology,Medicare,14,Home Health,No,31.5,2024-11-04,2024-11-18,No,
+PT0166,79,Female,COPD,Pulmonology,Medicare,3,Home Health,Yes,29.8,2024-06-05,2024-06-08,No,
+PT0167,55,Female,Hip/Knee Replacement,Internal Medicine,Medicare,2,Home Health,Yes,10,2024-01-30,2024-02-01,No,
+PT0168,68,Male,Hip/Knee Replacement,Internal Medicine,Uninsured,4,Rehab Facility,Yes,18.9,2024-02-04,2024-02-08,No,
+PT0169,68,Female,Pneumonia,Orthopedics,Private,2,Skilled Nursing Facility,Yes,33.7,2024-02-09,2024-02-11,No,
+PT0170,68,Female,Sepsis,Critical Care,Medicare,6,Skilled Nursing Facility,No,25.9,2024-01-14,2024-01-20,No,
+PT0171,78,Female,Hip/Knee Replacement,Internal Medicine,Private,3,Home Health,No,16.1,2024-11-09,2024-11-12,No,
+PT0172,57,Male,Hip/Knee Replacement,Internal Medicine,Medicare,3,Rehab Facility,Yes,10,2024-08-15,2024-08-18,No,
+PT0173,87,Female,Pneumonia,Orthopedics,Private,10,Home Health,No,40.2,2024-12-24,2025-01-03,No,
+PT0174,77,Male,Pneumonia,Orthopedics,Medicare,5,Skilled Nursing Facility,Yes,19.2,2024-09-09,2024-09-14,Yes,20
+PT0175,68,Female,Sepsis,Critical Care,Private,10,Skilled Nursing Facility,Yes,34.2,2024-09-02,2024-09-12,No,
+PT0176,81,Male,Hip/Knee Replacement,Internal Medicine,Medicare,7,Home,Yes,22.2,2024-12-14,2024-12-21,No,
+PT0177,80,Male,COPD,Pulmonology,Private,4,Rehab Facility,Yes,43.5,2024-09-22,2024-09-26,Yes,8
+PT0178,65,Male,COPD,Pulmonology,Medicare,10,Home Health,No,17.2,2024-05-08,2024-05-18,Yes,20
+PT0179,53,Female,Pneumonia,Orthopedics,Medicaid,3,Skilled Nursing Facility,Yes,17.0,2024-11-15,2024-11-18,No,
+PT0180,66,Male,Sepsis,Critical Care,Private,2,Home,Yes,25.3,2024-11-24,2024-11-26,No,
+PT0181,86,Male,Pneumonia,Orthopedics,Private,8,Home,Yes,27.7,2024-06-03,2024-06-11,No,
+PT0182,64,Female,Hip/Knee Replacement,Internal Medicine,Medicare,2,Skilled Nursing Facility,Yes,10,2024-09-04,2024-09-06,No,
+PT0183,83,Male,Pneumonia,Orthopedics,Medicare,13,Home Health,No,45.3,2024-03-07,2024-03-20,No,
+PT0184,80,Male,Sepsis,Critical Care,Medicare,9,Home,Yes,15.6,2024-05-06,2024-05-15,Yes,4
+PT0185,69,Female,Pneumonia,Orthopedics,Medicare,4,Home Health,No,25.7,2024-03-22,2024-03-26,No,
+PT0186,74,Female,Sepsis,Critical Care,Private,9,Home,Yes,25.2,2024-07-20,2024-07-29,No,
+PT0187,58,Female,COPD,Pulmonology,Medicare,6,Rehab Facility,Yes,32.6,2024-05-26,2024-06-01,No,
+PT0188,72,Male,Heart Failure,Cardiology,Private,13,Home Health,No,23.7,2024-07-06,2024-07-19,Yes,4
+PT0189,80,Male,Sepsis,Critical Care,Medicare,6,Home,Yes,22.7,2024-11-15,2024-11-21,No,
+PT0190,53,Male,Heart Failure,Cardiology,Medicare,14,Home Health,Yes,30.4,2024-07-06,2024-07-20,No,
+PT0191,83,Female,COPD,Pulmonology,Medicaid,2,Home,Yes,29.8,2024-08-21,2024-08-23,Yes,19
+PT0192,65,Female,COPD,Pulmonology,Medicare,11,Home Health,Yes,36.2,2024-09-16,2024-09-27,No,
+PT0193,76,Female,Sepsis,Critical Care,Medicaid,2,Home Health,Yes,37.4,2024-06-06,2024-06-08,No,
+PT0194,83,Female,Heart Failure,Cardiology,Medicare,12,Skilled Nursing Facility,No,42.6,2024-10-25,2024-11-06,No,
+PT0195,85,Female,Sepsis,Critical Care,Medicare,12,Skilled Nursing Facility,Yes,37.7,2024-01-10,2024-01-22,No,
+PT0196,54,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,8,Rehab Facility,No,10,2024-02-01,2024-02-09,No,
+PT0197,58,Female,Sepsis,Critical Care,Uninsured,9,Rehab Facility,Yes,33.2,2024-06-24,2024-07-03,No,
+PT0198,84,Female,Pneumonia,Orthopedics,Medicare,5,Home Health,Yes,47.3,2024-04-25,2024-04-30,No,
+PT0199,63,Male,Pneumonia,Orthopedics,Medicaid,9,Home Health,Yes,10,2024-05-20,2024-05-29,No,
+PT0200,88,Female,Sepsis,Critical Care,Private,8,Home Health,No,28.1,2024-03-15,2024-03-23,No,
+PT0201,50,Female,Pneumonia,Orthopedics,Private,12,Home Health,No,23.7,2024-05-18,2024-05-30,No,
+PT0202,53,Male,Pneumonia,Orthopedics,Medicaid,11,Skilled Nursing Facility,Yes,36.0,2024-12-08,2024-12-19,No,
+PT0203,85,Male,COPD,Pulmonology,Medicare,8,Home Health,No,46.1,2024-01-03,2024-01-11,No,
+PT0204,71,Female,COPD,Pulmonology,Medicaid,5,Home Health,Yes,38.4,2024-11-26,2024-12-01,Yes,27
+PT0205,86,Male,Heart Failure,Cardiology,Medicaid,13,Home,No,45.8,2024-03-31,2024-04-13,No,
+PT0206,70,Female,Heart Failure,Cardiology,Medicare,13,Home Health,No,47.7,2024-01-05,2024-01-18,Yes,22
+PT0207,66,Female,Heart Failure,Cardiology,Medicaid,12,Rehab Facility,No,38.0,2024-05-19,2024-05-31,Yes,6
+PT0208,55,Female,Pneumonia,Orthopedics,Medicaid,13,Skilled Nursing Facility,Yes,29.1,2024-06-21,2024-07-04,No,
+PT0209,88,Male,Sepsis,Critical Care,Medicare,12,Rehab Facility,No,31.6,2024-12-08,2024-12-20,Yes,7
+PT0210,65,Male,Hip/Knee Replacement,Internal Medicine,Medicare,8,Skilled Nursing Facility,Yes,13.0,2024-05-16,2024-05-24,No,
+PT0211,82,Male,Pneumonia,Orthopedics,Medicare,7,Skilled Nursing Facility,Yes,36.0,2024-07-26,2024-08-02,No,
+PT0212,89,Male,Pneumonia,Orthopedics,Medicaid,6,Home Health,Yes,38.0,2024-04-22,2024-04-28,No,
+PT0213,54,Female,Hip/Knee Replacement,Internal Medicine,Private,11,Home Health,Yes,10,2024-10-02,2024-10-13,No,
+PT0214,60,Male,COPD,Pulmonology,Medicaid,10,Home Health,Yes,23.9,2024-10-15,2024-10-25,Yes,29
+PT0215,77,Male,Sepsis,Critical Care,Medicaid,4,Skilled Nursing Facility,Yes,27.4,2024-04-15,2024-04-19,No,
+PT0216,50,Female,Hip/Knee Replacement,Internal Medicine,Private,9,Skilled Nursing Facility,Yes,10,2024-08-21,2024-08-30,No,
+PT0217,74,Female,Sepsis,Critical Care,Private,8,Home Health,No,30.1,2024-01-24,2024-02-01,No,
+PT0218,79,Male,Heart Failure,Cardiology,Private,3,Rehab Facility,Yes,25.5,2024-07-28,2024-07-31,Yes,7
+PT0219,68,Female,Hip/Knee Replacement,Internal Medicine,Medicare,8,Rehab Facility,Yes,30.2,2024-03-09,2024-03-17,No,
+PT0220,52,Male,Pneumonia,Orthopedics,Uninsured,8,Skilled Nursing Facility,No,17.4,2024-04-24,2024-05-02,No,
+PT0221,64,Female,Heart Failure,Cardiology,Medicaid,10,Rehab Facility,Yes,33.7,2024-06-26,2024-07-06,Yes,9
+PT0222,47,Female,Heart Failure,Cardiology,Medicaid,2,Skilled Nursing Facility,Yes,19.9,2024-02-21,2024-02-23,No,
+PT0223,83,Male,Hip/Knee Replacement,Internal Medicine,Medicare,2,Rehab Facility,Yes,10,2024-01-29,2024-01-31,No,
+PT0224,59,Female,Pneumonia,Orthopedics,Medicaid,14,Home Health,Yes,20.0,2024-03-14,2024-03-28,No,
+PT0225,59,Female,Sepsis,Critical Care,Medicare,2,Skilled Nursing Facility,Yes,16.9,2024-06-25,2024-06-27,No,
+PT0226,78,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,8,Skilled Nursing Facility,Yes,21.8,2024-04-04,2024-04-12,No,
+PT0227,60,Male,Hip/Knee Replacement,Internal Medicine,Medicare,13,Skilled Nursing Facility,No,20.5,2024-08-01,2024-08-14,No,
+PT0228,69,Male,COPD,Pulmonology,Medicare,7,Home,No,24.4,2024-07-08,2024-07-15,Yes,26
+PT0229,48,Female,COPD,Pulmonology,Medicare,11,Home,No,27.8,2024-12-09,2024-12-20,No,
+PT0230,58,Female,Hip/Knee Replacement,Internal Medicine,Medicare,2,Skilled Nursing Facility,No,23.5,2024-03-01,2024-03-03,No,
+PT0231,60,Male,Hip/Knee Replacement,Internal Medicine,Medicare,5,Home Health,No,10,2024-07-02,2024-07-07,No,
+PT0232,77,Female,Pneumonia,Orthopedics,Medicaid,14,Rehab Facility,No,36.1,2024-06-12,2024-06-26,No,
+PT0233,65,Female,Pneumonia,Orthopedics,Medicare,5,Skilled Nursing Facility,Yes,15.3,2024-08-01,2024-08-06,No,
+PT0234,66,Male,COPD,Pulmonology,Medicare,5,Rehab Facility,Yes,25.2,2024-12-16,2024-12-21,No,
+PT0235,86,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,13,Home Health,Yes,18.6,2024-10-04,2024-10-17,No,
+PT0236,78,Male,Heart Failure,Cardiology,Private,3,Home,No,26.6,2024-07-30,2024-08-02,Yes,23
+PT0237,49,Male,COPD,Pulmonology,Medicare,10,Rehab Facility,Yes,14.2,2024-11-11,2024-11-21,No,
+PT0238,46,Male,Hip/Knee Replacement,Internal Medicine,Medicaid,8,Home,Yes,10,2024-05-20,2024-05-28,No,
+PT0239,46,Female,Pneumonia,Orthopedics,Private,4,Home,No,13.1,2024-11-13,2024-11-17,No,
+PT0240,62,Female,Pneumonia,Orthopedics,Medicare,8,Rehab Facility,Yes,23.4,2024-12-22,2024-12-30,No,
+PT0241,86,Male,Heart Failure,Cardiology,Medicare,8,Rehab Facility,Yes,39.4,2024-03-28,2024-04-05,Yes,30
+PT0242,86,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,3,Home,Yes,20.7,2024-12-20,2024-12-23,No,
+PT0243,62,Male,Hip/Knee Replacement,Internal Medicine,Private,12,Home Health,No,10.4,2024-06-10,2024-06-22,Yes,9
+PT0244,54,Female,Sepsis,Critical Care,Private,6,Skilled Nursing Facility,Yes,22.9,2024-10-17,2024-10-23,No,
+PT0245,88,Female,Hip/Knee Replacement,Internal Medicine,Medicare,13,Skilled Nursing Facility,No,19.8,2024-06-26,2024-07-09,Yes,16
+PT0246,49,Female,COPD,Pulmonology,Medicaid,11,Rehab Facility,No,20.0,2024-06-16,2024-06-27,Yes,11
+PT0247,76,Male,Hip/Knee Replacement,Internal Medicine,Medicare,8,Rehab Facility,Yes,10.3,2024-11-12,2024-11-20,No,
+PT0248,49,Male,COPD,Pulmonology,Medicare,8,Skilled Nursing Facility,No,19.0,2024-06-11,2024-06-19,No,
+PT0249,45,Female,Heart Failure,Cardiology,Medicare,14,Home Health,Yes,31.9,2024-10-12,2024-10-26,No,
+PT0250,51,Male,Hip/Knee Replacement,Internal Medicine,Medicare,10,Home,Yes,13.1,2024-06-15,2024-06-25,No,
+PT0251,63,Female,Heart Failure,Cardiology,Medicare,3,Skilled Nursing Facility,Yes,34.5,2024-03-12,2024-03-15,No,
+PT0252,76,Male,Pneumonia,Orthopedics,Medicare,8,Home Health,Yes,35.9,2024-09-04,2024-09-12,No,
+PT0253,61,Male,Pneumonia,Orthopedics,Private,9,Skilled Nursing Facility,Yes,24.6,2024-07-21,2024-07-30,No,
+PT0254,69,Female,Sepsis,Critical Care,Medicare,8,Skilled Nursing Facility,Yes,29.4,2024-11-04,2024-11-12,No,
+PT0255,75,Female,COPD,Pulmonology,Medicare,8,Home Health,Yes,28.5,2024-10-21,2024-10-29,No,
+PT0256,69,Female,Pneumonia,Orthopedics,Private,8,Home Health,Yes,17.9,2024-10-15,2024-10-23,No,
+PT0257,56,Male,Sepsis,Critical Care,Uninsured,9,Skilled Nursing Facility,Yes,21.2,2024-07-28,2024-08-06,No,
+PT0258,85,Female,COPD,Pulmonology,Medicare,12,Skilled Nursing Facility,No,46.9,2024-07-12,2024-07-24,Yes,22
+PT0259,82,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,13,Rehab Facility,Yes,20.9,2024-10-01,2024-10-14,No,
+PT0260,51,Male,Heart Failure,Cardiology,Medicaid,7,Skilled Nursing Facility,Yes,19.4,2024-01-23,2024-01-30,No,
+PT0261,66,Female,Hip/Knee Replacement,Internal Medicine,Medicare,3,Home Health,Yes,13.5,2024-12-18,2024-12-21,No,
+PT0262,68,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,12,Skilled Nursing Facility,Yes,10,2024-01-13,2024-01-25,No,
+PT0263,71,Male,Pneumonia,Orthopedics,Medicare,13,Skilled Nursing Facility,Yes,19.6,2024-09-23,2024-10-06,No,
+PT0264,51,Female,Hip/Knee Replacement,Internal Medicine,Private,9,Home Health,Yes,20.3,2024-01-23,2024-02-01,No,
+PT0265,46,Female,Heart Failure,Cardiology,Medicaid,12,Skilled Nursing Facility,No,24.4,2024-10-09,2024-10-21,Yes,20
+PT0266,74,Male,Hip/Knee Replacement,Internal Medicine,Private,12,Skilled Nursing Facility,Yes,10,2024-12-02,2024-12-14,No,
+PT0267,84,Male,Heart Failure,Cardiology,Medicare,8,Rehab Facility,Yes,39.1,2024-12-26,2025-01-03,No,
+PT0268,81,Male,Heart Failure,Cardiology,Private,10,Skilled Nursing Facility,Yes,43.0,2024-04-10,2024-04-20,No,
+PT0269,87,Female,Pneumonia,Orthopedics,Medicaid,12,Home Health,Yes,24.5,2024-06-27,2024-07-09,No,
+PT0270,84,Male,Hip/Knee Replacement,Internal Medicine,Private,13,Home Health,No,12.8,2024-10-29,2024-11-11,Yes,7
+PT0271,52,Male,Pneumonia,Orthopedics,Medicare,4,Home Health,Yes,12.7,2024-03-11,2024-03-15,No,
+PT0272,56,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,13,Skilled Nursing Facility,Yes,10,2024-09-07,2024-09-20,No,
+PT0273,65,Female,COPD,Pulmonology,Medicaid,7,Home,Yes,31.0,2024-10-14,2024-10-21,No,
+PT0274,71,Female,Hip/Knee Replacement,Internal Medicine,Medicare,9,Rehab Facility,Yes,22.7,2024-10-16,2024-10-25,Yes,27
+PT0275,63,Male,COPD,Pulmonology,Medicare,10,Home Health,Yes,15.0,2024-09-10,2024-09-20,No,
+PT0276,81,Male,Heart Failure,Cardiology,Medicare,10,Home Health,Yes,40.2,2024-01-22,2024-02-01,No,
+PT0277,79,Male,Hip/Knee Replacement,Internal Medicine,Uninsured,3,Skilled Nursing Facility,Yes,26.7,2024-06-27,2024-06-30,No,
+PT0278,73,Male,Heart Failure,Cardiology,Private,5,Skilled Nursing Facility,No,34.0,2024-10-28,2024-11-02,No,
+PT0279,85,Female,Sepsis,Critical Care,Medicare,4,Skilled Nursing Facility,No,37.5,2024-09-29,2024-10-03,No,
+PT0280,55,Female,Sepsis,Critical Care,Uninsured,6,Home Health,Yes,14.2,2024-09-20,2024-09-26,No,
+PT0281,53,Female,Heart Failure,Cardiology,Private,6,Skilled Nursing Facility,No,30.4,2024-06-13,2024-06-19,No,
+PT0282,76,Male,Hip/Knee Replacement,Internal Medicine,Medicaid,6,Rehab Facility,Yes,20.3,2024-02-08,2024-02-14,No,
+PT0283,70,Female,Heart Failure,Cardiology,Medicaid,7,Rehab Facility,No,32.7,2024-02-17,2024-02-24,No,
+PT0284,85,Female,Hip/Knee Replacement,Internal Medicine,Private,14,Rehab Facility,Yes,20.5,2024-08-07,2024-08-21,No,
+PT0285,62,Female,Hip/Knee Replacement,Internal Medicine,Private,7,Skilled Nursing Facility,Yes,10,2024-12-15,2024-12-22,No,
+PT0286,51,Female,Heart Failure,Cardiology,Medicare,4,Rehab Facility,Yes,27.3,2024-08-07,2024-08-11,Yes,25
+PT0287,86,Female,COPD,Pulmonology,Medicare,6,Home,Yes,35.3,2024-11-28,2024-12-04,Yes,15
+PT0288,89,Male,Pneumonia,Orthopedics,Medicare,3,Home,Yes,41.0,2024-09-01,2024-09-04,Yes,21
+PT0289,78,Female,COPD,Pulmonology,Medicare,13,Home Health,No,41.0,2024-03-08,2024-03-21,No,
+PT0290,69,Male,COPD,Pulmonology,Private,3,Home,Yes,29.0,2024-06-02,2024-06-05,Yes,27
+PT0291,86,Male,COPD,Pulmonology,Medicare,11,Home,Yes,39.2,2024-04-19,2024-04-30,No,
+PT0292,71,Female,COPD,Pulmonology,Private,3,Home,Yes,36.7,2024-03-04,2024-03-07,No,
+PT0293,67,Female,Hip/Knee Replacement,Internal Medicine,Medicare,4,Skilled Nursing Facility,Yes,22.8,2024-11-03,2024-11-07,No,
+PT0294,89,Male,Pneumonia,Orthopedics,Private,12,Home Health,Yes,38.5,2024-11-06,2024-11-18,No,
+PT0295,63,Male,Hip/Knee Replacement,Internal Medicine,Private,14,Skilled Nursing Facility,Yes,19.8,2024-10-31,2024-11-14,No,
+PT0296,68,Female,Heart Failure,Cardiology,Medicare,11,Rehab Facility,Yes,38.5,2024-12-15,2024-12-26,Yes,18
+PT0297,46,Male,Heart Failure,Cardiology,Medicare,5,Home,No,32.6,2024-05-26,2024-05-31,No,
+PT0298,71,Female,Sepsis,Critical Care,Private,3,Skilled Nursing Facility,Yes,26.8,2024-06-07,2024-06-10,Yes,9
+PT0299,79,Female,COPD,Pulmonology,Medicare,12,Home,Yes,14.7,2024-05-02,2024-05-14,Yes,5
+PT0300,52,Female,Hip/Knee Replacement,Internal Medicine,Medicaid,2,Home Health,Yes,16.6,2024-12-02,2024-12-04,No,

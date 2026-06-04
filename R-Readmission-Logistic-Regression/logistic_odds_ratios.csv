@@ -1,0 +1,16 @@
+"Term","Odds_Ratio","CI_Lower","CI_Upper","P_Value"
+"(Intercept)",0.0342,0.0041,0.2824,0.0017
+"Age",1.0239,0.9981,1.0503,0.0695
+"Primary_DiagnosisCOPD",8.6791,2.5047,30.0747,7e-04
+"Primary_DiagnosisHeart Failure",19.7046,5.3258,72.9048,0
+"Primary_DiagnosisPneumonia",6.641,2.0429,21.5881,0.0016
+"Primary_DiagnosisSepsis",9.8844,2.9629,32.9749,2e-04
+"Insurance_TypeMedicare",1.9097,0.907,4.0207,0.0886
+"Insurance_TypePrivate",1.6842,0.7405,3.8306,0.2137
+"Insurance_TypeUninsured",0.416,0.0462,3.7458,0.4341
+"Length_of_Stay_Days",0.9907,0.9171,1.0701,0.8116
+"Discharge_DispositionHome Health",0.8127,0.356,1.8553,0.6224
+"Discharge_DispositionRehab Facility",1.2547,0.5397,2.9172,0.5981
+"Discharge_DispositionSkilled Nursing Facility",0.5752,0.2414,1.3708,0.212
+"Followup_ScheduledYes",0.5815,0.3099,1.091,0.0913
+"Risk_Score_at_Discharge",0.9559,0.9193,0.9938,0.0232
