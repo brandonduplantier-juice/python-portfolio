@@ -299,7 +299,7 @@
       <span class="card-badge">New</span>
     </div>
     <h3>Aging Clock - DNA Methylation Biological-Age Predictor</h3>
-    <p>A bioinformatics project that predicts biological age from whole-blood DNA methylation. It streams the public GSE40279 dataset (656 samples, about 450,000 CpG sites) with a memory-safe loader, then trains a cross-validated elastic-net regression that predicts chronological age to within 5.65 years (Pearson r 0.892) on held-out samples, using a sparse signature of 176 CpG sites the model selected on its own. The prediction residual estimates age acceleration, the central measurable in longevity research.</p>
+    <p>A bioinformatics project that predicts biological age from whole-blood DNA methylation. It streams the public GSE40279 dataset (656 samples, about 450,000 CpG sites) with a memory-safe loader, then trains a cross-validated elastic-net regression that predicts chronological age to within 5.65 years (Pearson r 0.892) on held-out samples, using a sparse signature of 176 CpG sites the model selected on its own. The prediction residual estimates age acceleration, the central measurable in longevity research. A follow-up enrichment test found the selected CpGs are significantly enriched for established Hannum blood-clock sites (hypergeometric p = 2.7e-06), including two of the strongest known single-site age markers, evidence the unsupervised pipeline recovered real age biology.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">scikit-learn</span>
