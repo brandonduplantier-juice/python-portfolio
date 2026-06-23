@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brandon Duplantier - Data Analyst Portfolio</title>
+<title>Brandon Duplantier - Longevity & Healthcare Data Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -253,13 +253,14 @@
 
 <header>
   <div>
-    <p class="header-label">Portfolio - Data Analytics</p>
+    <p class="header-label">Portfolio - Longevity &amp; Healthcare Analytics</p>
     <h1>Brandon<br><em>Duplantier</em></h1>
   </div>
   <div class="header-meta">
-    <p>Google Data Analytics Certified</p>
-    <p>Python - SQL - Power BI - Tableau - Flask - Looker Studio - Excel</p>
+    <p>Longevity &amp; Healthcare Data Analyst</p>
+    <p>Python - SQL - R - Power BI - Tableau - Bioinformatics</p>
     <p>Dayton, OH</p>
+    <p>Google Data Analytics Certified</p>
     <p style="margin-top:0.75rem">
       <a href="https://github.com/brandonduplantier-juice" target="_blank">GitHub</a>
     </p>
@@ -268,23 +269,20 @@
 
 <div class="intro">
   <p class="intro-text">
-    Data analyst and Python developer with a focus on <strong>healthcare analytics</strong>, operational insights, and shipped software. I build end-to-end projects from raw data to dashboards and production applications using Python, SQL, Flask, and BI tools to answer questions that drive decisions.
+    Longevity and healthcare data analyst. I turn <strong>aging, biomarker, and clinical data</strong> into decision-ready insight, pairing real bioinformatics work with 15+ years of operations and analytics experience. Recent work includes a DNA methylation aging clock that predicts biological age to within 5.65 years on held-out blood (Pearson r 0.892) and holds at 6.36 years on an independent cohort.
   </p>
   <p class="filter-label">Filter by skill</p>
   <div class="tags">
     <span class="tag tag-all" data-filter="all">All Projects</span>
-    <span class="tag" data-filter="flask">Flask</span>
-    <span class="tag" data-filter="power-bi">Power BI</span>
-    <span class="tag" data-filter="tableau">Tableau</span>
-    <span class="tag" data-filter="looker">Looker Studio</span>
+    <span class="tag" data-filter="bioinformatics">Bioinformatics</span>
     <span class="tag" data-filter="python">Python</span>
     <span class="tag" data-filter="sql">SQL</span>
-    <span class="tag" data-filter="ml">Machine Learning</span>
-    <span class="tag" data-filter="sheets">Google Sheets</span>
-    <span class="tag" data-filter="excel">Excel</span>
     <span class="tag" data-filter="r">R</span>
+    <span class="tag" data-filter="ml">Machine Learning</span>
+    <span class="tag" data-filter="power-bi">Power BI</span>
+    <span class="tag" data-filter="tableau">Tableau</span>
+    <span class="tag" data-filter="flask">Flask</span>
     <span class="tag" data-filter="healthcare">Healthcare</span>
-    <span class="tag" data-filter="dax">DAX</span>
   </div>
 </div>
 
@@ -293,29 +291,30 @@
 </div>
 
 <div class="projects">
-  <a class="card featured" href="https://github.com/brandonduplantier-juice/rnaseq-aging-de" data-tags="python" target="_blank">
+
+  <a class="card featured" href="https://brandon-aging-clock.streamlit.app/" data-tags="python ml bioinformatics" target="_blank">
     <div class="card-top">
-      <span class="card-type">Python - DESeq2 - Bioinformatics</span>
-      <span class="card-badge">New</span>
+      <span class="card-type">Streamlit - Interactive - Bioinformatics</span>
+      <span class="card-badge">Live</span>
     </div>
-    <h3>RNA-seq Aging DE - Differential Expression in Aging Human Brain</h3>
-    <p>A bioinformatics pipeline that finds genes differentially expressed between young and old human cortex. It pulls the public GSE104704 cohort (8 young and 10 aged brains) as uniformly processed counts, runs DESeq2 with multiple-testing correction, and outputs an annotated results table plus PCA, volcano, and heatmap figures. It found 119 genes significant at 5 percent FDR, led by myelin, oligodendrocyte, and extracellular-matrix genes consistent with brain aging. Includes a self-diagnosing GEO loader that handles the inconsistent ways datasets store their counts.</p>
+    <h3>Aging Clock - Interactive Biological-Age Dashboard</h3>
+    <p>A live, hosted dashboard for the methylation aging clock. Move the sliders on the gene-labeled CpG sites the model weights most (OTUD7A, RASSF5, ZEB2, KCNQ1) and the predicted biological age updates in real time. Shows held-out accuracy of 5.65 years (Pearson r 0.892), a predicted-versus-real-age scatter on people the model never saw, and a per-site attention chart. Holds at 6.36 years on an independent 689-person cohort (GSE42861), the honest cross-study transfer number. Built with Streamlit and Altair.</p>
     <div class="card-footer">
+      <span class="pill">Streamlit</span>
       <span class="pill">Python</span>
-      <span class="pill">DESeq2</span>
-      <span class="pill">pydeseq2</span>
-      <span class="pill">pandas</span>
-      <span class="pill">RNA-seq</span>
+      <span class="pill">scikit-learn</span>
+      <span class="pill">Altair</span>
       <span class="pill">Bioinformatics</span>
     </div>
   </a>
-  <a class="card featured" href="https://github.com/brandonduplantier-juice/aging-clock" data-tags="python" target="_blank">
+
+  <a class="card featured" href="https://github.com/brandonduplantier-juice/aging-clock" data-tags="python ml bioinformatics" target="_blank">
     <div class="card-top">
       <span class="card-type">Python - scikit-learn - Bioinformatics</span>
       <span class="card-badge">New</span>
     </div>
-    <h3>Aging Clock - DNA Methylation Biological-Age Predictor</h3>
-    <p>A bioinformatics project that predicts biological age from whole-blood DNA methylation. It streams the public GSE40279 dataset (656 samples, about 450,000 CpG sites) with a memory-safe loader, then trains a cross-validated elastic-net regression that predicts chronological age to within 5.65 years (Pearson r 0.892) on held-out samples, using a sparse signature of 176 CpG sites the model selected on its own. The prediction residual estimates age acceleration, the central measurable in longevity research. A follow-up enrichment test found the selected CpGs are significantly enriched for established Hannum blood-clock sites (hypergeometric p = 2.7e-06), including two of the strongest known single-site age markers, evidence the unsupervised pipeline recovered real age biology.</p>
+    <h3>Epigenetic Aging Clock - DNA Methylation Biological-Age Predictor</h3>
+    <p>Predicts biological age from whole-blood DNA methylation. Streams the public GSE40279 dataset (656 samples, about 450,000 CpG sites) with a memory-safe loader, then trains a cross-validated elastic-net regression that predicts age to within 5.65 years (Pearson r 0.892) on held-out samples using a sparse 176-CpG signature it selected itself. The residual estimates age acceleration. An enrichment test confirms the selected sites are significantly enriched for established Hannum blood-clock CpGs (hypergeometric p = 2.7e-06), evidence the pipeline recovered real age biology.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">scikit-learn</span>
@@ -325,76 +324,43 @@
       <span class="pill">Bioinformatics</span>
     </div>
   </a>
-  <a class="card featured" href="https://brandon-aging-clock.streamlit.app/" data-tags="python ml" target="_blank">
+
+  <a class="card featured" href="https://github.com/brandonduplantier-juice/rnaseq-aging-de" data-tags="python bioinformatics" target="_blank">
     <div class="card-top">
-      <span class="card-type">Streamlit - Interactive - Bioinformatics</span>
-      <span class="card-badge">Live</span>
+      <span class="card-type">Python - DESeq2 - Bioinformatics</span>
+      <span class="card-badge">New</span>
     </div>
-    <h3>Aging Clock - Interactive Dashboard (Live)</h3>
-    <p>A live, hosted dashboard for the methylation aging clock. Move the sliders to change the methylation level at the gene-labeled CpG sites the model relies on most (OTUD7A, RASSF5, ZEB2, KCNQ1, and others) and the predicted biological age updates in real time. It shows the held-out accuracy of 5.65 years (Pearson r 0.892), an estimate-versus-real-age scatter on people the model never saw, and a per-site attention chart. The same model holds at 6.36 years on an independent 689-person cohort (GSE42861), the honest cross-study transfer number. Built with Streamlit and Altair, deployed on Streamlit Community Cloud.</p>
+    <h3>RNA-seq Aging Differential Expression - Young vs Old Human Brain</h3>
+    <p>A bioinformatics pipeline that finds genes differentially expressed between young and old human cortex. Pulls the public GSE104704 cohort (8 young and 10 aged brains) as uniformly processed counts, runs DESeq2 with multiple-testing correction, and outputs an annotated results table plus PCA, volcano, and heatmap figures. Found 119 genes significant at 5 percent FDR, led by myelin, oligodendrocyte, and extracellular-matrix genes consistent with brain aging. Includes a self-diagnosing GEO loader that handles the inconsistent ways datasets store their counts.</p>
     <div class="card-footer">
-      <span class="pill">Streamlit</span>
       <span class="pill">Python</span>
-      <span class="pill">scikit-learn</span>
-      <span class="pill">Altair</span>
-      <span class="pill">Interactive</span>
+      <span class="pill">DESeq2</span>
+      <span class="pill">pydeseq2</span>
+      <span class="pill">pandas</span>
+      <span class="pill">RNA-seq</span>
       <span class="pill">Bioinformatics</span>
     </div>
   </a>
 
-  <a class="card featured" href="https://loadout-oracle.onrender.com" data-tags="flask python" target="_blank">
+  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/R-Readmission-Logistic-Regression" data-tags="r healthcare ml sql power-bi" target="_blank">
     <div class="card-top">
-      <span class="card-type">Flask - Python - OAuth 2.0 - REST API</span>
-      <span class="card-badge">Shipped</span>
+      <span class="card-type">R - SQL - Power BI - Clinical Analytics</span>
     </div>
-    <h3>Loadout Oracle - Destiny 2 Loadout Sharing</h3>
-    <p>Full-stack Flask web app shipped to production that generates shareable Destiny 2 armor loadout links by integrating the Bungie.net and Destiny Item Manager APIs end to end. Built a single-account, server-side OAuth 2.0 flow that exchanges a Bungie refresh token for an access token and then a DIM bearer token. Diagnosed and fixed live production failures including Cloudflare bot protection, authentication scope errors, and Destiny platform-membership resolution. Deployed on Render with unattended token management that holds for about 90 days.</p>
+    <h3>Clinical Readmission Risk Analysis</h3>
+    <p>A 30-day hospital readmission risk analysis on a 300-patient clinical dataset, executed across R, SQL, Power BI, and Excel to show the same result holds across tools. The R logistic regression (glm) quantifies how each factor shifts the odds of readmission: relative to surgical patients, Heart Failure carries roughly 20x the odds (OR 19.7, p&lt;0.001), with COPD, Sepsis, and Pneumonia all 6-10x and significant, reported as odds ratios with 95% confidence intervals and ROC AUC 0.714.</p>
     <div class="card-footer">
-      <span class="pill">Flask</span>
-      <span class="pill">Python</span>
-      <span class="pill">OAuth 2.0</span>
-      <span class="pill">Bungie API</span>
-      <span class="pill">DIM API</span>
-      <span class="pill">Render</span>
-    </div>
-  </a>
-
-  <a class="card featured" href="https://craftpath.onrender.com" data-tags="flask python" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Flask - Python - REST API - Cloud Deploy</span>
-      <span class="card-badge">Shipped</span>
-    </div>
-    <h3>CraftPath - Path of Exile 2 Optimizer</h3>
-    <p>Full-stack Flask web application shipped to production. Features a dual-edition architecture: an online optimizer deployed to Render and a desktop edition with live market pricing via REST API integration. Designed secure in-app session handling following Path of Building's local credential model. Managed full open source release pipeline with GitHub CLI versioned releases and downloadable desktop package.</p>
-    <div class="card-footer">
-      <span class="pill">Flask</span>
-      <span class="pill">Python</span>
-      <span class="pill">REST API</span>
-      <span class="pill">Render</span>
-      <span class="pill">GitHub CLI</span>
-      <span class="pill">Open Source</span>
-    </div>
-  </a>
-
-  <a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Hospital-Readmission-PowerBI" data-tags="power-bi healthcare dax" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Power BI - Healthcare</span>
-      <span class="card-badge">New</span>
-    </div>
-    <h3>Hospital 30-Day Readmission Analysis</h3>
-    <p>Interactive dashboard analyzing readmission patterns across 300 patients and 5 diagnoses. Heart Failure patients showed a 39% readmission rate, nearly 6x higher than surgical cases. Built with DAX measures and interactive slicers filtering by insurance type, department, and gender.</p>
-    <div class="card-footer">
+      <span class="pill">R</span>
+      <span class="pill">Logistic Regression</span>
+      <span class="pill">Odds Ratios</span>
+      <span class="pill">SQL</span>
       <span class="pill">Power BI</span>
-      <span class="pill">DAX</span>
-      <span class="pill">Healthcare</span>
-      <span class="pill">CMS HRRP</span>
+      <span class="pill">ROC / AUC</span>
     </div>
   </a>
 
-  <a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/HR-Attrition-PowerBI" data-tags="power-bi python dax" target="_blank">
+  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/HR-Attrition-PowerBI" data-tags="power-bi python dax" target="_blank">
     <div class="card-top">
       <span class="card-type">Python - Power BI - HR Analytics</span>
-      <span class="card-badge">New</span>
     </div>
     <h3>HR Attrition Risk Dashboard</h3>
     <p>Python engineered a weighted attrition risk score per employee across 8 factors. Power BI dashboard built on the enriched dataset identifies Sales and Marketing at 28% attrition, 8 points above the 15% target. Features a scatter plot, department treemap, gauge, and interactive slicers.</p>
@@ -402,100 +368,8 @@
       <span class="pill">Python</span>
       <span class="pill">Power BI</span>
       <span class="pill">DAX</span>
-      <span class="pill">CALCULATE</span>
       <span class="pill">RANKX</span>
       <span class="pill">HR Analytics</span>
-    </div>
-  </a>
-
-  <a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Readmission-Prediction-Model" data-tags="python ml healthcare" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Python - Machine Learning - Healthcare</span>
-      <span class="card-badge">New</span>
-    </div>
-    <h3>Hospital Readmission Prediction Model</h3>
-    <p>Machine learning pipeline predicting 30-day hospital readmission risk from patient records. Applies feature engineering, model training, and evaluation to identify high-risk patients before discharge. Built end-to-end in Python with scikit-learn.</p>
-    <div class="card-footer">
-      <span class="pill">Python</span>
-      <span class="pill">scikit-learn</span>
-      <span class="pill">Machine Learning</span>
-      <span class="pill">Healthcare</span>
-      <span class="pill">Pandas</span>
-    </div>
-  </a>
-
-  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/R-Readmission-Logistic-Regression" data-tags="r healthcare ml" target="_blank">
-    <div class="card-top">
-      <span class="card-type">R - Statistical Modeling - Healthcare</span>
-    </div>
-    <h3>Readmission Logistic Regression (R)</h3>
-    <p>Interpretable logistic-regression companion to the Random Forest model, built in R (glm) on the same 300-patient dataset. Quantifies how each factor shifts the odds of 30-day readmission: relative to surgical patients, Heart Failure carries roughly 20x the odds of readmission (OR 19.7, p&lt;0.001), with COPD, Sepsis, and Pneumonia all 6-10x and significant. Reports odds ratios with 95% confidence intervals and ROC AUC of 0.714.</p>
-    <div class="card-footer">
-      <span class="pill">R</span>
-      <span class="pill">Logistic Regression</span>
-      <span class="pill">Odds Ratios</span>
-      <span class="pill">glm</span>
-      <span class="pill">ROC / AUC</span>
-    </div>
-  </a>
-
-  <a class="card featured" href="https://public.tableau.com/views/global_happiness_dashboard/GlobalHappinessDashboard2019" data-tags="tableau python" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Tableau - Global Analytics</span>
-      <span class="card-badge">New</span>
-    </div>
-    <h3>Global Happiness Dashboard</h3>
-    <p>Interactive Tableau dashboard analyzing 2019 World Happiness Report data across 156 countries. Choropleth world map, GDP vs happiness scatter plot with trend line, top 20 countries bar chart, and happiness factors comparison. Live and interactive on Tableau Public.</p>
-    <div class="card-footer">
-      <span class="pill">Tableau</span>
-      <span class="pill">Choropleth Map</span>
-      <span class="pill">Trend Line</span>
-      <span class="pill">World Happiness</span>
-      <span class="pill">Python Prep</span>
-    </div>
-  </a>
-
-  <a class="card" href="https://datastudio.google.com/reporting/7d8410ea-6d2c-4c91-9f24-ab16f2809e22" data-tags="looker healthcare sheets" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Looker Studio - Healthcare Analytics</span>
-    </div>
-    <h3>Hospital Readmission Analysis</h3>
-    <p>Interactive Looker Studio dashboard analyzing 300-patient hospital readmission dataset. Features scorecards, bar charts by diagnosis and insurance type, pie chart by discharge destination, and a live dropdown filter. Connects directly to Google Sheets as the data source.</p>
-    <div class="card-footer">
-      <span class="pill">Looker Studio</span>
-      <span class="pill">Google Sheets</span>
-      <span class="pill">Interactive Filter</span>
-      <span class="pill">Healthcare</span>
-    </div>
-  </a>
-
-  <a class="card" href="https://docs.google.com/spreadsheets/d/15A3XCNeAAntAN3o3DH4Z97v85CsdN2afLzj7Zy2zYhY/edit?usp=sharing" data-tags="sheets healthcare" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Google Sheets - Healthcare Analytics</span>
-    </div>
-    <h3>Hospital Readmission Spreadsheet Analysis</h3>
-    <p>Advanced spreadsheet analysis using 3 pivot tables, COUNTIFS, COUNTIF, INDEX/MATCH, and calculated readmission rates by diagnosis and insurance type. Dashboard tab pulls live KPIs from formula sheet. Heart Failure readmission rate 39.29% vs 7.04% for Hip/Knee Replacement.</p>
-    <div class="card-footer">
-      <span class="pill">Google Sheets</span>
-      <span class="pill">Pivot Tables</span>
-      <span class="pill">COUNTIFS</span>
-      <span class="pill">INDEX/MATCH</span>
-      <span class="pill">Dashboard</span>
-    </div>
-  </a>
-
-  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Excel-Readmission-Analysis" data-tags="excel healthcare" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Microsoft Excel - Healthcare Analytics</span>
-    </div>
-    <h3>Hospital Readmission Excel Analysis</h3>
-    <p>Native Excel workbook analyzing the 300-patient readmission dataset. Three pivot-style summary tables (by diagnosis, insurance type, and discharge disposition) built with COUNTIFS and AVERAGEIF, plus an INDEX/MATCH lookup returning the highest-risk diagnosis. Dashboard tab links live to the formula sheet via cross-sheet references with a readmission-rate bar chart. Patients without a scheduled followup readmit at 30.59% vs 24.00% overall.</p>
-    <div class="card-footer">
-      <span class="pill">Microsoft Excel</span>
-      <span class="pill">Pivot Tables</span>
-      <span class="pill">COUNTIFS</span>
-      <span class="pill">INDEX/MATCH</span>
-      <span class="pill">Dashboard</span>
     </div>
   </a>
 
@@ -514,52 +388,56 @@
     </div>
   </a>
 
-  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Grammys%20-%20Website%20Analytics%20Project" data-tags="python" target="_blank">
+  <a class="card" href="https://loadout-oracle.onrender.com" data-tags="flask python" target="_blank">
     <div class="card-top">
-      <span class="card-type">Python - Analytics</span>
+      <span class="card-type">Flask - Python - OAuth 2.0 - REST API</span>
+      <span class="card-badge">Shipped</span>
     </div>
-    <h3>Grammy Website Analytics</h3>
-    <p>End-to-end web analytics project exploring Grammy Awards data. Applies data wrangling, exploratory analysis, and visualization to uncover audience and engagement patterns.</p>
+    <h3>Loadout Oracle - Destiny 2 Loadout Sharing</h3>
+    <p>Full-stack Flask web app shipped to production that generates shareable Destiny 2 armor loadout links by integrating the Bungie.net and Destiny Item Manager APIs end to end. Built a single-account, server-side OAuth 2.0 flow that exchanges a Bungie refresh token for an access token and then a DIM bearer token. Diagnosed and fixed live production failures including Cloudflare bot protection, authentication scope errors, and Destiny platform-membership resolution. Deployed on Render.</p>
     <div class="card-footer">
+      <span class="pill">Flask</span>
       <span class="pill">Python</span>
-      <span class="pill">Pandas</span>
-      <span class="pill">Matplotlib</span>
-      <span class="pill">Jupyter</span>
+      <span class="pill">OAuth 2.0</span>
+      <span class="pill">Bungie API</span>
+      <span class="pill">Render</span>
     </div>
   </a>
 
-  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/LiveLab" data-tags="python" target="_blank">
+  <a class="card" href="https://craftpath.onrender.com" data-tags="flask python" target="_blank">
     <div class="card-top">
-      <span class="card-type">Python - Practice</span>
+      <span class="card-type">Flask - Python - REST API - Cloud Deploy</span>
+      <span class="card-badge">Shipped</span>
     </div>
-    <h3>LiveLab Exercises</h3>
-    <p>Hands-on Python lab exercises covering data manipulation, functions, and analysis workflows. Demonstrates foundational programming competency applied to real datasets.</p>
+    <h3>CraftPath - Path of Exile 2 Optimizer</h3>
+    <p>Full-stack Flask web application shipped to production. Features a dual-edition architecture: an online optimizer deployed to Render and a desktop edition with live market pricing via REST API integration. Designed secure in-app session handling following Path of Building's local credential model. Managed full open source release pipeline with GitHub CLI versioned releases and a downloadable desktop package.</p>
     <div class="card-footer">
+      <span class="pill">Flask</span>
       <span class="pill">Python</span>
-      <span class="pill">Data Wrangling</span>
-      <span class="pill">Jupyter</span>
+      <span class="pill">REST API</span>
+      <span class="pill">Render</span>
+      <span class="pill">GitHub CLI</span>
     </div>
   </a>
 
-  <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio" data-tags="python" target="_blank">
+  <a class="card" href="https://public.tableau.com/views/global_happiness_dashboard/GlobalHappinessDashboard2019" data-tags="tableau python" target="_blank">
     <div class="card-top">
-      <span class="card-type">Python - Series</span>
+      <span class="card-type">Tableau - Global Analytics</span>
     </div>
-    <h3>SkillBuilder Series</h3>
-    <p>9-part project series covering progressively advanced analytics techniques from data cleaning and aggregation through statistical analysis and visualization. Datasets include Dunder Mifflin sales, Nike/Adidas, and Lyft bike share data.</p>
+    <h3>Global Happiness Dashboard</h3>
+    <p>Interactive Tableau dashboard analyzing 2019 World Happiness Report data across 156 countries. Choropleth world map, GDP vs happiness scatter plot with trend line, top 20 countries bar chart, and happiness factors comparison. Live and interactive on Tableau Public.</p>
     <div class="card-footer">
-      <span class="pill">Python</span>
-      <span class="pill">Pandas</span>
-      <span class="pill">NumPy</span>
-      <span class="pill">Seaborn</span>
-      <span class="pill">9 Projects</span>
+      <span class="pill">Tableau</span>
+      <span class="pill">Choropleth Map</span>
+      <span class="pill">Trend Line</span>
+      <span class="pill">Python Prep</span>
     </div>
   </a>
 
 </div>
 
 <footer>
-  <p>Brandon Duplantier - Data Analyst - Dayton, OH</p>
+  <p>Brandon Duplantier - Longevity &amp; Healthcare Data Analyst - Dayton, OH</p>
   <p><a href="https://github.com/brandonduplantier-juice" target="_blank">github.com/brandonduplantier-juice</a></p>
 </footer>
 
