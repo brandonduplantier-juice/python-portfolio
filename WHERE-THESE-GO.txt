@@ -1,0 +1,9 @@
+Extract this zip into the root of your python-portfolio repo with -Force.
+It places four README.md files:
+
+  README.md                                       -> repo root (the new index)
+  Excel-Readmission-Analysis/README.md            -> that folder
+  Grammys - Website Analytics Project/README.md   -> that folder
+  LiveLab/README.md                               -> that folder
+
+It only adds README files; it does not touch any existing file.
