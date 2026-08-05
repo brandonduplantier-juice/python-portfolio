@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: What the Readmissions Program Cannot See - Brandon Duplantier</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink:#0f0f0f; --paper:#f5f2ec; --accent:#1a3a5c; --accent2:#c8401e;
+          --mid:#6b6560; --rule:#d8d3cb; --card-bg:#ffffff; }
+  html { font-size:16px; }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif;
+         font-weight:300; line-height:1.65; }
+  .wrap { max-width:880px; margin:0 auto; padding:4rem 1.5rem 6rem; }
+  .back { font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em;
+          text-transform:uppercase; color:var(--mid); text-decoration:none; }
+  .back:hover { color:var(--accent2); }
+  .label { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em;
+           text-transform:uppercase; color:var(--mid); margin:2.5rem 0 0.4rem; }
+  h1 { font-family:'DM Serif Display',serif; font-weight:400; font-size:2.6rem;
+       line-height:1.1; margin:0.6rem 0 0.5rem; }
+  h1 em { color:var(--accent2); font-style:italic; }
+  h2 { font-family:'DM Serif Display',serif; font-weight:400; font-size:1.5rem; margin:3rem 0 0.3rem; }
+  .sub { color:var(--mid); font-size:1.05rem; margin-bottom:1.5rem; }
+  hr { border:none; border-top:1px solid var(--rule); margin:0.5rem 0 0; }
+  p { margin:0.9rem 0; } ul { margin:0.9rem 0 0.9rem 1.2rem; } li { margin:0.5rem 0; }
+  strong { font-weight:500; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule);
+          border:1px solid var(--rule); margin:1.8rem 0; }
+  .kpi { background:var(--card-bg); padding:1.1rem 0.9rem; text-align:center; }
+  .kpi .n { font-family:'DM Serif Display',serif; font-size:1.7rem; line-height:1.1; color:var(--accent); }
+  .kpi .l { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.06em;
+            text-transform:uppercase; color:var(--mid); margin-top:0.4rem; }
+  figure { background:var(--card-bg); border:1px solid var(--rule); padding:1.4rem; margin:1.8rem 0; }
+  figcaption { font-family:'DM Mono',monospace; font-size:0.68rem; color:var(--mid);
+               margin-top:0.9rem; line-height:1.5; }
+  table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.88rem; }
+  th, td { text-align:right; padding:0.45rem 0.55rem; border-bottom:1px solid var(--rule); }
+  th:first-child, td:first-child { text-align:left; }
+  th { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.07em;
+       text-transform:uppercase; color:var(--mid); font-weight:400; }
+  .note { background:var(--card-bg); border-left:3px solid var(--accent2);
+          padding:1.1rem 1.3rem; margin:1.8rem 0; font-size:0.95rem; }
+  .note .h { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em;
+             text-transform:uppercase; color:var(--accent2); margin-bottom:0.4rem; }
+  code { font-family:'DM Mono',monospace; font-size:0.85rem; background:#eee7dd; padding:0.1rem 0.3rem; }
+  pre { background:var(--card-bg); border:1px solid var(--rule); padding:1.1rem; overflow-x:auto;
+        font-family:'DM Mono',monospace; font-size:0.78rem; line-height:1.55; margin:1.4rem 0; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+           font-size:0.85rem; color:var(--mid); }
+  footer a { color:var(--accent); }
+  @media (max-width:640px){ .kpis{grid-template-columns:repeat(2,1fr);} h1{font-size:2rem;}
+    .wrap{padding:2.5rem 1.2rem 4rem;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html">&larr; Back to portfolio</a>
+
+<p class="label">Case Study - Public Health Policy Data</p>
+<h1>What the Readmissions Program <em>Cannot See</em></h1>
+<hr>
+<p class="sub">CMS Hospital Readmissions Reduction Program, FY2026 release. 18,330 hospital-measure records across 3,055 hospitals.</p>
+
+<h2>The dataset</h2>
+<hr>
+<p>Medicare's Hospital Readmissions Reduction Program penalizes hospitals whose 30 day readmission rates exceed what CMS predicts for their patient mix. It covers six conditions and it moves real money: penalties reach up to three percent of a hospital's Medicare inpatient payments.</p>
+<p>CMS publishes the hospital level results. This analysis uses the FY2026 file, covering discharges from 07/01/2021 through 06/30/2024. That is the last three year performance window before CMS shortens the period to two years.</p>
+<p>The obvious question, which hospitals score worst, is already answered by the file and is not worth asking. The interesting questions are about the measurement itself.</p>
+
+<div class="kpis">
+  <div class="kpi"><div class="n">36.1%</div><div class="l">Of records have no score</div></div>
+  <div class="kpi"><div class="n">21.2%</div><div class="l">Scored on all six conditions</div></div>
+  <div class="kpi"><div class="n">222</div><div class="l">Hospitals scored on none</div></div>
+  <div class="kpi"><div class="n">~48%</div><div class="l">Above expected, by construction</div></div>
+</div>
+
+<h2>One: a third of the program is invisible</h2>
+<hr>
+<p>A hospital needs at least 25 eligible discharges in a condition before CMS will score it. Below that, the measure is suppressed. That rule is defensible, since a rate computed on eight patients is noise. But the scale of what it removes is not obvious until you count it.</p>
+<p><strong>6,610 of 18,330 hospital-measure records, 36.1 percent, carry no excess readmission ratio at all.</strong></p>
+
+<figure>
+<svg viewBox="0 0 780 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Share of records suppressed by condition">
+  <rect x="150" y="20" width="68.8" height="24" fill="#c8401e" opacity="0.45"/>
+  <text x="142" y="37" text-anchor="end" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">Pneumonia</text>
+  <text x="223.8" y="37" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">11.1% (340 of 3,055)</text>
+  <rect x="150" y="58" width="88.0" height="24" fill="#c8401e" opacity="0.54"/>
+  <text x="142" y="75" text-anchor="end" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">Heart failure</text>
+  <text x="243.0" y="75" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">14.2% (434 of 3,055)</text>
+  <rect x="150" y="96" width="148.8" height="24" fill="#c8401e" opacity="0.63"/>
+  <text x="142" y="113" text-anchor="end" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">COPD</text>
+  <text x="303.8" y="113" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">24.0% (732 of 3,055)</text>
+  <rect x="150" y="134" width="267.8" height="24" fill="#c8401e" opacity="0.72"/>
+  <text x="142" y="151" text-anchor="end" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">Heart attack</text>
+  <text x="422.8" y="151" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">43.2% (1,319 of 3,055)</text>
+  <rect x="150" y="172" width="326.1" height="24" fill="#c8401e" opacity="0.81"/>
+  <text x="142" y="189" text-anchor="end" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">Hip &amp; knee</text>
+  <text x="481.1" y="189" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">52.6% (1,608 of 3,055)</text>
+  <rect x="150" y="210" width="442.1" height="24" fill="#c8401e" opacity="0.90"/>
+  <text x="142" y="227" text-anchor="end" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">Bypass surgery</text>
+  <text x="597.1" y="227" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">71.3% (2,177 of 3,055)</text>
+</svg>
+<figcaption>Share of hospital-measure records with no published ratio, by condition. Bypass surgery is suppressed for nearly three quarters of hospitals.</figcaption>
+</figure>
+
+<table>
+  <thead><tr><th>Condition</th><th>Records</th><th>Scored</th><th>Suppressed</th><th>Suppressed</th></tr></thead>
+  <tbody><tr><td>Pneumonia</td><td>3,055</td><td>2,715</td><td>340</td><td>11.1%</td></tr><tr><td>Heart failure</td><td>3,055</td><td>2,621</td><td>434</td><td>14.2%</td></tr><tr><td>COPD</td><td>3,055</td><td>2,323</td><td>732</td><td>24.0%</td></tr><tr><td>Heart attack</td><td>3,055</td><td>1,736</td><td>1,319</td><td>43.2%</td></tr><tr><td>Hip &amp; knee</td><td>3,055</td><td>1,447</td><td>1,608</td><td>52.6%</td></tr><tr><td>Bypass surgery</td><td>3,055</td><td>878</td><td>2,177</td><td>71.3%</td></tr></tbody>
+</table>
+
+<p>Pneumonia and heart failure are common enough that most hospitals clear the threshold. Bypass surgery is not: only 21.2 percent of hospitals are scored on all six conditions, and <strong>222 hospitals, 7.3 percent of the file, receive no score on any condition at all.</strong></p>
+
+<table>
+  <thead><tr><th>Conditions scored</th><th>Hospitals</th><th>Share</th></tr></thead>
+  <tbody><tr><td>0</td><td>222</td><td>7.3%</td></tr><tr><td>1</td><td>202</td><td>6.6%</td></tr><tr><td>2</td><td>239</td><td>7.8%</td></tr><tr><td>3</td><td>484</td><td>15.8%</td></tr><tr><td>4</td><td>599</td><td>19.6%</td></tr><tr><td>5</td><td>662</td><td>21.7%</td></tr><tr><td>6</td><td>647</td><td>21.2%</td></tr></tbody>
+</table>
+
+<h2>Two: the blindness is systematic</h2>
+<hr>
+<p>Missing data matters differently depending on whether it is random. Here it is not. Group hospitals by total reported discharges and the pattern is monotone.</p>
+
+<figure>
+<svg viewBox="0 0 780 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Average conditions scored by hospital volume">
+  <line x1="100" y1="220" x2="740" y2="220" stroke="#d8d3cb"/>
+  <text x="92" y="224" text-anchor="end" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">0</text>
+  <text x="92" y="130" text-anchor="end" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">3</text>
+  <text x="92" y="43"  text-anchor="end" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">6</text>
+  <line x1="100" y1="130" x2="740" y2="130" stroke="#eee7dd"/>
+  <line x1="100" y1="40"  x2="740" y2="40"  stroke="#eee7dd"/>
+  <rect x="120" y="145" width="90" height="75" fill="#1a3a5c" opacity="0.85"/>
+  <text x="165" y="139" text-anchor="middle" font-family="DM Mono, monospace" font-size="12" fill="#0f0f0f">2.51</text>
+  <text x="165" y="240" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">under 200</text>
+  <text x="165" y="254" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" fill="#6b6560">n=444</text>
+  <rect x="270" y="105" width="90" height="115" fill="#1a3a5c" opacity="0.85"/>
+  <text x="315" y="99" text-anchor="middle" font-family="DM Mono, monospace" font-size="12" fill="#0f0f0f">3.83</text>
+  <text x="315" y="240" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">200 to 499</text>
+  <text x="315" y="254" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" fill="#6b6560">n=636</text>
+  <rect x="420" y="74" width="90" height="146" fill="#1a3a5c" opacity="0.85"/>
+  <text x="465" y="68" text-anchor="middle" font-family="DM Mono, monospace" font-size="12" fill="#0f0f0f">4.86</text>
+  <text x="465" y="240" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">500 to 1499</text>
+  <text x="465" y="254" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" fill="#6b6560">n=1,014</text>
+  <rect x="570" y="49" width="90" height="171" fill="#1a3a5c" opacity="0.85"/>
+  <text x="615" y="43" text-anchor="middle" font-family="DM Mono, monospace" font-size="12" fill="#0f0f0f">5.7</text>
+  <text x="615" y="240" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">1500 and up</text>
+  <text x="615" y="254" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" fill="#6b6560">n=475</text>
+</svg>
+<figcaption>Average number of the six conditions a hospital is scored on, by total reported discharges. Computed only over hospitals with at least one reported discharge count, which means the very smallest hospitals are underrepresented even here.</figcaption>
+</figure>
+
+<p>The smallest hospitals are scored on 2.51 of six conditions on average. The largest are scored on 5.70. A program built to improve care quality has, by the mechanics of its own minimum, close to no visibility into small and rural hospitals.</p>
+
+<h2>Three: roughly half must lose, and that is arithmetic</h2>
+<hr>
+<p>The excess readmission ratio is predicted performance divided by expected performance, where expected comes from a model fitted across hospitals. It is relative. Its center is 1.0 by construction.</p>
+
+<figure>
+<svg viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Distribution of heart failure excess readmission ratios">
+  <line x1="70" y1="220" x2="730" y2="220" stroke="#d8d3cb"/>
+  <rect x="70.0" y="219.6" width="25.2" height="0.4" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="96.7" y="219.6" width="25.2" height="0.4" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="123.3" y="218.9" width="25.2" height="1.1" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="150.0" y="218.9" width="25.2" height="1.1" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="176.7" y="213.8" width="25.2" height="6.2" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="203.3" y="202.8" width="25.2" height="17.2" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="230.0" y="189.0" width="25.2" height="31.0" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="256.7" y="169.2" width="25.2" height="50.8" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="283.3" y="110.1" width="25.2" height="109.9" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="310.0" y="65.6" width="25.2" height="154.4" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="336.7" y="40.0" width="25.2" height="180.0" fill="#1a3a5c" opacity="0.8"/>
+  <rect x="363.3" y="74.0" width="25.2" height="146.0" fill="#c8401e" opacity="0.8"/>
+  <rect x="390.0" y="114.5" width="25.2" height="105.5" fill="#c8401e" opacity="0.8"/>
+  <rect x="416.7" y="149.2" width="25.2" height="70.8" fill="#c8401e" opacity="0.8"/>
+  <rect x="443.3" y="171.1" width="25.2" height="48.9" fill="#c8401e" opacity="0.8"/>
+  <rect x="470.0" y="203.2" width="25.2" height="16.8" fill="#c8401e" opacity="0.8"/>
+  <rect x="496.7" y="211.6" width="25.2" height="8.4" fill="#c8401e" opacity="0.8"/>
+  <rect x="523.3" y="217.1" width="25.2" height="2.9" fill="#c8401e" opacity="0.8"/>
+  <rect x="550.0" y="217.8" width="25.2" height="2.2" fill="#c8401e" opacity="0.8"/>
+  <rect x="576.7" y="217.8" width="25.2" height="2.2" fill="#c8401e" opacity="0.8"/>
+  <rect x="603.3" y="219.6" width="25.2" height="0.4" fill="#c8401e" opacity="0.8"/>
+  <rect x="630.0" y="220.0" width="25.2" height="0.0" fill="#c8401e" opacity="0.8"/>
+  <rect x="656.7" y="220.0" width="25.2" height="0.0" fill="#c8401e" opacity="0.8"/>
+  <rect x="683.3" y="219.6" width="25.2" height="0.4" fill="#c8401e" opacity="0.8"/>
+  <line x1="353.6" y1="20" x2="353.6" y2="220" stroke="#0f0f0f" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="359.6" y="32" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">1.0 = as expected</text>
+  <text x="70.0" y="240" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">0.71</text>
+  <text x="353.6" y="240" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">1.00</text>
+  <text x="710.0" y="240" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">1.36</text>
+</svg>
+<figcaption>Distribution of the heart failure excess readmission ratio across all scored hospitals. Blue is at or below expected, red is above. The distribution is centered on 1.0 because the measure is defined relative to other hospitals.</figcaption>
+</figure>
+
+<table>
+  <thead><tr><th>Condition</th><th>Scored</th><th>Mean</th><th>SD</th><th>Min</th><th>Max</th><th>Above 1.0</th></tr></thead>
+  <tbody><tr><td>Heart attack</td><td>1,736</td><td>1.0018</td><td>0.0668</td><td>0.6839</td><td>1.2639</td><td>49.7%</td></tr><tr><td>Bypass surgery</td><td>878</td><td>1.0018</td><td>0.0966</td><td>0.7434</td><td>1.4237</td><td>49.9%</td></tr><tr><td>COPD</td><td>2,323</td><td>1.0011</td><td>0.046</td><td>0.8681</td><td>1.2545</td><td>47.2%</td></tr><tr><td>Heart failure</td><td>2,621</td><td>1.0014</td><td>0.065</td><td>0.7137</td><td>1.3606</td><td>48.9%</td></tr><tr><td>Hip &amp; knee</td><td>1,447</td><td>1.004</td><td>0.1557</td><td>0.4698</td><td>1.6297</td><td>47.9%</td></tr><tr><td>Pneumonia</td><td>2,715</td><td>1.0015</td><td>0.0663</td><td>0.7967</td><td>1.4255</td><td>46.8%</td></tr></tbody>
+</table>
+
+<p>Every one of the six conditions puts between 46.8 and 49.9 percent of scored hospitals above 1.0. <strong>That is not a finding about hospital quality. It is a property of the definition.</strong> If every hospital in the country cut readmissions by a third tomorrow, roughly half would still sit above expected, and the penalty pool would not empty.</p>
+<p>Worth being careful here: this is a criticism of what the ratio can express, not a claim that the program fails. A relative measure is a reasonable way to allocate a fixed penalty pool. But it cannot answer "did readmissions improve nationally," and it is regularly read as though it can.</p>
+
+<h2>Four: the six conditions are not one signal</h2>
+<hr>
+<p>The program treats a hospital's performance as a single thing to be penalized. If that were right, a hospital good at heart failure should be good at pneumonia. Among the 647 hospitals scored on all six conditions, it mostly is not.</p>
+
+<figure>
+<svg viewBox="0 0 780 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Correlation between conditions within hospitals">
+  <rect x="170" y="40" width="84" height="32" fill="#e8e2d8"/>
+  <text x="212" y="61" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">1.00</text>
+  <rect x="258" y="40" width="84" height="32" fill="rgba(26,58,92,0.61)"/>
+  <text x="300" y="61" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.32</text>
+  <rect x="346" y="40" width="84" height="32" fill="rgba(26,58,92,0.46)"/>
+  <text x="388" y="61" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.23</text>
+  <rect x="434" y="40" width="84" height="32" fill="rgba(26,58,92,0.65)"/>
+  <text x="476" y="61" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.34</text>
+  <rect x="522" y="40" width="84" height="32" fill="rgba(26,58,92,0.32)"/>
+  <text x="564" y="61" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.14</text>
+  <rect x="610" y="40" width="84" height="32" fill="rgba(26,58,92,0.59)"/>
+  <text x="652" y="61" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.31</text>
+  <text x="162" y="61" text-anchor="end" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Heart attack</text>
+  <rect x="170" y="76" width="84" height="32" fill="rgba(26,58,92,0.61)"/>
+  <text x="212" y="97" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.32</text>
+  <rect x="258" y="76" width="84" height="32" fill="#e8e2d8"/>
+  <text x="300" y="97" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">1.00</text>
+  <rect x="346" y="76" width="84" height="32" fill="rgba(26,58,92,0.24)"/>
+  <text x="388" y="97" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.09</text>
+  <rect x="434" y="76" width="84" height="32" fill="rgba(26,58,92,0.40)"/>
+  <text x="476" y="97" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.19</text>
+  <rect x="522" y="76" width="84" height="32" fill="rgba(26,58,92,0.37)"/>
+  <text x="564" y="97" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.17</text>
+  <rect x="610" y="76" width="84" height="32" fill="rgba(26,58,92,0.37)"/>
+  <text x="652" y="97" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.17</text>
+  <text x="162" y="97" text-anchor="end" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Bypass surgery</text>
+  <rect x="170" y="112" width="84" height="32" fill="rgba(26,58,92,0.46)"/>
+  <text x="212" y="133" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.23</text>
+  <rect x="258" y="112" width="84" height="32" fill="rgba(26,58,92,0.24)"/>
+  <text x="300" y="133" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.09</text>
+  <rect x="346" y="112" width="84" height="32" fill="#e8e2d8"/>
+  <text x="388" y="133" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">1.00</text>
+  <rect x="434" y="112" width="84" height="32" fill="rgba(26,58,92,0.59)"/>
+  <text x="476" y="133" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.30</text>
+  <rect x="522" y="112" width="84" height="32" fill="rgba(26,58,92,0.32)"/>
+  <text x="564" y="133" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.14</text>
+  <rect x="610" y="112" width="84" height="32" fill="rgba(26,58,92,0.49)"/>
+  <text x="652" y="133" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.25</text>
+  <text x="162" y="133" text-anchor="end" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">COPD</text>
+  <rect x="170" y="148" width="84" height="32" fill="rgba(26,58,92,0.65)"/>
+  <text x="212" y="169" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.34</text>
+  <rect x="258" y="148" width="84" height="32" fill="rgba(26,58,92,0.40)"/>
+  <text x="300" y="169" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.19</text>
+  <rect x="346" y="148" width="84" height="32" fill="rgba(26,58,92,0.59)"/>
+  <text x="388" y="169" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.30</text>
+  <rect x="434" y="148" width="84" height="32" fill="#e8e2d8"/>
+  <text x="476" y="169" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">1.00</text>
+  <rect x="522" y="148" width="84" height="32" fill="rgba(26,58,92,0.33)"/>
+  <text x="564" y="169" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.14</text>
+  <rect x="610" y="148" width="84" height="32" fill="rgba(26,58,92,0.75)"/>
+  <text x="652" y="169" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.41</text>
+  <text x="162" y="169" text-anchor="end" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Heart failure</text>
+  <rect x="170" y="184" width="84" height="32" fill="rgba(26,58,92,0.32)"/>
+  <text x="212" y="205" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.14</text>
+  <rect x="258" y="184" width="84" height="32" fill="rgba(26,58,92,0.37)"/>
+  <text x="300" y="205" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.17</text>
+  <rect x="346" y="184" width="84" height="32" fill="rgba(26,58,92,0.32)"/>
+  <text x="388" y="205" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.14</text>
+  <rect x="434" y="184" width="84" height="32" fill="rgba(26,58,92,0.33)"/>
+  <text x="476" y="205" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.14</text>
+  <rect x="522" y="184" width="84" height="32" fill="#e8e2d8"/>
+  <text x="564" y="205" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">1.00</text>
+  <rect x="610" y="184" width="84" height="32" fill="rgba(26,58,92,0.21)"/>
+  <text x="652" y="205" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.07</text>
+  <text x="162" y="205" text-anchor="end" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Hip and knee</text>
+  <rect x="170" y="220" width="84" height="32" fill="rgba(26,58,92,0.59)"/>
+  <text x="212" y="241" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.31</text>
+  <rect x="258" y="220" width="84" height="32" fill="rgba(26,58,92,0.37)"/>
+  <text x="300" y="241" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.17</text>
+  <rect x="346" y="220" width="84" height="32" fill="rgba(26,58,92,0.49)"/>
+  <text x="388" y="241" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.25</text>
+  <rect x="434" y="220" width="84" height="32" fill="rgba(26,58,92,0.75)"/>
+  <text x="476" y="241" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#ffffff">0.41</text>
+  <rect x="522" y="220" width="84" height="32" fill="rgba(26,58,92,0.21)"/>
+  <text x="564" y="241" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#0f0f0f">0.07</text>
+  <rect x="610" y="220" width="84" height="32" fill="#e8e2d8"/>
+  <text x="652" y="241" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#6b6560">1.00</text>
+  <text x="162" y="241" text-anchor="end" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Pneumonia</text>
+  <text x="212" y="32" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Heart</text>
+  <text x="300" y="32" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Bypass</text>
+  <text x="388" y="32" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">COPD</text>
+  <text x="476" y="32" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Heart</text>
+  <text x="564" y="32" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Hip</text>
+  <text x="652" y="32" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#6b6560">Pneumonia</text>
+</svg>
+<figcaption>Pearson correlation between excess readmission ratios across conditions, computed only over the 647 hospitals scored on all six, so every cell is measured on the same population.</figcaption>
+</figure>
+
+<p>Heart failure and pneumonia track each other at 0.41, the strongest pair in the matrix, and that is still weak. Hip and knee replacement against pneumonia is 0.07, effectively nothing. The average hospital's spread across its own six conditions is <strong>0.2138</strong>, roughly three times the standard deviation of most individual measures.</p>
+<p>A hospital penalized on one condition is only slightly more likely to be penalized on another. Whatever the ratio captures, it is closer to condition-specific performance than to an institution-wide property.</p>
+
+<h2>Five: state variation, with a caveat</h2>
+<hr>
+<p>Averaging across scored measures, states separate by about eight points between the extremes. States with fewer than 60 scored records are excluded, because ranking a state on a handful of hospitals is exactly the error this analysis is about.</p>
+
+<table>
+  <thead><tr><th>Best</th><th>Mean ratio</th><th>Records</th><th>Worst</th><th>Mean ratio</th><th>Records</th></tr></thead>
+  <tbody><tr><td>UT</td><td>0.9559</td><td>99</td><td>MA</td><td>1.0344</td><td>240</td></tr><tr><td>OR</td><td>0.9599</td><td>131</td><td>NJ</td><td>1.0277</td><td>272</td></tr><tr><td>WA</td><td>0.9636</td><td>207</td><td>FL</td><td>1.0229</td><td>771</td></tr><tr><td>KS</td><td>0.9662</td><td>157</td><td>IL</td><td>1.0194</td><td>491</td></tr><tr><td>CO</td><td>0.9674</td><td>183</td><td>MS</td><td>1.0141</td><td>185</td></tr></tbody>
+</table>
+
+<p>This is the weakest finding here and it should be treated that way. State means are unweighted across hospitals of very different size, and the coverage bias above means small-hospital states are represented by their larger hospitals. It is a place to start looking, not a conclusion.</p>
+
+<div class="note">
+<div class="h">What this analysis does not establish</div>
+<p style="margin-top:0">Nothing here is causal. This is a cross-sectional file covering one performance window, so it can describe how the measurement behaves and cannot say what drives a hospital's readmissions.</p>
+<p>The suppression rule also cuts both ways in the analysis itself. Discharge counts are suppressed for the same low-volume records, so the volume analysis is computed on hospitals that reported at least one count. The hospitals most affected by the coverage gap are partly missing from the evidence for the coverage gap.</p>
+<p>CMS also suppressed the pneumonia measure for FY2023 and excluded discharges from December 2019 through June 2020 from several performance periods because of COVID. This file is not affected, since its window starts in July 2021, but any comparison across program years must account for it.</p>
+</div>
+
+<h2>Method</h2>
+<hr>
+<p>Aggregation in SQL through DuckDB, correlation and reshaping in pandas. The two numeric columns arrive as text, because CMS writes <code>N/A</code> and <code>Too Few to Report</code> into numeric fields, so both are read with <code>TRY_CAST</code>: a suppressed value becomes null rather than throwing, which is correct, since suppressed means unknown and not zero.</p>
+<p>The load is followed by a reconciliation assert. Every record must be either scored or suppressed, never both and never neither.</p>
+
+<pre>SELECT
+    count(*)              AS rows_total,
+    count(err)            AS scored,
+    count(*) - count(err) AS suppressed
+FROM hrrp
+-- 11,720 scored + 6,610 suppressed = 18,330 rows</pre>
+
+<p>That check exists because a silent cast failure would have made every rate on this page wrong in the same direction, and nothing downstream would have looked odd. The full analysis script is in the repository.</p>
+
+<h2>What I would want next</h2>
+<hr>
+<ul>
+  <li><strong>Multiple program years.</strong> One window shows how the measure behaves. Several would show whether hospitals move, and whether the penalty tracks the same institutions year after year.</li>
+  <li><strong>A link to hospital characteristics.</strong> CMS publishes ownership, teaching status, and safety-net indicators separately. Joining them would test whether the coverage gap falls hardest on the hospitals with the least capacity to respond.</li>
+  <li><strong>The two-year transition.</strong> CMS shortens the performance window starting with October 2026 discharges. A shorter window means smaller denominators, which means more suppression. The size of that effect is estimable from this file and is worth estimating before it happens.</li>
+</ul>
+
+<footer>
+  <p>Brandon Duplantier - Data Analyst - Dayton, OH</p>
+  <p>Data: Centers for Medicare and Medicaid Services, Provider Data Catalog, FY2026 HRRP hospital file. Public domain.</p>
+  <p><a href="mailto:brandon.duplantier@gmail.com">brandon.duplantier@gmail.com</a> -
+     <a href="https://www.linkedin.com/in/charles-brandon-duplantier/" target="_blank">LinkedIn</a> -
+     <a href="https://github.com/brandonduplantier-juice" target="_blank">GitHub</a> -
+     <a href="index.html">Portfolio</a></p>
+</footer>
+
+</div>
+</body>
+</html>
