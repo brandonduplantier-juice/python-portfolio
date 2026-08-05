@@ -275,7 +275,7 @@
 
 <div class="intro">
   <p class="intro-text">
-    Data analyst. Since 2018 I have helped small businesses figure out what their numbers are actually telling them, and built the <strong>reports and dashboards</strong> they use to decide where to spend. Right now I build reporting systems for a search and rescue organization in Alaska. The thing I care most about is being straight with people: I say how confident a number is, when a sample is too small to trust, and when the honest answer is that we do not know yet. Further down the page, the aging and biology research is where I go deepest, and every project there explains itself in plain language before it shows you the math.
+    I am a data analyst who likes getting past the surface of a number and figuring out what it actually means for the person making the decision. Since 2018, I have helped small businesses understand their traffic, customers, and marketing, then turned that information into reports they can use. I currently build reporting systems for a search and rescue organization in Alaska. I try to be direct about what the data supports, what it does not support, and when the sample is too small to trust. The aging and biology projects further down the page are where I go deepest. Each one starts by explaining the question in plain language before getting into the methods.
   </p>
   <p class="filter-label">Filter by skill</p>
   <div class="tags">
@@ -297,17 +297,17 @@
 
 <div class="zone">
   <div class="section-header">
-    <h2>Client Analytics, BI &amp; Healthcare</h2>
+    <h2>Client Analytics, Business Intelligence and Healthcare</h2>
   </div>
-  <p class="zone-sub">Work for real clients and real organizations. Eight years of analytics for a local business, a national Medicare program, and hospital risk analysis built six different ways.</p>
+  <p class="zone-sub">Client analytics, Medicare policy analysis, hospital risk modeling, and tools built to support real business decisions.</p>
   <div class="projects">
 
 <a class="card featured" href="case-study-alterations.html" data-tags="digital sql python healthcare">
     <div class="card-top">
       <span class="card-type">Client Work - Google Analytics - Case Study</span>
     </div>
-    <h3>Eight Years of Client Analytics: Alterations by Josetta</h3>
-    <p>The only paying client on this page, and the one I have worked with longest. Since 2018 I have handled the analytics for a local alterations and tailoring shop: I built the website, set up the tracking, and produce the reports the owner uses to decide where her money goes. Visitors grew from 927 a year in 2018 to 3,020 in 2025, more than three times as many, and that includes 2020, when the shop went to zero website visitors for two straight months during the shutdown. The site had quietly collected a list of 399 people who reached out. We started emailing that list around the calendar instead of around the budget, going out ahead of prom and wedding season and deliberately during the slow months. After that, more visitors were arriving by typing the shop's name directly than by finding it on Google, for the first time ever. The full write-up explains what that does and does not prove, since the actual bookings happened over the phone where nothing was tracked.</p>
+    <h3>Eight Years of Analytics for Alterations by Josetta</h3>
+    <p>This is the only paid client project on the page, and it is the one I have worked on the longest. Since 2018, I have managed the analytics for a local alterations and tailoring shop. I built the website, set up the tracking, and create the reports the owner uses to decide when and where to advertise. Annual visits grew from 927 in 2018 to 3,020 in 2025, even with the shop receiving zero website visits for two straight months during the 2020 shutdown. Over time, the website also collected 399 contacts from people who had reached out to the business. We started using that list based on the business calendar, sending emails before prom and wedding season and during slower months when the shop had open capacity. Direct traffic later passed Google for the first time, which is consistent with more returning customers visiting the site. The full case study explains why that pattern matters, what it suggests, and why it cannot prove the emails caused the increase.</p>
     <div class="card-footer">
       <span class="pill">Google Analytics</span>
       <span class="pill">Seasonality</span>
@@ -323,7 +323,7 @@
       <span class="card-type">SQL - DuckDB - pandas - Public Policy Data</span>
     </div>
     <h3>What the Readmissions Program Cannot See</h3>
-    <p>Medicare fines hospitals that send too many patients home only to have them come back within a month. This looks at the government's own results file for 3,055 hospitals and asks whether the scoring actually works. Three things stood out. More than a third of the records have no score at all, because a hospital needs at least 25 patients with a condition before Medicare will grade it, and that rule quietly removes most small and rural hospitals from the program's view entirely. About half of all graded hospitals are always going to land on the wrong side of the line, because each one is scored against the others rather than against a fixed target, so the fines never run out no matter how much care improves nationally. And a hospital that scores badly on one condition is barely more likely to score badly on another, which means the program treats six loosely related things as if they were one measure of hospital quality. Built with SQL and Python, with the analysis code published alongside it.</p>
+    <p>Medicare penalizes hospitals when too many patients return within 30 days of being discharged. I analyzed the government's results file for 3,055 hospitals to see what the scoring system measures and what it leaves out. More than one third of the records have no score because a hospital needs at least 25 qualifying patients before Medicare will grade it. That rule removes many small and rural hospitals from the program's view. The system also compares hospitals with one another instead of using a fixed standard, which means roughly half of graded hospitals will remain on the wrong side of the line even if care improves across the country. Finally, a hospital that performs badly for one condition is only slightly more likely to perform badly for another. That raises questions about treating six loosely related conditions as one measure of overall hospital quality. The analysis was built with SQL and Python, and the full code is published with the project.</p>
     <div class="card-footer">
       <span class="pill">SQL</span>
       <span class="pill">DuckDB</span>
@@ -339,8 +339,8 @@
     <div class="card-top">
       <span class="card-type">R - Python - SQL - Power BI - Looker Studio - Excel</span>
     </div>
-    <h3>Hospital Readmission Analysis: Six Implementations</h3>
-    <p>When a patient is sent home from the hospital and comes back within 30 days, that is a readmission, and hospitals are penalized for having too many. This project asks which patients are most at risk, and answers it six separate times in six different tools, to show the answer does not change depending on which software you use. The data is a 300-patient practice set built to mimic the real Medicare program. The finding: heart failure patients came back about 20 times more often than hip and knee replacement patients, the lowest-risk group. Scheduling a follow-up appointment looked like it helped, but not by enough to be sure, so it is reported that way instead of claimed as a result.</p>
+    <h3>Hospital Readmission Analysis in Six Tools</h3>
+    <p>A readmission happens when a patient returns to the hospital within 30 days of being discharged. Hospitals can be penalized when their readmission rates are too high. This project looks at which patients appear most at risk and answers the same question in six different tools. The dataset is a synthetic practice dataset containing 300 patients and was designed to resemble the structure of the Medicare program. Heart failure patients returned about 20 times more often than hip and knee replacement patients, who had the lowest risk. Patients with a follow up appointment also appeared less likely to return, but the difference was not large enough to support a confident conclusion. I reported that uncertainty instead of presenting the pattern as a proven result.</p>
     <p style="margin-top:0.75rem">
       <a href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/R-Readmission-Logistic-Regression" target="_blank">R logistic regression</a> -
       <a href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Hospital-Readmission-PowerBI" target="_blank">Power BI dashboard</a> -
@@ -366,8 +366,8 @@
     <div class="card-top">
       <span class="card-type">Python - Power BI - HR Analytics</span>
     </div>
-    <h3>HR Attrition Risk Dashboard</h3>
-    <p>Which employees are most likely to quit, and which departments should worry. I scored every employee on eight things that tend to predict leaving, including overtime, pay, job satisfaction, and how long they have been there, then built a dashboard managers can actually click through. Sales and Marketing came out at 28 percent turnover, eight points worse than the company's own 15 percent target.</p>
+    <h3>Employee Attrition Risk Dashboard</h3>
+    <p>This dashboard looks at which employees are most likely to leave and where turnover is creating the greatest risk. I scored each employee using eight factors commonly connected with attrition, including overtime, pay, job satisfaction, and time with the company. I then built an interactive dashboard so managers could filter the results by department and explore the factors behind each score. Sales and Marketing showed 28 percent turnover, which was eight percentage points above the company's 15 percent target.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">Power BI</span>
@@ -381,8 +381,8 @@
     <div class="card-top">
       <span class="card-type">Python - Google Places API - Production</span>
     </div>
-    <h3>Google Places API Lead Sourcing Pipeline</h3>
-    <p>A tool that goes looking for new clients so I do not have to. It runs every day, searches business listings across 1,116 cities in 38 states, and files what it finds into a spreadsheet that tracks who has been contacted and who is worth following up with. The unglamorous part is the important part: cities overlap, so the same business shows up more than once, and the tool has to recognize that and not count it twice. Built for my own consulting practice, not as an exercise.</p>
+    <h3>Google Places Lead Sourcing Pipeline</h3>
+    <p>I built this tool to find potential clients for my own consulting practice. It runs daily, searches business listings across 1,116 cities in 38 states, and records the results in a spreadsheet that tracks outreach and follow up. The hardest part is not collecting the businesses. It is keeping the results clean. Nearby cities often return the same listings, so the pipeline has to recognize duplicate businesses and avoid counting them more than once. This is a production tool I use for my own work, not a practice exercise.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">REST APIs</span>
@@ -399,9 +399,9 @@
 
 <div class="zone">
   <div class="section-header">
-    <h2>Longevity &amp; Aging Analytics</h2>
+    <h2>Longevity and Aging Analytics</h2>
   </div>
-  <p class="zone-sub">Can we measure how fast someone is aging, and does it predict anything? Independent research on public medical data.</p>
+  <p class="zone-sub">Independent research using public health and biological data to study how aging can be measured, what it predicts, and where the evidence is still limited.</p>
   <div class="projects">
 
 <a class="card featured" href="https://brandon-aging-clock.streamlit.app/" data-tags="longevity python ml bioinformatics" target="_blank">
@@ -409,8 +409,8 @@
       <span class="card-type">Streamlit - Live demo - Bioinformatics</span>
       <span class="card-badge">Live</span>
     </div>
-    <h3>Aging Clock: Interactive Biological-Age Dashboard</h3>
-    <p>Your body has an age that can differ from the number on your birthday. This dashboard estimates it from a blood sample and lets you see what drives the estimate: move a slider and watch the predicted age change in real time. On people the model had never seen, it lands within about 5.7 years of true age, and on a completely separate group of 689 people it holds at 6.4 years. That second number is the honest one, and it is the one I lead with.</p>
+    <h3>Interactive Biological Age Dashboard</h3>
+    <p>The age of your body can differ from the number of years since you were born. This dashboard estimates biological age from a blood sample and shows which measurements are driving the prediction. Users can move a slider and watch the estimated age change in real time. On people the model had not seen during training, its predictions were off by about 5.7 years on average. On a completely separate group of 689 people, the error was 6.4 years. That second result matters more because it shows how the model performed on data that played no role in building it, so it is the result I lead with.</p>
     <div class="card-footer">
       <span class="pill">Streamlit</span>
       <span class="pill">Python</span>
@@ -424,8 +424,8 @@
       <span class="card-type">Streamlit - Survival analysis - Bioinformatics</span>
       <span class="card-badge">Live</span>
     </div>
-    <h3>NHANES Biological Age &amp; Mortality Dashboard</h3>
-    <p>Does a body that looks older than its years actually mean a shorter life? I tested that on 28,510 US adults tracked by the government for up to 19 years, using nine routine blood tests that any doctor's office runs. The answer is yes, and it is measurable: each extra year of biological age carried about 4.5 percent higher risk of dying, and it predicted survival better than a person's actual age did. Filter by age and sex and explore the survival curves yourself.</p>
+    <h3>Biological Age and Mortality Dashboard</h3>
+    <p>This project asks whether a body that appears older than its actual age is also at greater risk of dying. I tested that question using data from 28,510 adults in the United States who were followed by the government for as long as 19 years. The biological age estimate uses nine routine blood measurements available through a standard laboratory panel. Each additional year of biological age was associated with about a 4.5 percent increase in mortality risk. Biological age also predicted survival better than chronological age alone. The dashboard lets users filter the population by age and sex and compare the survival curves directly.</p>
     <div class="card-footer">
       <span class="pill">Streamlit</span>
       <span class="pill">lifelines</span>
@@ -440,8 +440,8 @@
       <span class="card-type">Streamlit - DESeq2 - Bioinformatics</span>
       <span class="card-badge">Live</span>
     </div>
-    <h3>RNA-seq Aging Differential Expression Explorer</h3>
-    <p>Which genes behave differently in an old brain versus a young one. I compared tissue from younger and older donors and found 119 genes that change reliably with age, most of them tied to the insulating sheath around nerve fibers. Type in any gene name and get a plain-English explanation of how it changes with age, pulled live from the national genetics database.</p>
+    <h3>RNA Sequencing Aging Explorer</h3>
+    <p>This project looks at which genes behave differently in older brain tissue compared with younger brain tissue. I found 119 genes whose activity changed reliably with age. Many of the strongest changes involved the material that insulates nerve fibers and helps signals move through the brain. The interactive explorer lets users search for any gene and see how its activity changed between the two groups. It also provides a plain language explanation of the gene's function using information pulled from the national genetics database.</p>
     <div class="card-footer">
       <span class="pill">Streamlit</span>
       <span class="pill">DESeq2</span>
@@ -457,7 +457,7 @@
       <span class="card-badge">Live</span>
     </div>
     <h3>Longevity Intervention Evidence Explorer</h3>
-    <p>Everyone has heard that some supplement or fasting protocol will help you live longer. This tool grades those claims on how strong the evidence actually is, using the same six criteria for every one of them, and shows the gap between how much attention something gets and how much proof stands behind it. Nothing earns the top grade, because the top grade requires a study that followed humans for a lifetime, and no such study exists yet. Every source links back to the published research.</p>
+    <p>Claims about supplements, diets, and fasting are everywhere, but the amount of attention an idea receives is not the same as the amount of evidence behind it. This tool grades longevity interventions using the same six criteria for every claim. It shows what has been tested in cells, animals, and humans, then compares the strength of that research with the intervention's popularity. Nothing receives the highest possible grade because that grade requires strong human research that follows people across an entire lifetime. No such study exists yet. Every score links back to the published research so users can review the evidence for themselves.</p>
     <div class="card-footer">
       <span class="pill">Streamlit</span>
       <span class="pill">Plotly</span>
@@ -471,8 +471,8 @@
       <span class="card-type">Python - scikit-learn - Bioinformatics</span>
       <span class="card-badge">Repo</span>
     </div>
-    <h3>Epigenetic Aging Clock: DNA Methylation Predictor</h3>
-    <p>The code behind the aging clock dashboard. It reads roughly 450,000 chemical markers along the DNA of 656 people, then narrows that down on its own to the 176 that matter most for predicting age, and gets within about 5.7 years. As a check, the markers it picked overlap heavily with the ones an established published clock uses, which is strong evidence it found something real rather than memorizing the data it was trained on.</p>
+    <h3>DNA Methylation Aging Clock</h3>
+    <p>This is the modeling work behind the interactive aging clock. The project starts with roughly 450,000 chemical markers measured along the DNA of 656 people. The model narrows those markers down to 176 that are most useful for predicting age and reaches an average error of about 5.7 years on people it did not see during training. As an additional check, many of the markers selected by the model overlap with markers used by an established published aging clock. That overlap suggests the model identified a meaningful biological signal instead of only fitting patterns that were unique to its training data.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">scikit-learn</span>
@@ -487,8 +487,8 @@
       <span class="card-type">Python - pydeseq2 - Bioinformatics</span>
       <span class="card-badge">Live</span>
     </div>
-    <h3>Single-Cell Aging Pathway Analysis</h3>
-    <p>Aging does not happen evenly across a body, or even across a single organ. This looks at a mouse lung one cell at a time, across 11 different cell types, and shows which ones change with age and how. The methodological point matters here: analyzing individual cells as if they were independent people is a common mistake that produces false results, so this treats each animal as the unit instead, which is the statistically correct approach.</p>
+    <h3>Single Cell Aging Pathway Analysis</h3>
+    <p>Aging does not affect every part of the body in the same way. It can even affect different cell types inside the same organ differently. This project examines mouse lung tissue one cell type at a time and compares age related changes across 11 cell types. The main methodological decision is just as important as the biological result. Individual cells from the same animal are not independent observations. Treating them as if they came from separate animals can make weak patterns appear statistically significant. This analysis groups the cells by animal and treats each animal as the unit of comparison, which avoids that mistake.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">pydeseq2</span>
@@ -505,7 +505,7 @@
   <div class="section-header">
     <h2>Software Engineering</h2>
   </div>
-  <p class="zone-sub">Web applications I built, launched, and keep running for real users.</p>
+  <p class="zone-sub">Web applications I designed, deployed, and continue to maintain for real users.</p>
   <div class="projects">
 
 <a class="card" href="https://loadout-oracle.onrender.com" data-tags="flask python" target="_blank">
@@ -514,7 +514,7 @@
       <span class="card-badge">Shipped</span>
     </div>
     <h3>Loadout Oracle: Destiny 2 Loadout Sharing</h3>
-    <p>A web app I built and put online that lets players share their game setups with a single link. The interesting engineering is the login: it securely connects to a third-party account system, pulls a player's live inventory, and scores thousands of possible combinations against whatever the player is trying to do. It also survived contact with reality. After launch, a bot-protection service started blocking it, and I had to diagnose and fix that on a live site.</p>
+    <p>Loadout Oracle is a web application that lets Destiny 2 players share complete character setups with one link. It connects securely to a player's game account, retrieves live inventory data, and scores thousands of possible equipment combinations based on what the player is trying to build. The project also gave me experience maintaining a live application after launch. When an outside bot protection service started blocking legitimate traffic, I had to identify the cause and change the application so users could access it again.</p>
     <div class="card-footer">
       <span class="pill">Flask</span>
       <span class="pill">Python</span>
@@ -530,7 +530,7 @@
       <span class="card-badge">Shipped</span>
     </div>
     <h3>CraftPath: Path of Exile 2 Optimizer</h3>
-    <p>A web app that helps players make better decisions in a game with a punishing crafting system, by calculating the odds across a huge number of possible outcomes. It ships in two forms: a version anyone can use in a browser, and a downloadable version that pulls live market prices. Managing that as an open-source release, with versioned downloads and a public repository, was as much of the work as the app itself.</p>
+    <p>CraftPath helps players make better decisions in a game where crafting an item can involve a large number of possible outcomes. The application calculates the odds of those outcomes and helps users compare their options before spending valuable resources. It is available as a browser application and as a downloadable version that uses live market prices. Building the calculation engine was only part of the work. I also had to manage releases, maintain versioned downloads, publish the repository, and make sure both versions stayed usable as the project changed.</p>
     <div class="card-footer">
       <span class="pill">Flask</span>
       <span class="pill">Python</span>
@@ -545,9 +545,9 @@
 
 <div class="zone">
   <div class="section-header">
-    <h2>Data, BI &amp; Foundations</h2>
+    <h2>Data, Business Intelligence and Foundations</h2>
   </div>
-  <p class="zone-sub">Database work, dashboards, and earlier practice projects from when I was learning.</p>
+  <p class="zone-sub">Database analysis, dashboards, and earlier coursework that shows how my technical skills developed over time.</p>
   <div class="projects">
 
 <a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/SQL-Analytics-Portfolio" data-tags="sql" target="_blank">
@@ -555,7 +555,7 @@
       <span class="card-type">SQL - Multi-Domain Analysis</span>
     </div>
     <h3>SQL Analytics Portfolio</h3>
-    <p>Six database questions answered across four real databases, covering the query techniques a working analyst uses daily. The most interesting answer: in a mobile game, 210 players generated 52 percent of all revenue despite being only 9 percent of the people who spent anything. That kind of concentration changes how a company should think about who it is actually selling to.</p>
+    <p>This project answers six business questions across four databases and uses the SQL techniques an analyst works with regularly. The most useful finding came from a mobile game dataset. A group of 210 players generated 52 percent of all revenue while representing only 9 percent of the players who spent money. That level of concentration changes how a company should think about its customers, retention strategy, and the risks of relying on a small group for most of its revenue.</p>
     <div class="card-footer">
       <span class="pill">PostgreSQL</span>
       <span class="pill">CTEs</span>
@@ -570,7 +570,7 @@
       <span class="card-type">Tableau - Global Analytics</span>
     </div>
     <h3>Global Happiness Dashboard</h3>
-    <p>An interactive map of how happy countries report being, across 156 of them, and how that relates to wealth. Click a country to explore it, or look at the trend line to see how much of happiness money actually explains. Built to be explored rather than read.</p>
+    <p>This Tableau dashboard explores reported happiness across 156 countries and compares it with national wealth. Users can select a country, examine its individual results, and use the trend line to see how much of the difference in happiness can be explained by income. The project was built to be explored interactively rather than read as a fixed report.</p>
     <div class="card-footer">
       <span class="pill">Tableau</span>
       <span class="pill">Choropleth Map</span>
@@ -584,7 +584,7 @@
       <span class="card-type">Python - Analytics</span>
     </div>
     <h3>Grammy Website Analytics</h3>
-    <p>An early exploration of Grammy Awards data, looking at what patterns show up in who gets nominated and who wins. Straightforward analysis and charts, included here because it is where I started learning to work with messy real-world data.</p>
+    <p>This was one of my earlier analytics projects. It explores Grammy Awards data to look for patterns in who receives nominations and who wins. The analysis is straightforward, but the dataset gave me useful experience cleaning inconsistent information and turning it into charts that could answer a clear question. I keep it in the portfolio because it shows where I started and how my work has developed since then.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">Pandas</span>
@@ -597,8 +597,8 @@
     <div class="card-top">
       <span class="card-type">Python - Practice</span>
     </div>
-    <h3>LiveLab Exercises</h3>
-    <p>Practice work from my coursework. Python exercises covering the fundamentals of handling and analyzing data. Included for completeness rather than as a highlight.</p>
+    <h3>Python LiveLab Exercises</h3>
+    <p>These are practice exercises from my coursework covering the fundamentals of working with data in Python. They include basic cleaning, transformation, analysis, and problem solving. I include them for completeness and to show the foundation behind the larger projects, not as one of the main portfolio highlights.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">Data Wrangling</span>
@@ -611,7 +611,7 @@
       <span class="card-type">Python - Series</span>
     </div>
     <h3>SkillBuilder Series</h3>
-    <p>A nine-part series working up from basic data cleaning to statistical analysis and charting, using sales, retail, and bike-share data. Coursework rather than client work, kept here to show the progression.</p>
+    <p>This nine part coursework series moves from basic data cleaning into statistical analysis and visualization. The exercises use sales, retail, and bike sharing data to build each skill in sequence. I keep the series in the portfolio to show the progression from early practice work to the larger independent and client projects above.</p>
     <div class="card-footer">
       <span class="pill">Python</span>
       <span class="pill">Pandas</span>
