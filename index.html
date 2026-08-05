@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brandon Duplantier - Longevity & Healthcare Data Analyst</title>
+<title>Brandon Duplantier - Data Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -256,23 +256,26 @@
 
 <header>
   <div>
-    <p class="header-label">Portfolio - Longevity &amp; Healthcare Analytics</p>
+    <p class="header-label">Portfolio - Data, BI &amp; Healthcare Analytics</p>
     <h1>Brandon<br><em>Duplantier</em></h1>
   </div>
   <div class="header-meta">
-    <p>Longevity &amp; Healthcare Data Analyst</p>
-    <p>Python - SQL - R - Power BI - Tableau - Bioinformatics</p>
-    <p>Dayton, OH</p>
+    <p>Data Analyst</p>
+    <p>SQL - Python - Power BI - Tableau - Looker Studio - R</p>
+    <p>Dayton, OH - Remote</p>
     <p>Google Data Analytics Certified</p>
     <p style="margin-top:0.75rem">
-      <a href="https://github.com/brandonduplantier-juice" target="_blank">GitHub</a>
+      <a href="mailto:brandon.duplantier@gmail.com">Email</a> -
+      <a href="https://www.linkedin.com/in/charles-brandon-duplantier/" target="_blank">LinkedIn</a> -
+      <a href="https://github.com/brandonduplantier-juice" target="_blank">GitHub</a> -
+      <a href="resume.pdf" target="_blank">Resume (PDF)</a>
     </p>
   </div>
 </header>
 
 <div class="intro">
   <p class="intro-text">
-    Longevity and healthcare data analyst. I turn <strong>aging, biomarker, and clinical data</strong> into decision-ready insight, pairing real bioinformatics work with 15+ years of operations and analytics experience. Recent work includes a DNA methylation aging clock that predicts biological age to within 5.65 years on held-out blood (Pearson r 0.892) and holds at 6.36 years on an independent cohort. A companion mortality study on 28,510 NHANES adults found each year of biological-age acceleration carries 4.5 percent higher mortality risk, independent of chronological age.
+    Data analyst. I have run analytics for client businesses since 2018, building <strong>SQL, Power BI, and Looker Studio reporting</strong> that owners actually use to make decisions, and I currently build operational reporting systems for a search and rescue organization in Alaska. I report confidence intervals, sample size limits, and external validation figures rather than the most favorable number. Below that, the longevity and bioinformatics work is where I go deep: a DNA methylation aging clock that holds at 6.36 years on an independent cohort, and a survival analysis on 28,510 NHANES adults.
   </p>
   <p class="filter-label">Filter by skill</p>
   <div class="tags">
@@ -287,6 +290,58 @@
     <span class="tag" data-filter="tableau">Tableau</span>
     <span class="tag" data-filter="flask">Flask</span>
     <span class="tag" data-filter="healthcare">Healthcare</span>
+  </div>
+</div>
+
+<div class="zone">
+  <div class="section-header">
+    <h2>Healthcare &amp; Clinical Analytics</h2>
+  </div>
+  <p class="zone-sub">Clinical risk modeling and BI reporting, including one readmission analysis carried across six tools to show the result holds regardless of stack.</p>
+  <div class="projects">
+
+<div class="card featured" data-tags="r python sql power-bi tableau ml healthcare excel looker sheets dax">
+    <div class="card-top">
+      <span class="card-type">R - Python - SQL - Power BI - Looker Studio - Excel</span>
+    </div>
+    <h3>Hospital Readmission Analysis: Six Implementations</h3>
+    <p>One 30-day readmission question, answered six ways, to show the result survives the tool it was built in. The dataset is a 300-patient synthetic clinical set modeled on CMS HRRP metrics. The R logistic regression quantifies how each factor shifts the odds relative to hip and knee replacement, the lowest-readmission reference group: heart failure carries 19.7 times the odds (95 percent CI 5.3 to 72.9, p below 0.001), with COPD, sepsis, and pneumonia between 6 and 10 times and significant. Scheduled follow up trended protective (OR 0.58) but did not reach significance at p 0.09, and is reported as such. Discrimination was ROC AUC 0.714 for the logistic model and 0.587 for a Random Forest classifier, both reported as measured.</p>
+    <p style="margin-top:0.75rem">
+      <a href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/R-Readmission-Logistic-Regression" target="_blank">R logistic regression</a> -
+      <a href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Hospital-Readmission-PowerBI" target="_blank">Power BI dashboard</a> -
+      <a href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Readmission-Prediction-Model" target="_blank">Python prediction model</a> -
+      <a href="https://datastudio.google.com/reporting/7d8410ea-6d2c-4c91-9f24-ab16f2809e22" target="_blank">Looker Studio</a> -
+      <a href="https://docs.google.com/spreadsheets/d/15A3XCNeAAntAN3o3DH4Z97v85CsdN2afLzj7Zy2zYhY/edit?usp=sharing" target="_blank">Google Sheets</a> -
+      <a href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Excel-Readmission-Analysis" target="_blank">Excel workbook</a>
+    </p>
+    <div class="card-footer">
+      <span class="pill">R</span>
+      <span class="pill">Logistic Regression</span>
+      <span class="pill">Odds Ratios</span>
+      <span class="pill">scikit-learn</span>
+      <span class="pill">SQL</span>
+      <span class="pill">Power BI</span>
+      <span class="pill">DAX</span>
+      <span class="pill">Looker Studio</span>
+      <span class="pill">Excel</span>
+      <span class="pill">ROC / AUC</span>
+    </div>
+  </div>
+<a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/HR-Attrition-PowerBI" data-tags="power-bi python dax" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Python - Power BI - HR Analytics</span>
+    </div>
+    <h3>HR Attrition Risk Dashboard</h3>
+    <p>Python engineered a weighted attrition risk score per employee across 8 factors. A Power BI dashboard on the enriched dataset identifies Sales and Marketing at 28% attrition, 8 points above the 15% target, with a scatter plot, department treemap, gauge, and interactive slicers.</p>
+    <div class="card-footer">
+      <span class="pill">Python</span>
+      <span class="pill">Power BI</span>
+      <span class="pill">DAX</span>
+      <span class="pill">RANKX</span>
+      <span class="pill">HR Analytics</span>
+    </div>
+  </a>
+
   </div>
 </div>
 
@@ -388,122 +443,6 @@
       <span class="pill">AnnData</span>
       <span class="pill">Pseudobulk</span>
       <span class="pill">Bioinformatics</span>
-    </div>
-  </a>
-
-  </div>
-</div>
-
-<div class="zone">
-  <div class="section-header">
-    <h2>Healthcare &amp; Clinical Analytics</h2>
-  </div>
-  <p class="zone-sub">Clinical risk modeling, plus the same 300-patient readmission analysis carried across R, Power BI, Python, Looker, Sheets, and Excel.</p>
-  <div class="projects">
-
-<a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/R-Readmission-Logistic-Regression" data-tags="r healthcare ml sql power-bi" target="_blank">
-    <div class="card-top">
-      <span class="card-type">R - SQL - Power BI - Clinical Analytics</span>
-    </div>
-    <h3>Clinical Readmission Risk Analysis</h3>
-    <p>A 30-day hospital readmission risk analysis on a 300-patient clinical dataset, executed across R, SQL, Power BI, and Excel to show the result holds across tools. The R logistic regression (glm) quantifies how each factor shifts the odds: relative to surgical patients, Heart Failure carries roughly 20x the odds (OR 19.7, p&lt;0.001), with COPD, Sepsis, and Pneumonia all 6-10x and significant, reported as odds ratios with 95% confidence intervals and ROC AUC 0.714.</p>
-    <div class="card-footer">
-      <span class="pill">R</span>
-      <span class="pill">Logistic Regression</span>
-      <span class="pill">Odds Ratios</span>
-      <span class="pill">SQL</span>
-      <span class="pill">Power BI</span>
-      <span class="pill">ROC / AUC</span>
-    </div>
-  </a>
-
-<a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Hospital-Readmission-PowerBI" data-tags="power-bi healthcare dax" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Power BI - Healthcare</span>
-      <span class="card-badge">New</span>
-    </div>
-    <h3>Hospital 30-Day Readmission Analysis</h3>
-    <p>Interactive dashboard analyzing readmission patterns across 300 patients and 5 diagnoses. Heart Failure patients showed a 39% readmission rate, nearly 6x higher than surgical cases. Built with DAX measures and interactive slicers filtering by insurance type, department, and gender.</p>
-    <div class="card-footer">
-      <span class="pill">Power BI</span>
-      <span class="pill">DAX</span>
-      <span class="pill">Healthcare</span>
-      <span class="pill">CMS HRRP</span>
-    </div>
-  </a>
-
-<a class="card featured" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Readmission-Prediction-Model" data-tags="python ml healthcare" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Python - Machine Learning - Healthcare</span>
-      <span class="card-badge">New</span>
-    </div>
-    <h3>Hospital Readmission Prediction Model</h3>
-    <p>Machine learning pipeline predicting 30-day hospital readmission risk from patient records. Applies feature engineering, model training, and evaluation to identify high-risk patients before discharge. Built end-to-end in Python with scikit-learn.</p>
-    <div class="card-footer">
-      <span class="pill">Python</span>
-      <span class="pill">scikit-learn</span>
-      <span class="pill">Machine Learning</span>
-      <span class="pill">Healthcare</span>
-      <span class="pill">Pandas</span>
-    </div>
-  </a>
-
-<a class="card" href="https://datastudio.google.com/reporting/7d8410ea-6d2c-4c91-9f24-ab16f2809e22" data-tags="looker healthcare sheets" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Looker Studio - Healthcare Analytics</span>
-    </div>
-    <h3>Hospital Readmission Analysis</h3>
-    <p>Interactive Looker Studio dashboard analyzing 300-patient hospital readmission dataset. Features scorecards, bar charts by diagnosis and insurance type, pie chart by discharge destination, and a live dropdown filter. Connects directly to Google Sheets as the data source.</p>
-    <div class="card-footer">
-      <span class="pill">Looker Studio</span>
-      <span class="pill">Google Sheets</span>
-      <span class="pill">Interactive Filter</span>
-      <span class="pill">Healthcare</span>
-    </div>
-  </a>
-
-<a class="card" href="https://docs.google.com/spreadsheets/d/15A3XCNeAAntAN3o3DH4Z97v85CsdN2afLzj7Zy2zYhY/edit?usp=sharing" data-tags="sheets healthcare" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Google Sheets - Healthcare Analytics</span>
-    </div>
-    <h3>Hospital Readmission Spreadsheet Analysis</h3>
-    <p>Advanced spreadsheet analysis using 3 pivot tables, COUNTIFS, COUNTIF, INDEX/MATCH, and calculated readmission rates by diagnosis and insurance type. Dashboard tab pulls live KPIs from formula sheet. Heart Failure readmission rate 39.29% vs 7.04% for Hip/Knee Replacement.</p>
-    <div class="card-footer">
-      <span class="pill">Google Sheets</span>
-      <span class="pill">Pivot Tables</span>
-      <span class="pill">COUNTIFS</span>
-      <span class="pill">INDEX/MATCH</span>
-      <span class="pill">Dashboard</span>
-    </div>
-  </a>
-
-<a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/Excel-Readmission-Analysis" data-tags="excel healthcare" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Microsoft Excel - Healthcare Analytics</span>
-    </div>
-    <h3>Hospital Readmission Excel Analysis</h3>
-    <p>Native Excel workbook analyzing the 300-patient readmission dataset. Three pivot-style summary tables (by diagnosis, insurance type, and discharge disposition) built with COUNTIFS and AVERAGEIF, plus an INDEX/MATCH lookup returning the highest-risk diagnosis. Dashboard tab links live to the formula sheet via cross-sheet references with a readmission-rate bar chart. Patients without a scheduled followup readmit at 30.59% vs 24.00% overall.</p>
-    <div class="card-footer">
-      <span class="pill">Microsoft Excel</span>
-      <span class="pill">Pivot Tables</span>
-      <span class="pill">COUNTIFS</span>
-      <span class="pill">INDEX/MATCH</span>
-      <span class="pill">Dashboard</span>
-    </div>
-  </a>
-
-<a class="card" href="https://github.com/brandonduplantier-juice/python-portfolio/tree/main/HR-Attrition-PowerBI" data-tags="power-bi python dax" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Python - Power BI - HR Analytics</span>
-    </div>
-    <h3>HR Attrition Risk Dashboard</h3>
-    <p>Python engineered a weighted attrition risk score per employee across 8 factors. A Power BI dashboard on the enriched dataset identifies Sales and Marketing at 28% attrition, 8 points above the 15% target, with a scatter plot, department treemap, gauge, and interactive slicers.</p>
-    <div class="card-footer">
-      <span class="pill">Python</span>
-      <span class="pill">Power BI</span>
-      <span class="pill">DAX</span>
-      <span class="pill">RANKX</span>
-      <span class="pill">HR Analytics</span>
     </div>
   </a>
 
@@ -634,8 +573,13 @@
 </div>
 
 <footer>
-  <p>Brandon Duplantier - Longevity &amp; Healthcare Data Analyst - Dayton, OH</p>
-  <p><a href="https://github.com/brandonduplantier-juice" target="_blank">github.com/brandonduplantier-juice</a></p>
+  <p>Brandon Duplantier - Data Analyst - Dayton, OH - Open to remote roles</p>
+  <p>
+    <a href="mailto:brandon.duplantier@gmail.com">brandon.duplantier@gmail.com</a> -
+    <a href="https://www.linkedin.com/in/charles-brandon-duplantier/" target="_blank">LinkedIn</a> -
+    <a href="https://github.com/brandonduplantier-juice" target="_blank">GitHub</a> -
+    <a href="resume.pdf" target="_blank">Download resume (PDF)</a>
+  </p>
 </footer>
 
 <script>
