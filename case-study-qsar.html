@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search and Rescue Systems Work - Brandon Duplantier</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Mono:wght@300;400;500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink:#0f0f0f; --paper:#f5f2ec; --accent:#1a3a5c; --accent2:#c8401e;
+          --mid:#6b6560; --rule:#d8d3cb; --card-bg:#ffffff; }
+  html { font-size:16px; }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif;
+         font-weight:300; line-height:1.65; }
+  .wrap { max-width:880px; margin:0 auto; padding:4rem 1.5rem 6rem; }
+  .back { font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em;
+          text-transform:uppercase; color:var(--mid); text-decoration:none; }
+  .label { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em;
+           text-transform:uppercase; color:var(--mid); margin:2.5rem 0 0.4rem; }
+  h1 { font-family:'DM Serif Display',serif; font-weight:400; font-size:2.5rem;
+       line-height:1.1; margin:0.6rem 0 0.5rem; }
+  h1 em { color:var(--accent2); font-style:italic; }
+  h2 { font-family:'DM Serif Display',serif; font-weight:400; font-size:1.5rem; margin:3rem 0 0.3rem; }
+  h3 { font-family:'DM Sans',sans-serif; font-weight:500; font-size:1.02rem;
+       margin:1.8rem 0 0.1rem; color:var(--accent); }
+  .sub { color:var(--mid); font-size:1.05rem; margin-bottom:1.5rem; }
+  hr { border:none; border-top:1px solid var(--rule); margin:0.5rem 0 0; }
+  p { margin:0.9rem 0; } ul { margin:0.9rem 0 0.9rem 1.2rem; } li { margin:0.5rem 0; }
+  ol { margin:0.9rem 0 0.9rem 1.3rem; }
+  strong { font-weight:500; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule);
+          border:1px solid var(--rule); margin:1.8rem 0; }
+  .kpi { background:var(--card-bg); padding:1.1rem 0.9rem; text-align:center; }
+  .kpi .n { font-family:'DM Serif Display',serif; font-size:1.6rem; line-height:1.1; color:var(--accent); }
+  .kpi .l { font-family:'DM Mono',monospace; font-size:0.58rem; letter-spacing:0.05em;
+            text-transform:uppercase; color:var(--mid); margin-top:0.4rem; }
+  pre { background:var(--card-bg); border:1px solid var(--rule); padding:1.1rem;
+        overflow-x:auto; font-family:'DM Mono',monospace; font-size:0.78rem;
+        line-height:1.55; margin:1.2rem 0; }
+  .note { background:var(--card-bg); border-left:3px solid var(--accent2);
+          padding:1.1rem 1.3rem; margin:1.8rem 0; font-size:0.95rem; }
+  .note .h { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em;
+             text-transform:uppercase; color:var(--accent2); margin-bottom:0.4rem; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+           font-size:0.85rem; color:var(--mid); }
+  footer a { color:var(--accent); }
+  @media (max-width:640px){ h1{font-size:1.9rem;} .kpis{grid-template-columns:repeat(2,1fr);}
+    .wrap{padding:1.5rem 1.2rem 4rem;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html">&larr; Back to portfolio</a>
+
+<p class="label">Case Study - Operational Systems and Reporting</p>
+<h1>Building for a Search and Rescue Team <em>Where Being Wrong Is Not Recoverable</em></h1>
+<hr>
+<p class="sub">Nalaquq, LLC and Quinhagak Search and Rescue, western Alaska. May 2026 to present.</p>
+
+<h2>The setting</h2>
+<hr>
+<p>Quinhagak Search and Rescue covers a remote part of western Alaska. There are no roads in. Searches run across tundra and river country, often in cold, and the team is new enough that it has run only a handful of missions.</p>
+<p>I am the Data Analyst and Integration Developer on the project, working remotely. I build features onto a shared situational awareness system that a lead developer owns and maintains. He owns the core; I build alongside it.</p>
+<p>What shapes every decision here: when this software is wrong, the cost is not a bad quarter. It is an area marked searched that nobody walked, or a casualty request that never arrives.</p>
+
+<div class="kpis">
+  <div class="kpi"><div class="n">6</div><div class="l">Tools built and demonstrated</div></div>
+  <div class="kpi"><div class="n">~30</div><div class="l">Modules authored</div></div>
+  <div class="kpi"><div class="n">240 / 240</div><div class="l">Combined suite, stacked merge</div></div>
+  <div class="kpi"><div class="n">0</div><div class="l">Merge conflicts across five branches</div></div>
+</div>
+
+<p>Six tools, each built to answer one question a search leader actually asks. A coverage model, a casualty request bridge for iPhone users, a crew accountability board, a mission history dashboard, a callout summary report, and a vitals monitoring framework. Each was built to the point where it can demonstrate its own use case on its own, so the team could look at all six and adopt the ones they wanted rather than being handed a single thing to take or leave.</p>
+
+<h2>The problem I am most pleased with</h2>
+<hr>
+<p>The team runs a mixed fleet. Some members are on Android, some on iPhone. The iPhone client is a stripped-down build of the same platform, and one of the things that did not make it across is the casualty evacuation tool. There is no CASEVAC button on iPhone at all.</p>
+<p>That broke two things at once, and both of them matter during an actual emergency:</p>
+<ol>
+  <li><strong>iPhone users could not see a CASEVAC.</strong> Someone on Android calls one in, everyone else sees it, iPhone users see nothing.</li>
+  <li><strong>iPhone users could not file one.</strong> If the only person standing next to a casualty is on an iPhone, they have no way to call it in.</li>
+</ol>
+<p>The iPhone client is closed source. I cannot fix it and neither can anyone else outside its vendor.</p>
+
+<h3>So do not fix the client</h3>
+<p>The client already handles one thing perfectly well: plain map markers. That is the whole solution. I wrote two small server-side services that use markers as the transport, both modeled on an existing bridge already running in the system, so they fit the patterns the lead developer had already established rather than introducing my own.</p>
+
+<p><strong>Mirror, which fixes seeing.</strong> Whenever a request exists, the service drops an ordinary pin at the same location with the nine line details written into the pin's notes. iPhone users see the casualty and tap it for the details. It runs roughly every thirty seconds. Android users change nothing about how they work.</p>
+<p>Two design choices matter more than the feature. Each mirrored pin uses a fixed identifier, so re-running refreshes the same marker in place rather than creating duplicates, and a resolved request ages out on its own through the marker's own expiry. And it reuses the transport an existing bridge in the system already proved out, rather than introducing a second way of doing the same thing.</p>
+
+<p><strong>Intake, which fixes filing.</strong> The reverse direction. An iPhone user drops a marker named CASEVAC and types the nine line into the notes:</p>
+
+<pre>URGENT: 1
+LITTER: 1
+HOIST: yes
+HAZARD: open water, thin ice
+MARK: orange smoke
+NOTES: leg fracture, conscious</pre>
+
+<p>The server turns that into a logged CASEVAC on the command dashboard, identical to one authored on Android. And if someone types it loosely instead of in that format, which is what actually happens when a person is cold and frightened, <strong>it still files the casualty and preserves their exact words in the notes.</strong> Nothing is lost because the format was not followed.</p>
+
+<h3>The failure mode that had to be designed out</h3>
+<p>These two services are each other's trigger. The mirror pins every real request as a plain marker whose name begins with the trigger word. The intake watches for plain markers with that name and files them. Left alone, one casualty report becomes an unbounded stream of fabricated casualties on a live server during an emergency.</p>
+<p>Two independent guards prevent it, and the module docstring says plainly why there are two: <em>one is not enough on a life-safety path</em>.</p>
+<ol>
+  <li><strong>A naming guard.</strong> Ignore anything this stack generated, identified by its own identifier prefix. With one deliberate exception, described below.</li>
+  <li><strong>An identity guard.</strong> Ignore anything authored by a service rather than a person, whatever it happens to be named. A rename by either service cannot reopen the hole.</li>
+</ol>
+<p>The exception in the first guard is the interesting part. The system stages template pins for users to drag and fill, and those templates are generated by the same stack the guard is designed to reject. So the guard has to exclude its own output while still admitting its own staged templates, which means it cannot be a simple prefix match.</p>
+<p>Both guards live in one function so they can be tested directly, and the database query that does the fast filtering mirrors that same logic. A comment on the query states that the two must change together, and the fetch re-runs the function in code after the query returns, with the note that the query is the fast filter and the function is <em>the one that counts</em>. Defence in depth, with the authoritative layer named rather than left ambiguous.</p>
+
+<h3>The distinction I am most pleased with</h3>
+<p>A staged template pin has all the field labels and no values. If the intake treats that as a filled form, it files an empty casualty. If it demands a strict format, it discards a real one from someone who typed in a hurry.</p>
+<p>So the check is not "does this parse" but "did a person actually enter something":</p>
+
+<pre>def is_filled(remarks):
+    """True if the author actually entered a value for a known field.
+
+    A parked template has the keys but no values ("URGENT: "), so it must not
+    file a casualty. Free text with no keys at all still counts as filled: a
+    person typed something, and the intake preserves it.
+    """</pre>
+
+<p>Template keys present but all blank means an unused template, so no casualty is filed. Free text with no recognised keys at all counts as filled, because a person typed something and the point is not to lose it.</p>
+<p>The rest of the parser is built for the same conditions. It accepts either a colon or an equals sign as a separator. It accepts abbreviations alongside full words, so AMB works as well as AMBULATORY and VENT as well as VENTILATOR. Anything it cannot interpret is skipped for the structured fields, and the author's entire note is preserved verbatim regardless.</p>
+
+<h3>What is honestly still unfinished</h3>
+<ul>
+  <li><strong>Not yet deployed.</strong> Both services need to be set up as timers on the server, which requires access I have deliberately not requested. Both ship with a dry run mode that prints exactly what they would send and transmits nothing, which is how anything gets checked before it touches a live system.</li>
+  <li><strong>No live end-to-end test yet.</strong> Tested thoroughly, but not once against a real device in the field. Until that happens, it works in principle.</li>
+  <li><strong>The iPhone side is a convention, not a button.</strong> Users have to remember the marker name and the field format. It works, and it is typing under stress, which is exactly the condition under which people forget conventions.</li>
+  <li><strong>Attribution is imperfect.</strong> The filed CASEVAC is logged under the server's identity, with the original author's callsign preserved inside the record. That matters for the after action report and someone should know it before they read one.</li>
+</ul>
+
+<h2>Reporting on an organization with almost no data</h2>
+<hr>
+<p>A new team wants what an established one wants. Which months are busiest, how long searches take, which outcomes are common, where the training money should go.</p>
+<p>The data cannot support most of those questions yet, and the obvious failure is to build the dashboard anyway and let someone make a real decision from eight records.</p>
+
+<h3>A three tier sample size gate</h3>
+<p>The module says why in its own docstring, which matters more than the code beneath it:</p>
+
+<pre>"""Turn callout records into summaries, gated by sample size.
+
+The gate is the point: with a handful of records, seasonal and outcome
+"patterns" are noise. So the report runs at three tiers by n:
+  n &lt; 10   raw counts only, no pattern claims
+  10-29    breakdowns shown, flagged low-confidence
+  n &gt;= 30  breakdowns reported normally
+Thresholds are conventions, documented so they can be defended or changed.
+"""
+
+RAW_MAX = 10
+TENTATIVE_MAX = 30
+
+def tier(n):
+    if n &lt; RAW_MAX:
+        return "raw"
+    if n &lt; TENTATIVE_MAX:
+        return "tentative"
+    return "reported"</pre>
+
+<p>That last docstring line is the one I would defend. The thresholds are conventions, not laws. Someone will eventually disagree with thirty, and when they do the reasoning sits next to the number instead of in my head. The gate does not need removing later either. As the record grows, findings graduate through the tiers on their own.</p>
+<p>The command line tool refuses outright to run against real data until the schema is confirmed and access is granted. It raises rather than guessing at column names.</p>
+
+<h3>A small count privacy guard</h3>
+<p>This was not in scope. I added it after reading my own output.</p>
+<p>The reporting breaks activity down by village. In a community of a few hundred people, a cell reading two is not a statistic. It is potentially a specific person, and their neighbors can work out who.</p>
+
+<pre># Counts below this are personally identifying in a small community
+# (a village of a few hundred, a known date range). Standard disclosure
+# floor. Real counts below it are shown as "&lt;5", never exact.
+SMALL_COUNT = 5
+
+def suppress_small(counts, floor=SMALL_COUNT):
+    """Replace any exact count below the floor with a sentinel string, so a
+    category with 1-4 records is shown as "&lt;N" rather than a number that could
+    identify a person. Only matters on real data; harmless on synthetic."""
+    out = {}
+    for k, v in counts.items():
+        out[k] = v if v &gt;= floor else f"&lt;{floor}"
+    return out</pre>
+
+<h3>Reporting that knows what it does not have</h3>
+<p>Callout records may or may not carry an outcome field, depending on upstream configuration. Rather than guessing or defaulting to zero, the analysis carries an explicit flag, and when outcomes are unavailable the report says so instead of rendering an empty chart that reads as a finding.</p>
+
+<pre>outcome_available = schema.OUTCOME_SOURCE is not None
+outcomes = Counter(_outcome(r) for r in rows) if outcome_available else Counter()</pre>
+
+<p>Every timestamp parse and every JSON field read is wrapped the same way, returning nothing rather than raising or inventing a default. A malformed record drops out of the duration statistics and the rest of the report still runs. Column names and field locations are indirected through a schema module, so upstream changes do not touch the analysis.</p>
+
+<h2>A coverage model that would rather be wrong in one direction</h2>
+<hr>
+<p>The coverage work takes GPS tracks searchers actually walked and estimates how much ground was genuinely covered, as opposed to how much was assigned. Those are very different numbers. A sector can be marked searched while half of it was never within sight of anyone.</p>
+<p>I did not invent the method. I implemented published search and rescue methodology, drawing on Koester, Cooper, Frost, Robe, and the US Coast Guard 2004 addendum. The judgment I applied was in the defaults.</p>
+<p>Every uncertain parameter, particularly effective sweep width, is set so the model <strong>understates</strong> coverage, and a flag in the source states plainly that the defaults are not field measured. If the model overstates, a team stops searching an area that was never really searched. If it understates, the cost is a redundant sweep. One of those errors is recoverable and the other is not.</p>
+<p>An early version took sweep width as a single number. It does not work that way, since sweep width differs by search mode, so it now takes a value per mode. That correction came from reading the literature properly rather than from a bug report.</p>
+<p>A demonstration run on simulated tracks reports something like twenty four percent chance of detection with half the sector never walked. Two numbers a search leader can act on, from tracks that already existed.</p>
+<p>The design rule underneath it: <strong>the tool reports a number and never says searched.</strong> It has no binary output, because the binary is the judgment a search leader makes, not one a model should make on their behalf.</p>
+
+<h3>Where this model is not yet valid, stated plainly</h3>
+<p>The methodology assumes ground search. Applying it to drone or boat search is not a matter of changing a constant. The detection curve is wrong for an aircraft flying a programmed grid, drone coverage credits detection to the flight when detection actually happens later during footage review, and on open water the subject drifts while the searched area does not. I raised these with the project lead rather than presenting the model as ready for all three.</p>
+
+<h2>The rest of the work</h2>
+<hr>
+<h3>Patient vitals framework</h3>
+<p>Thirteen modules covering baselines, expected ranges, deterioration detection, cold weather bands that loosen the low side without touching the high side for a hypothermic patient, explicit sensor handoff that flags a searcher as unmonitored when their sensor moves to a casualty, a transmission policy tuned for a satellite link where bandwidth is genuinely scarce, and simulation so the whole path can be exercised without a patient.</p>
+<p>One rule governs the whole thing: <strong>nothing calls an emergency by itself.</strong> The system raises attention and a human decides. That is a deliberate limit on the automation, not a gap in it, and it is the difference between a tool that supports a decision and one that makes it.</p>
+<p>The clinical thresholds are the part I will not sign off on myself. They are tested and they need a medic's name on them before anyone uses this on a real person, and I have said so every time it has come up.</p>
+
+<h3>Crew accountability board</h3>
+<p>Who is out, who is accounted for, and alerting when that changes.</p>
+<p>Authentication fails closed, and the reason is specific rather than stylistic: this board shows where people currently are. If the access check breaks, refusing everyone is a broken feature, while defaulting open is a location leak. So a failure in the check locks the door rather than opening it.</p>
+<p>The test suite exercises the real guard through the framework's test client rather than mocking it, and the demo refuses to write its own output file at all if any of the four access paths returns the wrong status code. A demo that quietly produces output when the security model is broken is worse than no demo.</p>
+
+<h3>Mission history dashboard</h3>
+<p>Filterable history of callouts by date, status and location, reading the live store fresh on every request with no caching, so there is no second copy of the truth to go stale.</p>
+
+<h2>Working inside someone else's system</h2>
+<hr>
+<p>None of this is standalone. It plugs into an application the lead developer wrote and maintains, and the constraint I set myself was to leave no trace anywhere except the routes I own.</p>
+<ul>
+  <li>Each feature registers itself through a single function call rather than restructuring anything to fit a pattern I preferred.</li>
+  <li>Features ride the application's existing authentication rather than adding their own, so there is one place where access is decided and it is not mine.</li>
+  <li>Integration into the host application is two lines. Nothing else in the file changes.</li>
+  <li>I deliberately kept my branches free of the main branch's history, so each one can be adopted independently rather than dragging everything else along.</li>
+</ul>
+
+<h3>The merge readiness analysis</h3>
+<p>The lead developer rewrote a large part of the core application while I was working. Rather than assume my branches still fit, I tested it.</p>
+<p>I stacked all five feature branches onto a throwaway branch off the current main, one at a time, and ran the entire combined suite: <strong>240 tests, 240 passing, zero conflicts</strong>. The method matters, because it had to prove compatibility without polluting any branch. Each check was a merge with no commit, run the tests, then abort.</p>
+<p>The finding that made it worth doing: one branch silently contains all of another, because I had branched it from the wrong place months earlier. Adopting the first would have quietly brought the second along with it. That is not something a test suite tells you. I reported it in bold, along with the one trivial import-line conflict I found and exactly how to resolve it.</p>
+
+<h2>What is deliberately not here</h2>
+<hr>
+<div class="note">
+<div class="h">Scope of this write-up</div>
+<p style="margin-top:0">This describes my own work only. Substantial parts of the wider system were built by the project lead and are not discussed or claimed here.</p>
+<p>It does not include the organization's system architecture, hostnames, infrastructure details, credentials, configuration, mission data, operational records, individual or community identifying information, vendor terms, device identifiers, or any code beyond the short excerpts above, all of which are pure logic from a single analysis module.</p>
+<p>Published with written approval from Nalaquq. The organization's data stays with the organization.</p>
+</div>
+
+<h2>What I would want next</h2>
+<hr>
+<ul>
+  <li><strong>A live end to end casualty request test.</strong> Everything else is secondary. Tested is not the same as proven, and this is the piece where the gap between those two words costs the most.</li>
+  <li><strong>Enough missions to retire the raw tier.</strong> The most useful thing that could happen to the reporting is time. The gates are built; the record needs to catch up.</li>
+  <li><strong>Validation of the coverage model against a known outcome.</strong> It is implemented from literature and has never been checked against a real search where the subject's position was later known. Until it is, conservative defaults are doing the work that validation should do.</li>
+  <li><strong>A clinician on the vitals thresholds.</strong> The code is tested. The numbers need a name on them.</li>
+</ul>
+
+<footer>
+  <p>Brandon Duplantier - Data Analyst - Dayton, Ohio</p>
+  <p><a href="mailto:brandon.duplantier@gmail.com">brandon.duplantier@gmail.com</a> -
+     <a href="https://www.linkedin.com/in/charles-brandon-duplantier/" target="_blank">LinkedIn</a> -
+     <a href="https://github.com/brandonduplantier-juice" target="_blank">GitHub</a> -
+     <a href="index.html">Portfolio</a></p>
+</footer>
+
+</div>
+</body>
+</html>
