@@ -61,14 +61,14 @@
 <h2>The setting</h2>
 <hr>
 <p>Quinhagak Search and Rescue covers a remote part of western Alaska. There are no roads in. Searches run across tundra and river country, often in cold, and the team is new enough that it has run only a handful of missions.</p>
-<p>I am the Data Analyst and Integration Developer on the project, working remotely. I build features onto a shared situational awareness system that a lead developer owns and maintains. He owns the core; I build alongside it.</p>
+<p>I am the Data Analyst and Integration Developer (internship) on the project, working remotely. I build features onto a shared situational awareness system that a lead developer owns and maintains. He owns the core; I build alongside it.</p>
 <p>What shapes every decision here: when this software is wrong, the cost is not a bad quarter. It is an area marked searched that nobody walked, or a casualty request that never arrives.</p>
 
 <div class="kpis">
   <div class="kpi"><div class="n">6</div><div class="l">Tools built and demonstrated</div></div>
   <div class="kpi"><div class="n">~30</div><div class="l">Modules authored</div></div>
   <div class="kpi"><div class="n">240 / 240</div><div class="l">Combined suite, stacked merge</div></div>
-  <div class="kpi"><div class="n">0</div><div class="l">Merge conflicts across five branches</div></div>
+  <div class="kpi"><div class="n">9</div><div class="l">Test modules written</div></div>
 </div>
 
 <p>Six tools, each built to answer one question a search leader actually asks. A coverage model, a casualty request bridge for iPhone users, a crew accountability board, a mission history dashboard, a callout summary report, and a vitals monitoring framework. Each was built to the point where it can demonstrate its own use case on its own, so the team could look at all six and adopt the ones they wanted rather than being handed a single thing to take or leave.</p>
@@ -229,7 +229,7 @@ outcomes = Counter(_outcome(r) for r in rows) if outcome_available else Counter(
 
 <h3>The merge readiness analysis</h3>
 <p>The lead developer rewrote a large part of the core application while I was working. Rather than assume my branches still fit, I tested it.</p>
-<p>I stacked all five feature branches onto a throwaway branch off the current main, one at a time, and ran the entire combined suite: <strong>240 tests, 240 passing, zero conflicts</strong>. The method matters, because it had to prove compatibility without polluting any branch. Each check was a merge with no commit, run the tests, then abort.</p>
+<p>A temporary branch combining all five feature branches passed 240 tests. Separately, compatibility checks against the rewritten logger passed unchanged for four branches. Mission history required resolving one shared-import conflict. The method matters, because it had to prove compatibility without polluting any branch. Each check was a merge with no commit, run the tests, then abort.</p>
 <p>The finding that made it worth doing: one branch silently contains all of another, because I had branched it from the wrong place months earlier. Adopting the first would have quietly brought the second along with it. That is not something a test suite tells you. I reported it in bold, along with the one trivial import-line conflict I found and exactly how to resolve it.</p>
 
 <h2>What is deliberately not here</h2>

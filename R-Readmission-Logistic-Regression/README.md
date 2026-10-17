@@ -2,7 +2,7 @@
 
 Interpretable logistic-regression companion to the Python Random Forest readmission
 model, run on the same 300-patient dataset. Where the Random Forest predicts who is at
-risk, this model quantifies *how much* each factor changes the odds of 30-day
+risk, this model estimates how much each factor is associated with the odds of 30-day
 readmission, reported as odds ratios with confidence intervals.
 
 ## Files
@@ -15,7 +15,7 @@ readmission, reported as odds ratios with confidence intervals.
 Binomial logistic regression (`glm`, logit link) predicting `Readmitted_30_Days` from
 age, primary diagnosis, insurance type, length of stay, discharge disposition, followup
 scheduling, and risk score at discharge. Hip/Knee Replacement (the lowest-readmission
-diagnosis) is the reference category, so diagnosis odds ratios read as risk relative to
+diagnosis) is the reference category, so diagnosis odds ratios read as modeled odds relative to
 it. Department is excluded to avoid collinearity with diagnosis; `Days_to_Readmission`
 is excluded as a post-outcome leak. Discrimination is reported as ROC AUC.
 
