@@ -564,6 +564,83 @@
 
 <div class="zone">
   <div class="section-header">
+    <h2>In Development</h2>
+  </div>
+  <p class="zone-sub">Unlaunched projects in active development. The code is private while the work is in progress, so these cards describe what is built and tested so far and carry no links.</p>
+  <div class="projects">
+
+<div class="card" data-tags="flask python sql">
+    <div class="card-top">
+      <span class="card-type">Python - Flask - PostgreSQL - Private Preview</span>
+      <span class="card-badge">In Development</span>
+    </div>
+    <h3>Beauty Storefront and Merchant Platform</h3>
+    <p>An online beauty store and the phone-friendly back office that runs it, built as two separate apps. Shoppers can browse, build routines, and try makeup shades on a photo in the browser, with photos staying on their own device. The owner manages products, stock, orders, and reports from a phone. I owned the product, the architecture decisions, the quality gates, and every release, and directed AI coding assistants to write the code. 1,408 automated tests passing locally as of Nov 23, 2026. Daily encrypted backups with a restore drill, and one full database recovery run and passed. Traced a database outage to a single background check and cut its data use from about 986 KB per call to about 12 bytes. Runs at $0 fixed monthly cost. Unlaunched. Code and preview are private.</p>
+    <div class="card-footer">
+      <span class="pill">Python</span>
+      <span class="pill">Flask</span>
+      <span class="pill">PostgreSQL</span>
+      <span class="pill">JavaScript</span>
+      <span class="pill">pytest</span>
+      <span class="pill">Playwright</span>
+    </div>
+  </div>
+
+<div class="card" data-tags="python">
+    <div class="card-top">
+      <span class="card-type">React Native - Python - PostgreSQL - Private Beta</span>
+      <span class="card-badge">In Development</span>
+    </div>
+    <h3>UNPHUCKED: Money, Body, and Life App</h3>
+    <p>A phone app that takes the mental load out of money, health, and daily routines: one place for bills and budgets, workouts and food, and recurring chores, with a short list of what to do next. Built for people who are not comfortable with technology. Phone app in React Native (Expo) and TypeScript, server in Python with PostgreSQL. The design rule is that private financial and health records are encrypted on the user's phone so that the operator cannot read them. Moving every feature to that model is the current work, and it has not yet had an independent security review. Private Android beta builds exist with a built-in updater. On-phone verification is in progress and there is no iPhone build yet. As of Nov 19, 2026: 484 server tests and 281 phone tests passing, plus 20 tests of the phone talking to a live test server. Every status report separates built, tested, and verified on a device. I directed product, privacy requirements, and release approval, with AI coding assistants writing the code. Unlaunched. Code is private.</p>
+    <div class="card-footer">
+      <span class="pill">React Native</span>
+      <span class="pill">TypeScript</span>
+      <span class="pill">Python</span>
+      <span class="pill">PostgreSQL</span>
+      <span class="pill">Privacy by Design</span>
+      <span class="pill">Automated Testing</span>
+    </div>
+  </div>
+
+<div class="card" data-tags="unity">
+    <div class="card-top">
+      <span class="card-type">Unity - C# - Multiplayer - Pre-Alpha</span>
+      <span class="card-badge">In Development</span>
+    </div>
+    <h3>Night Shift (working title): Co-op Physics Comedy Game</h3>
+    <p>A cooperative 3D comedy game where players are night staff at a haunted museum, rebuilding exhibits before the morning inspection while things go wrong around them. Designed for 1 to 6 players. Built in Unity 6 with C#, with Python and PowerShell tooling and a scripted Blender pipeline for 3D assets. One full round is playable from start to finish. In multiplayer, the host decides outcomes, so when two players grab the same object at once exactly one wins. That was tested with two copies of the game running against each other under added network delay. Disruptive events come from a seeded system, so the same seed replays the same sequence and bugs can be reproduced. As of Nov 19, 2026: 145 automated tests passing locally (72 logic, 73 in-game), about 45,000 lines of C#. Newer work is still in testing. I directed design, quality gates, and releases, with an AI coding assistant writing most of the code. Windows only so far. Unlaunched. Code is private.</p>
+    <div class="card-footer">
+      <span class="pill">Unity 6</span>
+      <span class="pill">C#</span>
+      <span class="pill">Netcode</span>
+      <span class="pill">Python</span>
+      <span class="pill">Blender</span>
+      <span class="pill">Automated Testing</span>
+    </div>
+  </div>
+
+<div class="card" data-tags="bioinformatics python ml">
+    <div class="card-top">
+      <span class="card-type">Python - PyTorch - Bioinformatics - Early Research</span>
+      <span class="card-badge">In Development</span>
+    </div>
+    <h3>Does Genomic AI Beat the Cheap Baselines?</h3>
+    <p>A self-funded research project testing whether a large AI model trained on DNA can predict the measured effect of DNA changes better than older, cheaper scoring methods. The first experiment used a public lab dataset of 3,893 single-letter changes in the BRCA1 gene (Findlay et al., Nature 2018). I ran a 7-billion-parameter DNA model (Evo 2) on one home graphics card, kept the big model frozen, and trained a small prediction layer on top. Scoring held out one whole region of the gene at a time across 12 regions, and every method was compared on the same 3,593 variants. Result: the established scores performed better. I reported that and stopped, with no tuning until something won. Data checks matched the published figures, with zero reference mismatches when placing variants on the genome. Computer analysis on lab data only, not clinical, not peer reviewed. AI assistants were used for engineering and review under my direction. Code is private.</p>
+    <div class="card-footer">
+      <span class="pill">Python</span>
+      <span class="pill">PyTorch</span>
+      <span class="pill">Evo 2</span>
+      <span class="pill">Bioinformatics</span>
+      <span class="pill">Research Methods</span>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<div class="zone">
+  <div class="section-header">
     <h2>Data, Business Intelligence and Foundations</h2>
   </div>
   <p class="zone-sub">Database analysis, dashboards, and earlier coursework that shows how my technical skills developed over time.</p>
