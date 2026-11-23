@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Does Genomic AI Beat the Cheap Baselines? - Brandon Duplantier</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink:#0f0f0f; --paper:#f5f2ec; --accent:#1a3a5c; --accent2:#c8401e;
+          --mid:#6b6560; --rule:#d8d3cb; --card-bg:#ffffff; }
+  html { font-size:16px; }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif;
+         font-weight:300; line-height:1.65; }
+  .wrap { max-width:880px; margin:0 auto; padding:4rem 1.5rem 6rem; }
+  .back { font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em;
+          text-transform:uppercase; color:var(--mid); text-decoration:none; }
+  .back:hover { color:var(--accent2); }
+  .label { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em;
+           text-transform:uppercase; color:var(--mid); margin:2.5rem 0 0.4rem; }
+  h1 { font-family:'DM Serif Display',serif; font-weight:400; font-size:2.6rem;
+       line-height:1.1; margin:0.6rem 0 0.5rem; }
+  h1 em { color:var(--accent2); font-style:italic; }
+  h2 { font-family:'DM Serif Display',serif; font-weight:400; font-size:1.5rem; margin:3rem 0 0.3rem; }
+  .sub { color:var(--mid); font-size:1.05rem; margin-bottom:1.5rem; }
+  hr { border:none; border-top:1px solid var(--rule); margin:0.5rem 0 0; }
+  p { margin:0.9rem 0; } ul { margin:0.9rem 0 0.9rem 1.2rem; } li { margin:0.5rem 0; }
+  strong { font-weight:500; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule);
+          border:1px solid var(--rule); margin:1.8rem 0; }
+  .kpi { background:var(--card-bg); padding:1.1rem 0.9rem; text-align:center; }
+  .kpi .n { font-family:'DM Serif Display',serif; font-size:1.7rem; line-height:1.1; color:var(--accent); }
+  .kpi .l { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.06em;
+            text-transform:uppercase; color:var(--mid); margin-top:0.4rem; }
+  figure { background:var(--card-bg); border:1px solid var(--rule); padding:1.4rem; margin:1.8rem 0; }
+  figcaption { font-family:'DM Mono',monospace; font-size:0.68rem; color:var(--mid);
+               margin-top:0.9rem; line-height:1.5; }
+  table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.88rem; }
+  th, td { text-align:right; padding:0.45rem 0.55rem; border-bottom:1px solid var(--rule); }
+  th:first-child, td:first-child { text-align:left; }
+  th { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.07em;
+       text-transform:uppercase; color:var(--mid); font-weight:400; }
+  .note { background:var(--card-bg); border-left:3px solid var(--accent2);
+          padding:1.1rem 1.3rem; margin:1.8rem 0; font-size:0.95rem; }
+  .note .h { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em;
+             text-transform:uppercase; color:var(--accent2); margin-bottom:0.4rem; }
+  code { font-family:'DM Mono',monospace; font-size:0.85rem; background:#eee7dd; padding:0.1rem 0.3rem; }
+  pre { background:var(--card-bg); border:1px solid var(--rule); padding:1.1rem; overflow-x:auto;
+        font-family:'DM Mono',monospace; font-size:0.78rem; line-height:1.55; margin:1.4rem 0; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+           font-size:0.85rem; color:var(--mid); }
+  footer a { color:var(--accent); }
+  @media (max-width:640px){ .kpis{grid-template-columns:repeat(2,1fr);} h1{font-size:2rem;}
+    .wrap{padding:2.5rem 1.2rem 4rem;} }
+  figure img { width:100%; height:auto; display:block; }
+  td, th { vertical-align:top; }
+  table.wide td, table.wide th { text-align:left; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html">&larr; Back to portfolio</a>
+
+<p class="label">Project Write-up - Early Research - Bioinformatics</p>
+<h1>Does Genomic AI Beat the <em>Cheap Baselines?</em></h1>
+<hr>
+<p class="sub">A self-funded research project comparing a large DNA model against established scoring methods on public lab data. Early stage, in progress. Computer analysis only.</p>
+
+<div class="note"><div class="h">Read this first</div><p>The first experiment in this project produced a negative result: the older, cheaper methods did better than the AI model. Nothing here is scientifically validated, peer reviewed, or clinical. What this page shows is how the experiment was set up and checked.</p></div><h2>The question</h2>
+<hr>
+<p>What predictive information does genomic AI add beyond reliable, inexpensive biological annotations?</p>
+<p>Put plainly: large AI models trained on DNA sequence are new and expensive to run. Older scoring methods are cheap and well established. Published work disagrees about whether the new models beat the old ones at predicting what a DNA change does. I wrote that disagreement down before running anything, along with a rule: a negative result is a finding, not a failure, and I do not tune until something wins.</p>
+<p>The project is self-funded and runs on one home computer with a consumer graphics card, using free public data. First recorded work is dated October 17, 2026.</p>
+<div class="kpis">
+  <div class="kpi"><div class="n">3,893</div><div class="l">DNA changes in the public lab dataset</div></div>
+  <div class="kpi"><div class="n">3,593</div><div class="l">Changes scored by every method compared</div></div>
+  <div class="kpi"><div class="n">12</div><div class="l">Regions of the gene, each held out in turn</div></div>
+  <div class="kpi"><div class="n">0</div><div class="l">Reference mismatches placing changes on the genome</div></div>
+</div><h2>The first experiment</h2>
+<hr>
+<p>The data is a public lab dataset (Findlay et al., Nature 2018, MaveDB urn:mavedb:00000097-0-2) in which scientists measured the effect of nearly every single-letter change in key parts of the BRCA1 gene. These are lab measurements in cells. They say nothing about any person.</p><ul>
+  <li>Each change was run through Evo 2, a 7-billion-parameter DNA model, and the model's internal numbers were kept. The big model was frozen, meaning it was not retrained.</li>
+  <li>A small, simple prediction layer was trained on top of those numbers.</li>
+  <li>Scoring left out one whole region of the gene at a time, so the layer was never scored on a region it had trained on.</li>
+  <li>The result was compared against established scores on exactly the same changes.</li>
+  <li>Uncertainty was estimated by resampling whole regions instead of individual changes, because neighbouring changes are not independent.</li>
+</ul>
+<h2>The result</h2>
+<hr>
+<p>The established scores did better than both versions of the AI model on this dataset.</p>
+<p>The measure is rank correlation: how well a method's ordering of the changes agrees with the lab's ordering, where 0 is no agreement and 1 is perfect. The trained layer on Evo 2 scored 0.29 on held-out regions, and raw Evo 2 with no training scored 0.28. The best established score was clearly higher than both.</p>
+<p>The trained layer was not shown to beat raw Evo 2. The difference between them was 0.0147, with an uncertainty range that crosses zero. Four other ways of summarising the model's numbers did worse than the raw score.</p>
+<p>I reported that and stopped. This is a negative result about this particular design on this particular lab experiment, not about all genomic models.</p>
+<h2>Data checks against published figures</h2>
+<hr>
+<p>Before any model was scored, the prepared data was checked against numbers published with the dataset and against an independent public service.</p><table class="wide">
+  <thead><tr><th>Check</th><th>Result</th></tr></thead>
+  <tbody>
+    <tr><td>Share of changes in each functional class, using the published cut-offs</td><td>72.5% functional, 6.4% intermediate, 21.1% non-functional. Matches the published figures</td></tr>
+    <tr><td>Middle score of the changes that cut the protein short, worked out independently</td><td>-2.119 against a published -2.12</td></tr>
+    <tr><td>Position of each change on the genome</td><td>3,828 mapped with zero mismatches against the reference genome</td></tr>
+    <tr><td>Independent position check against Ensembl's variant service</td><td>26 of 26 agree</td></tr>
+  </tbody>
+</table>
+<h2>What is built, run, and still planned</h2>
+<hr>
+<table class="wide">
+  <thead><tr><th>Item</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Evo 2 (7 billion parameters) running on one consumer graphics card, with a peak of 13.47 GB of graphics memory</td><td>Built, tested locally</td></tr>
+    <tr><td>Data pipeline for the BRCA1 dataset</td><td>Built, tested locally, checked against published figures</td></tr>
+    <tr><td>Trained prediction layer and the region-by-region scoring</td><td>Built, tested locally</td></tr>
+    <tr><td>Comparison against two established scores on the same changes</td><td>Built, tested locally</td></tr>
+    <tr><td>A tool that scans public sources weekly for new papers, code, models, and trials, and produces a ranked digest</td><td>Built, tested locally</td></tr>
+    <tr><td>A second comparison using a protein model</td><td>Code written. The real analysis has never been run</td></tr>
+    <tr><td>Tests on a second gene and on newer data, both set aside and never opened</td><td>Planned</td></tr>
+    <tr><td>A reliability test for a local language model</td><td>Designed. Never run</td></tr>
+    <tr><td>Anything about aging</td><td>Planned. Nothing built or run</td></tr>
+  </tbody>
+</table>
+<h2>Engineering problems solved</h2>
+<hr>
+<ul>
+  <li><strong>Reported a negative result and stopped</strong> instead of adjusting the method until something won. The limits of the conclusion were written down before and after.</li>
+  <li><strong>Made it impossible for the answers to leak into a comparison.</strong> A public file needed for a planned comparison also contains the lab answers. The loader was redesigned so those columns are never read at all, and a test with planted marker values confirmed none got through.</li>
+  <li><strong>Placed every change on the genome correctly</strong> for a gene that runs on the reverse strand and has 23 coding segments, which is a known source of quiet, plausible-looking errors.</li>
+  <li><strong>Got a 7-billion-parameter model running on a single consumer graphics card</strong> after working out which versions cannot run on that hardware and resolving a chain of incompatible software versions.</li>
+  <li><strong>Replaced a slow calculation with a faster equivalent and proved they agree</strong> to about 12 decimal places.</li>
+</ul>
+<h2>How results are checked</h2>
+<hr>
+<ul>
+  <li>Every check must be shown to fail on bad input before its pass is trusted.</li>
+  <li>Tests are themselves tested, by deliberately breaking the code and confirming a test catches it.</li>
+  <li>Prepared data is cross-checked against an independent source. Agreeing with yourself is not validation.</li>
+  <li>Earlier results are never overwritten. Every file version gets a new name.</li>
+  <li>Decisions are logged in a record that is only ever added to. A changed decision is replaced by a new entry, never edited.</li>
+  <li>A second and third dataset are kept unopened so they can serve as a clean test later.</li>
+</ul>
+<h2>Limits</h2>
+<hr>
+<ul>
+  <li>The headline result is negative.</li>
+  <li>One gene, one lab experiment, one model, one design.</li>
+  <li>No outside validation. The reserved datasets have not been opened.</li>
+  <li>Even later it will not be a perfectly clean test: the AI model saw BRCA1 sequence during its own original training. Only leakage of the lab answers can be controlled.</li>
+  <li>Nothing here is about aging, and nothing here is clinical. There is no patient data, no diagnosis, and no risk prediction.</li>
+  <li>Review so far is by AI assistants and by me. No human scientist has reviewed the work.</li>
+  <li>The comparison figures were recorded in late October 2026.</li>
+</ul>
+<h2>My role and how AI was used</h2>
+<hr>
+<p>This is a solo project and I am its principal investigator. I set the question, the rules of evidence, and the stopping rule, and I approve every significant step.</p>
+<p>AI assistants were used for engineering and for review, under my direction. That is AI review. It is not independent validation and I do not describe it as such.</p>
+<h2>Stack</h2>
+<hr>
+<p>Python, PyTorch, NumPy, pandas, SciPy, Evo 2, SQLite, a local open-weight language model, Windows with WSL2, one NVIDIA RTX 4090.</p>
+
+<footer>
+  <p>Brandon Duplantier - <a href="index.html">Portfolio</a> - <a href="resume.pdf">Resume (PDF)</a></p>
+  <p>This project is unlaunched and its code is private. Figures on this page carry the date they were recorded and the level of checking behind them.</p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Night Shift: Co-op Physics Comedy Game - Brandon Duplantier</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink:#0f0f0f; --paper:#f5f2ec; --accent:#1a3a5c; --accent2:#c8401e;
+          --mid:#6b6560; --rule:#d8d3cb; --card-bg:#ffffff; }
+  html { font-size:16px; }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif;
+         font-weight:300; line-height:1.65; }
+  .wrap { max-width:880px; margin:0 auto; padding:4rem 1.5rem 6rem; }
+  .back { font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em;
+          text-transform:uppercase; color:var(--mid); text-decoration:none; }
+  .back:hover { color:var(--accent2); }
+  .label { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em;
+           text-transform:uppercase; color:var(--mid); margin:2.5rem 0 0.4rem; }
+  h1 { font-family:'DM Serif Display',serif; font-weight:400; font-size:2.6rem;
+       line-height:1.1; margin:0.6rem 0 0.5rem; }
+  h1 em { color:var(--accent2); font-style:italic; }
+  h2 { font-family:'DM Serif Display',serif; font-weight:400; font-size:1.5rem; margin:3rem 0 0.3rem; }
+  .sub { color:var(--mid); font-size:1.05rem; margin-bottom:1.5rem; }
+  hr { border:none; border-top:1px solid var(--rule); margin:0.5rem 0 0; }
+  p { margin:0.9rem 0; } ul { margin:0.9rem 0 0.9rem 1.2rem; } li { margin:0.5rem 0; }
+  strong { font-weight:500; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule);
+          border:1px solid var(--rule); margin:1.8rem 0; }
+  .kpi { background:var(--card-bg); padding:1.1rem 0.9rem; text-align:center; }
+  .kpi .n { font-family:'DM Serif Display',serif; font-size:1.7rem; line-height:1.1; color:var(--accent); }
+  .kpi .l { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.06em;
+            text-transform:uppercase; color:var(--mid); margin-top:0.4rem; }
+  figure { background:var(--card-bg); border:1px solid var(--rule); padding:1.4rem; margin:1.8rem 0; }
+  figcaption { font-family:'DM Mono',monospace; font-size:0.68rem; color:var(--mid);
+               margin-top:0.9rem; line-height:1.5; }
+  table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.88rem; }
+  th, td { text-align:right; padding:0.45rem 0.55rem; border-bottom:1px solid var(--rule); }
+  th:first-child, td:first-child { text-align:left; }
+  th { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.07em;
+       text-transform:uppercase; color:var(--mid); font-weight:400; }
+  .note { background:var(--card-bg); border-left:3px solid var(--accent2);
+          padding:1.1rem 1.3rem; margin:1.8rem 0; font-size:0.95rem; }
+  .note .h { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em;
+             text-transform:uppercase; color:var(--accent2); margin-bottom:0.4rem; }
+  code { font-family:'DM Mono',monospace; font-size:0.85rem; background:#eee7dd; padding:0.1rem 0.3rem; }
+  pre { background:var(--card-bg); border:1px solid var(--rule); padding:1.1rem; overflow-x:auto;
+        font-family:'DM Mono',monospace; font-size:0.78rem; line-height:1.55; margin:1.4rem 0; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+           font-size:0.85rem; color:var(--mid); }
+  footer a { color:var(--accent); }
+  @media (max-width:640px){ .kpis{grid-template-columns:repeat(2,1fr);} h1{font-size:2rem;}
+    .wrap{padding:2.5rem 1.2rem 4rem;} }
+  figure img { width:100%; height:auto; display:block; }
+  td, th { vertical-align:top; }
+  table.wide td, table.wide th { text-align:left; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html">&larr; Back to portfolio</a>
+
+<p class="label">Project Write-up - In Development - Game</p>
+<h1>Night Shift: Co-op <em>Physics Comedy</em></h1>
+<hr>
+<p class="sub">A cooperative game about the night staff at a haunted museum. Working title. Pre-alpha, unlaunched. Started November 17, 2026.</p>
+
+<div class="note"><div class="h">How to read the status labels</div><p><strong>Built</strong> means the code exists. <strong>Tested locally</strong> means automated tests passed on a development machine, not on a shared build server. <strong>Checked on the private preview</strong> means it was checked on a hosted copy that the public cannot reach. <strong>Run on my own device</strong> means I ran it myself on my own hardware. <strong>Planned</strong> means designed but not built or not switched on.</p></div><h2>What it is</h2>
+<hr>
+<p>A cooperative 3D comedy game, working title Night Shift. Players are the night staff at a haunted museum. They have to repair and rebuild damaged exhibits before the morning inspection while supernatural events get in the way.</p>
+<p>It is designed for 1 to 6 players. The idea is that players physically depend on each other, for example by carrying heavy objects together, and that problems are funny and recoverable instead of punishing.</p>
+<p>It is pre-alpha and unlaunched. The first commit was November 17, 2026. Only a Windows build exists and it has not been released to anyone.</p>
+<figure>
+<img src="img/night-shift-carry.jpg" alt="A staff character holding a dinosaur bone above a work table, with on-screen controller prompts" loading="lazy">
+<figcaption>Carrying a piece to the exhibit. The prompts change with the input device: this frame shows a controller. Cropped screenshot from a local development build.</figcaption>
+</figure><div class="kpis">
+  <div class="kpi"><div class="n">145</div><div class="l">Automated tests passing locally, Nov 19, 2026</div></div>
+  <div class="kpi"><div class="n">~45,400</div><div class="l">Lines of C# game code</div></div>
+  <div class="kpi"><div class="n">162</div><div class="l">Test methods in the project</div></div>
+  <div class="kpi"><div class="n">2</div><div class="l">Players verified together, on local test runs</div></div>
+</div><p>Test count: 72 logic tests plus 73 tests that run inside real game scenes. That full run is from Nov 19, 2026. Newer work on the current branch is still in testing and includes failing runs, so I am not claiming a full pass for the latest code.</p><h2>What is built, tested, and still planned</h2>
+<hr>
+<table class="wide">
+  <thead><tr><th>Area</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Third-person movement and camera, with controller and keyboard and mouse support and remappable controls</td><td>Built, tested locally</td></tr>
+    <tr><td>Grabbing, rotating, throwing, and placing physics objects, with snap-into-place assembly</td><td>Built, tested locally</td></tr>
+    <tr><td>Two players carrying a heavy object together, with an assist so a solo player is never blocked</td><td>Built, tested locally</td></tr>
+    <tr><td>One complete round: clock in, work orders, rebuild a 15-piece exhibit, timed inspection, grade, reset for the next round</td><td>Built, tested locally</td></tr>
+    <tr><td>Disruptive supernatural events with ways to counter and recover from them</td><td>Built, tested locally</td></tr>
+    <tr><td>Accessibility options for camera shake and reduced motion</td><td>Built, tested locally</td></tr>
+    <tr><td>Two-player networked play, with the host deciding outcomes</td><td>Built, tested locally with two copies of the game and added network delay</td></tr>
+    <tr><td>A larger multi-room level and new mission types</td><td>Built, not fully verified. Recent test runs include failures</td></tr>
+    <tr><td>3 to 6 players, online services, matchmaking</td><td>Planned. Not tested</td></tr>
+    <tr><td>More content, long-term progression, final character design, release</td><td>Planned</td></tr>
+  </tbody>
+</table>
+<figure>
+<img src="img/night-shift-exhibit.jpg" alt="A partly rebuilt dinosaur skeleton on a display stand in a dark museum hall" loading="lazy">
+<figcaption>The exhibit partway through a rebuild. Cropped screenshot from a local development build. The art is in early look-development and is not final.</figcaption>
+</figure><h2>Engineering problems solved</h2>
+<hr>
+<ul>
+  <li><strong>One winner when two players grab the same object.</strong> In multiplayer the host is the authority on what happened. When two players grab the same object at the same moment, exactly one wins, and late or duplicate messages are ignored safely. This was checked by running two copies of the game against each other with 60 milliseconds of added delay.</li>
+  <li><strong>Carrying heavy objects together without jitter.</strong> Heavy objects need more than one player. A solo player gets an assist so they are never stuck, and a carry with too few players degrades gracefully instead of breaking.</li>
+  <li><strong>Chaos that can be replayed.</strong> The disruptive events come from a seeded system, so the same seed replays the same sequence of decisions. That makes chaotic gameplay testable and makes bugs reproducible.</li>
+  <li><strong>Failure that players can recover from.</strong> Lost or thrown objects return home, wrong placements are flagged and reversible, and running out of time gives a grade instead of leaving the round stuck.</li>
+  <li><strong>Tooling that keeps "it compiled" from being reported as "it works".</strong> A custom test runner, a network log analyzer, and a record of lessons from past failures that is consulted before retrying a failed approach. A run that finds zero tests counts as a failure, not a pass.</li>
+</ul>
+<figure>
+<img src="img/night-shift-hall.jpg" alt="A museum hall with a staff character, storage crates, a time clock, and a trolley" loading="lazy">
+<figcaption>Part of the hall: storage, the time clock, and a trolley for moving pieces. Cropped screenshot from a local development build.</figcaption>
+</figure><h2>How the work is run</h2>
+<hr>
+<ul>
+  <li>The roadmap is split into milestones. Each one has written pass criteria and needs named evidence before it counts as passed.</li>
+  <li>There are two test suites: one for rules and logic, and one that runs inside real game scenes, including long repeated grab, carry, attach, and throw cycles.</li>
+  <li>Networked play is tested by a scripted two-copy scenario and a script that analyzes the logs.</li>
+  <li>Game, art, and audio work happen on separate branches and are merged through reviewed change requests.</li>
+  <li>3D assets are produced by scripted Blender pipelines so they can be rebuilt the same way each time.</li>
+</ul>
+<h2>Limits</h2>
+<hr>
+<ul>
+  <li>Unlaunched. No public build, no store page, and no outside playtesting.</li>
+  <li>Only two players have been verified together, on local test runs. 3 to 6 players is designed, not tested.</li>
+  <li>There is no online service or matchmaking. Play is one player hosting and another joining.</li>
+  <li>Windows only. No console work has been done.</li>
+  <li>The art is in early look-development and the character design is not final.</li>
+  <li>The full test pass is from Nov 19, 2026. Newer work includes failing runs.</li>
+  <li>The automated checks on the shared build server do not run the game's tests, so every test figure here is a local run.</li>
+</ul>
+<h2>My role and how AI was used</h2>
+<hr>
+<p>I am the owner and final decision maker on this project. I set the requirements, decided what to build and in what order, set the rules for testing and evidence, reviewed the results, and approved every release.</p>
+<p>The code was written by AI coding assistants working under my direction and review. I am describing that plainly because it is how the work was done. On the main line of development, 236 of 324 commits carry an AI coding assistant co-author line.</p>
+<h2>Stack</h2>
+<hr>
+<p>Unity 6 with the Universal Render Pipeline, C#, Unity Netcode for GameObjects, Unity Test Framework, Python and PowerShell tooling, Blender.</p>
+
+<footer>
+  <p>Brandon Duplantier - <a href="index.html">Portfolio</a> - <a href="resume.pdf">Resume (PDF)</a></p>
+  <p>This project is unlaunched and its code is private. Figures on this page carry the date they were recorded and the level of checking behind them.</p>
+</footer>
+
+</div>
+</body>
+</html>

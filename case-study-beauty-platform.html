@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Storefront and Merchant Platform - Brandon Duplantier</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink:#0f0f0f; --paper:#f5f2ec; --accent:#1a3a5c; --accent2:#c8401e;
+          --mid:#6b6560; --rule:#d8d3cb; --card-bg:#ffffff; }
+  html { font-size:16px; }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif;
+         font-weight:300; line-height:1.65; }
+  .wrap { max-width:880px; margin:0 auto; padding:4rem 1.5rem 6rem; }
+  .back { font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em;
+          text-transform:uppercase; color:var(--mid); text-decoration:none; }
+  .back:hover { color:var(--accent2); }
+  .label { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em;
+           text-transform:uppercase; color:var(--mid); margin:2.5rem 0 0.4rem; }
+  h1 { font-family:'DM Serif Display',serif; font-weight:400; font-size:2.6rem;
+       line-height:1.1; margin:0.6rem 0 0.5rem; }
+  h1 em { color:var(--accent2); font-style:italic; }
+  h2 { font-family:'DM Serif Display',serif; font-weight:400; font-size:1.5rem; margin:3rem 0 0.3rem; }
+  .sub { color:var(--mid); font-size:1.05rem; margin-bottom:1.5rem; }
+  hr { border:none; border-top:1px solid var(--rule); margin:0.5rem 0 0; }
+  p { margin:0.9rem 0; } ul { margin:0.9rem 0 0.9rem 1.2rem; } li { margin:0.5rem 0; }
+  strong { font-weight:500; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule);
+          border:1px solid var(--rule); margin:1.8rem 0; }
+  .kpi { background:var(--card-bg); padding:1.1rem 0.9rem; text-align:center; }
+  .kpi .n { font-family:'DM Serif Display',serif; font-size:1.7rem; line-height:1.1; color:var(--accent); }
+  .kpi .l { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.06em;
+            text-transform:uppercase; color:var(--mid); margin-top:0.4rem; }
+  figure { background:var(--card-bg); border:1px solid var(--rule); padding:1.4rem; margin:1.8rem 0; }
+  figcaption { font-family:'DM Mono',monospace; font-size:0.68rem; color:var(--mid);
+               margin-top:0.9rem; line-height:1.5; }
+  table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.88rem; }
+  th, td { text-align:right; padding:0.45rem 0.55rem; border-bottom:1px solid var(--rule); }
+  th:first-child, td:first-child { text-align:left; }
+  th { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.07em;
+       text-transform:uppercase; color:var(--mid); font-weight:400; }
+  .note { background:var(--card-bg); border-left:3px solid var(--accent2);
+          padding:1.1rem 1.3rem; margin:1.8rem 0; font-size:0.95rem; }
+  .note .h { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em;
+             text-transform:uppercase; color:var(--accent2); margin-bottom:0.4rem; }
+  code { font-family:'DM Mono',monospace; font-size:0.85rem; background:#eee7dd; padding:0.1rem 0.3rem; }
+  pre { background:var(--card-bg); border:1px solid var(--rule); padding:1.1rem; overflow-x:auto;
+        font-family:'DM Mono',monospace; font-size:0.78rem; line-height:1.55; margin:1.4rem 0; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+           font-size:0.85rem; color:var(--mid); }
+  footer a { color:var(--accent); }
+  @media (max-width:640px){ .kpis{grid-template-columns:repeat(2,1fr);} h1{font-size:2rem;}
+    .wrap{padding:2.5rem 1.2rem 4rem;} }
+  figure img { width:100%; height:auto; display:block; }
+  td, th { vertical-align:top; }
+  table.wide td, table.wide th { text-align:left; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html">&larr; Back to portfolio</a>
+
+<p class="label">Project Write-up - In Development - E-commerce</p>
+<h1>Beauty Storefront and <em>Merchant Platform</em></h1>
+<hr>
+<p class="sub">An online beauty store and the phone-first back office that runs it. Unlaunched, in private preview. Started November 11, 2026.</p>
+
+<div class="note"><div class="h">How to read the status labels</div><p><strong>Built</strong> means the code exists. <strong>Tested locally</strong> means automated tests passed on a development machine, not on a shared build server. <strong>Checked on the private preview</strong> means it was checked on a hosted copy that the public cannot reach. <strong>Run on my own device</strong> means I ran it myself on my own hardware. <strong>Planned</strong> means designed but not built or not switched on.</p></div><h2>What it is</h2>
+<hr>
+<p>An online beauty store and the back office that runs it, built as two separate applications. Shoppers can browse products, build skincare and makeup routines, and try makeup shades on a model or on their own photo in the browser. The try-on runs in the browser and the photo stays on the shopper's device.</p>
+<p>The back office is designed for a solo seller who works only from a phone and has no technical help: products, stock, orders, suppliers, and reports, all from a phone-sized dashboard.</p>
+<p>It is unlaunched. The store runs as a private preview that is hidden from search engines, with checkout switched off and every product marked not for sale.</p>
+<div class="kpis">
+  <div class="kpi"><div class="n">1,408</div><div class="l">Automated tests passing locally, Nov 23, 2026</div></div>
+  <div class="kpi"><div class="n">72</div><div class="l">Database tables restored in the recovery run</div></div>
+  <div class="kpi"><div class="n">5 of 5</div><div class="l">Days of backups with a passing restore drill</div></div>
+  <div class="kpi"><div class="n">$0</div><div class="l">Fixed monthly hosting and database cost</div></div>
+</div><p>Test count: 830 in the dashboard plus 578 in the storefront. These are from local runs on Nov 23, 2026, before later changes that day.</p><h2>What is built, tested, and still planned</h2>
+<hr>
+<table class="wide">
+  <thead><tr><th>Area</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Storefront: home, shop, category, product, cart, account, policies, shade finder</td><td>Built, tested locally, checked on the private preview</td></tr>
+    <tr><td>Makeup try-on on models and uploaded photos, with saved looks</td><td>Built, tested locally. Tested with AI-generated portraits and emulated phones only</td></tr>
+    <tr><td>Routine builder with templates, history, and shopping lists</td><td>Built, tested locally, checked on the private preview</td></tr>
+    <tr><td>Customer accounts: sign-up, email confirmation, password reset, data download, account deletion</td><td>Built, tested locally, checked on the private preview</td></tr>
+    <tr><td>Merchant dashboard: products, stock, orders, suppliers, reports</td><td>Built, tested locally</td></tr>
+    <tr><td>Two-step sign-in for staff</td><td>Built, tested locally</td></tr>
+    <tr><td>Daily encrypted off-site backups with a restore drill</td><td>Built, tested locally, checked on the private preview</td></tr>
+    <tr><td>Database recovery from an encrypted backup into a new database</td><td>Run on my own device, and checked on the private preview</td></tr>
+    <tr><td>Website analytics that only run with the visitor's consent</td><td>Built, tested locally, checked on the private preview</td></tr>
+    <tr><td>Checkout, refunds, and order messages</td><td>Built and tested locally in test mode. Kept switched off</td></tr>
+    <tr><td>A real test payment, then live checkout</td><td>Planned</td></tr>
+    <tr><td>Checks on physical phones, real cameras, real customer photos, and with a screen reader</td><td>Planned. None done yet</td></tr>
+    <tr><td>Photographic-quality makeup realism</td><td>Planned. Recorded as not yet achieved</td></tr>
+    <tr><td>Licensed product images, own domain, cleared brand name</td><td>Planned</td></tr>
+  </tbody>
+</table>
+<h2>Engineering problems solved</h2>
+<hr>
+<ul>
+  <li><strong>Found the cause of a database outage and cut the load.</strong> The free database plan hit its data-transfer limit and paused the store. I had the cause traced to one background check that read far too much data every few seconds. It went from about 986 KB per call to about 12 bytes, and usage tracking and alerts were added so it cannot happen quietly again.</li>
+  <li><strong>Recovered the store from an encrypted backup at no cost.</strong> The store was restored into a new database with a scripted, step-by-step procedure and checked table by table: 72 tables and 1,178 rows. I ran that recovery myself on my own computer and it passed. The server now refuses to start on a database it cannot verify.</li>
+  <li><strong>Made pages fast on free hosting that goes to sleep.</strong> Free hosting shuts down when idle and takes about 30 seconds to wake. Public pages now show a saved, checked copy of public data right away and swap in live data when the server wakes: about 1 second instead of about 30. The saved copy expires and can never make an item purchasable.</li>
+  <li><strong>Fixed an intermittent test failure at its cause.</strong> A test that failed once in many runs was reproduced on demand, traced to two network answers arriving in the opposite order, and fixed. New tests were added that fail on the old code.</li>
+  <li><strong>Kept backups running when the automated build service stopped.</strong> Backups run inside the application and never depended on that service, so they continued. Monitoring was moved to a free scheduler.</li>
+</ul>
+<h2>How the work is run</h2>
+<hr>
+<ul>
+  <li>Every requirement has a permanent ID, a status, the evidence for that status, and what remains.</li>
+  <li>Work is done in numbered rounds. Each round starts with a written brief from me and ends with a written results report.</li>
+  <li>Every report separates what is built, what is tested, what is live on the preview, and what was physically checked. Emulated phones are never reported as real phones.</li>
+  <li>Changes go through branches and reviewed change requests, and I approve the merges. Anything involving money, paid services, legal text, or live selling needs my explicit approval.</li>
+  <li>Database changes need a verified encrypted backup and a rehearsed change first. A hard switch keeps checkout closed.</li>
+</ul>
+<h2>Limits</h2>
+<hr>
+<ul>
+  <li>There are no customers, sales, or orders. The store has never been open.</li>
+  <li>Nothing has been tested on a physical phone or with real customer photos. Phone testing so far is emulated.</li>
+  <li>The accessibility result is from automated scans only (no issues found on 12 storefront pages and 20 dashboard pages). No person has checked it with a screen reader.</li>
+  <li>No independent security review has been done.</li>
+  <li>The recovery matched the backup. A comparison against the original database is still pending.</li>
+  <li>Automated tests have not run on the shared build server since Nov 21, 2026, so the test figures here are local runs.</li>
+  <li>69 of 99 items on the original requirements list are complete.</li>
+</ul>
+<h2>My role and how AI was used</h2>
+<hr>
+<p>I am the owner and final decision maker on this project. I set the requirements, decided what to build and in what order, set the rules for testing and evidence, reviewed the results, and approved every release.</p>
+<p>The code was written by AI coding assistants working under my direction and review. I am describing that plainly because it is how the work was done. On this project I also ran the database recovery on my own computer and wrote a fix to the start-up safety check during it.</p>
+<h2>Stack</h2>
+<hr>
+<p>Python, Flask, SQLAlchemy, PostgreSQL, plain HTML, CSS and JavaScript, MediaPipe for face tracking in the browser, pytest, Playwright, axe-core, GitHub Actions, PowerShell.</p>
+
+<footer>
+  <p>Brandon Duplantier - <a href="index.html">Portfolio</a> - <a href="resume.pdf">Resume (PDF)</a></p>
+  <p>This project is unlaunched and its code is private. Figures on this page carry the date they were recorded and the level of checking behind them.</p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNPHUCKED: Money, Body, and Life App - Brandon Duplantier</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink:#0f0f0f; --paper:#f5f2ec; --accent:#1a3a5c; --accent2:#c8401e;
+          --mid:#6b6560; --rule:#d8d3cb; --card-bg:#ffffff; }
+  html { font-size:16px; }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif;
+         font-weight:300; line-height:1.65; }
+  .wrap { max-width:880px; margin:0 auto; padding:4rem 1.5rem 6rem; }
+  .back { font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em;
+          text-transform:uppercase; color:var(--mid); text-decoration:none; }
+  .back:hover { color:var(--accent2); }
+  .label { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em;
+           text-transform:uppercase; color:var(--mid); margin:2.5rem 0 0.4rem; }
+  h1 { font-family:'DM Serif Display',serif; font-weight:400; font-size:2.6rem;
+       line-height:1.1; margin:0.6rem 0 0.5rem; }
+  h1 em { color:var(--accent2); font-style:italic; }
+  h2 { font-family:'DM Serif Display',serif; font-weight:400; font-size:1.5rem; margin:3rem 0 0.3rem; }
+  .sub { color:var(--mid); font-size:1.05rem; margin-bottom:1.5rem; }
+  hr { border:none; border-top:1px solid var(--rule); margin:0.5rem 0 0; }
+  p { margin:0.9rem 0; } ul { margin:0.9rem 0 0.9rem 1.2rem; } li { margin:0.5rem 0; }
+  strong { font-weight:500; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule);
+          border:1px solid var(--rule); margin:1.8rem 0; }
+  .kpi { background:var(--card-bg); padding:1.1rem 0.9rem; text-align:center; }
+  .kpi .n { font-family:'DM Serif Display',serif; font-size:1.7rem; line-height:1.1; color:var(--accent); }
+  .kpi .l { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.06em;
+            text-transform:uppercase; color:var(--mid); margin-top:0.4rem; }
+  figure { background:var(--card-bg); border:1px solid var(--rule); padding:1.4rem; margin:1.8rem 0; }
+  figcaption { font-family:'DM Mono',monospace; font-size:0.68rem; color:var(--mid);
+               margin-top:0.9rem; line-height:1.5; }
+  table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.88rem; }
+  th, td { text-align:right; padding:0.45rem 0.55rem; border-bottom:1px solid var(--rule); }
+  th:first-child, td:first-child { text-align:left; }
+  th { font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.07em;
+       text-transform:uppercase; color:var(--mid); font-weight:400; }
+  .note { background:var(--card-bg); border-left:3px solid var(--accent2);
+          padding:1.1rem 1.3rem; margin:1.8rem 0; font-size:0.95rem; }
+  .note .h { font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em;
+             text-transform:uppercase; color:var(--accent2); margin-bottom:0.4rem; }
+  code { font-family:'DM Mono',monospace; font-size:0.85rem; background:#eee7dd; padding:0.1rem 0.3rem; }
+  pre { background:var(--card-bg); border:1px solid var(--rule); padding:1.1rem; overflow-x:auto;
+        font-family:'DM Mono',monospace; font-size:0.78rem; line-height:1.55; margin:1.4rem 0; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+           font-size:0.85rem; color:var(--mid); }
+  footer a { color:var(--accent); }
+  @media (max-width:640px){ .kpis{grid-template-columns:repeat(2,1fr);} h1{font-size:2rem;}
+    .wrap{padding:2.5rem 1.2rem 4rem;} }
+  figure img { width:100%; height:auto; display:block; }
+  td, th { vertical-align:top; }
+  table.wide td, table.wide th { text-align:left; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html">&larr; Back to portfolio</a>
+
+<p class="label">Project Write-up - In Development - Mobile App</p>
+<h1>UNPHUCKED: Money, Body, <em>and Life</em></h1>
+<hr>
+<p class="sub">A phone app that takes the mental load out of money, health, and daily routines. Unlaunched, in private beta development. Started November 2026.</p>
+
+<div class="note"><div class="h">How to read the status labels</div><p><strong>Built</strong> means the code exists. <strong>Tested</strong> means automated tests passed. <strong>Checked on the test server</strong> means it was checked against a private hosted test server using made-up data. <strong>Verified on a phone</strong> means it was run on a physical device. Nothing on this page is claimed as verified on a phone unless it says so.</p></div><h2>What it is</h2>
+<hr>
+<p>UNPHUCKED is a phone app with the tagline "Less thinking. More living." It puts money, body, and daily life in one place: bills and budgets, workouts, water and food, and recurring routines, with a short list of what to do next.</p>
+<p>The goal is to remove mental load. It is built for people who are not comfortable with technology: large touch targets, short labels, one-tap actions, and no tutorial needed. It deliberately avoids engagement tricks, punishing streaks, and heavy notifications.</p>
+<p>It is unlaunched and in private beta development. It has only ever held made-up test data.</p>
+<div class="kpis">
+  <div class="kpi"><div class="n">484</div><div class="l">Server tests passing, Nov 18 to 19, 2026</div></div>
+  <div class="kpi"><div class="n">281</div><div class="l">Phone app tests passing, Nov 18 to 19, 2026</div></div>
+  <div class="kpi"><div class="n">20</div><div class="l">Tests of the phone talking to a live test server</div></div>
+  <div class="kpi"><div class="n">0</div><div class="l">Real users or real personal records</div></div>
+</div><p>These counts are from Nov 18 to 19, 2026. The server tests ran against both a lightweight test database and PostgreSQL. Work since then has been tested locally and I do not have a newer combined total recorded here.</p><h2>The privacy requirement</h2>
+<hr>
+<p>The app asks people for the most private information they have: finances, bills, health, sleep, and menstrual-cycle records. My requirement is that I must not be able to read it. Private records are to be encrypted on the user's phone under keys the user controls, with no copy the operator, the hosting company, or the database can read, and no back door.</p>
+<p>This is the largest piece of work in the project and it is not finished. The encrypted on-phone storage exists and features are being moved onto it one area at a time, with the phone's results compared against the server's on made-up data before anything is switched over.</p>
+<p>I am not describing this as a finished guarantee. It has not had an independent security review, and no real personal data will be accepted until it has.</p>
+<h2>What is built, tested, and still planned</h2>
+<hr>
+<table class="wide">
+  <thead><tr><th>Area</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Accounts: sign-up by approved email, email confirmation, password reset, sign out everywhere</td><td>Built, tested, checked on the test server</td></tr>
+    <tr><td>Today, Money, Body, Life routines, and bills screens with a working server</td><td>Built, tested, checked on the test server</td></tr>
+    <tr><td>Changes made offline are queued and sent safely when the phone reconnects</td><td>Built, tested</td></tr>
+    <tr><td>In-app problem and crash reports, with an owner-only review screen</td><td>Built, tested</td></tr>
+    <tr><td>Invitation-only beta with individual invitations</td><td>Built, tested</td></tr>
+    <tr><td>Private Android test builds with a built-in updater</td><td>Built. Builds exist. Not yet verified on a phone in the records I am working from</td></tr>
+    <tr><td>Encrypted on-phone storage and moving each feature onto it</td><td>In progress. Tested locally. Kept switched off for regular use</td></tr>
+    <tr><td>Workout safety rule: a rest period after reported pain cannot quietly expire early</td><td>Built, tested locally</td></tr>
+    <tr><td>iPhone version</td><td>Planned. No iPhone build exists</td></tr>
+    <tr><td>Bank statement upload, bank connection, AI coaching, paid subscriptions</td><td>Planned, or built and kept switched off</td></tr>
+    <tr><td>Independent security review</td><td>Planned. Required before launch</td></tr>
+  </tbody>
+</table>
+<h2>Engineering problems solved</h2>
+<hr>
+<ul>
+  <li><strong>Sign-in protection that cannot be turned against the user.</strong> A common defence against password guessing locks the account, which lets a stranger lock someone out on purpose. The app is designed so that someone else's wrong guesses cannot block a phone the account has already used.</li>
+  <li><strong>Offline changes that are safe to send twice.</strong> A phone with a bad connection may send the same change more than once. Every change on the server is all-or-nothing and can be repeated without creating duplicates, with tests for replay and for a failure halfway through.</li>
+  <li><strong>A data leak between two accounts on one phone, found in review and fixed.</strong> A problem report written by one person and waiting to send could have gone out under another account on the same phone. Each waiting report now records its owner and only sends under that account.</li>
+  <li><strong>A safety rule that depends on the calendar.</strong> A rest period after reported pain is counted in days. Travel or a changed phone clock could have shortened it. The account's saved time zone is now the calendar that counts, and when the date cannot be trusted the restriction stays in place.</li>
+  <li><strong>Honest naming.</strong> A button is only called Undo if the original data can really be restored. One that recreated a different record was treated as a defect.</li>
+</ul>
+<h2>How the work is run</h2>
+<hr>
+<ul>
+  <li>Every status report separates built, tested, checked on the test server, and verified on a phone. Nothing is called verified on a phone until I report it myself.</li>
+  <li>Merges, deployments, and new app builds need my go-ahead. So does anything that spends money, turns on a paid service, or touches real personal data.</li>
+  <li>The test server only accepts sign-ups from approved addresses and only holds made-up data.</li>
+  <li>Before any change to the test server's database, there is a checklist: confirm the data is made-up, take a backup that can be restored, and rehearse the change first.</li>
+  <li>One-time codes and secrets must never appear in code history, logs, or build records.</li>
+</ul>
+<h2>Limits</h2>
+<hr>
+<ul>
+  <li>Unlaunched. No real users and no real personal data.</li>
+  <li>On-phone verification is still in progress, and there is no iPhone build.</li>
+  <li>The privacy design is partly built and has not been independently reviewed.</li>
+  <li>Bank connection, AI coaching, and paid subscriptions are not active.</li>
+  <li>The test counts on this page are from Nov 18 to 19, 2026.</li>
+</ul>
+<h2>My role and how AI was used</h2>
+<hr>
+<p>I am the owner and final decision maker on this project. I set the requirements, decided what to build and in what order, set the rules for testing and evidence, reviewed the results, and approved every release.</p>
+<p>The code was written by AI coding assistants working under my direction and review. I am describing that plainly because it is how the work was done.</p>
+<h2>Stack</h2>
+<hr>
+<p>React Native with Expo, TypeScript, Python, PostgreSQL, Jest, GitHub Actions.</p>
+
+<footer>
+  <p>Brandon Duplantier - <a href="index.html">Portfolio</a> - <a href="resume.pdf">Resume (PDF)</a></p>
+  <p>This project is unlaunched and its code is private. Figures on this page carry the date they were recorded and the level of checking behind them.</p>
+</footer>
+
+</div>
+</body>
+</html>
