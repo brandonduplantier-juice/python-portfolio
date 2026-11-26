@@ -1,3 +1,11 @@
 *.csv
 
 snowflake_config.json
+
+# Generated local artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.bak-*
+.DS_Store
+Thumbs.db
