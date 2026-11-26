@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brandon Duplantier - Bioinformatics and Research Data Analyst</title>
+<title>Brandon Duplantier | Software Engineering, Computational Biology &amp; Data Science</title>
+<meta name="description" content="Software engineering, AI-assisted product development, computational biology and data science. Explore published case studies, research results and project limitations.">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -250,6 +251,12 @@
   .no-results { display: none; grid-column: 1 / -1; text-align: center; padding: 3rem; font-family: "DM Mono", monospace; font-size: 0.8rem; color: var(--mid); }
   .zone-sub { max-width: 1200px; margin: 0 auto 0; padding: 0 3rem; font-size: 0.9rem; color: var(--mid); }
   .zone.hidden { display: none; }
+  .tag { background: transparent; font-family: inherit; }
+  .tag:focus-visible, a:focus-visible { outline: 2px solid var(--accent2); outline-offset: 3px; }
+  .portfolio-nav { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; }
+  .portfolio-nav a { color: var(--accent); text-underline-offset: 3px; font-weight: 500; }
+  .filter-status { color: var(--mid); font-size: .8rem; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
   @media (max-width: 700px) { .zone-sub { padding-left: 2rem; padding-right: 2rem; } }
 </style>
 </head>
@@ -257,11 +264,12 @@
 
 <header>
   <div>
-    <p class="header-label">Portfolio - Data, BI &amp; Healthcare Analytics</p>
+    <p class="header-label">Portfolio - Engineering, Research &amp; Data Science</p>
     <h1>Brandon<br><em>Duplantier</em></h1>
   </div>
   <div class="header-meta">
-    <p>Bioinformatics and Research Data Analyst</p>
+    <p>AI-assisted Software Engineering</p>
+    <p>Computational Biology &amp; Data Science</p>
     <p>SQL - Python - Power BI - Tableau - Looker Studio - R</p>
     <p>Dayton, OH - Remote</p>
     <p>Google Data Analytics Certified</p>
@@ -276,28 +284,253 @@
 
 <div class="intro">
   <p class="intro-text">
-    I am a data analyst who likes getting past the surface of a number and figuring out what it actually means for the person making the decision. Since 2018, I have helped small businesses understand their traffic, customers, and marketing, then turned that information into reports they can use. I currently build reporting systems for a search and rescue organization in Alaska. I try to be direct about what the data supports, what it does not support, and when the sample is too small to trust. The aging and biology projects further down the page are where I go deepest. Each one starts by explaining the question in plain language before getting into the methods.
+    I design software products, build reproducible research pipelines, and turn data into decisions. My work spans operational systems, web and mobile applications, computational biology, and applied analytics. I use AI-assisted development to translate requirements into implementation and reviewable evidence, while distinguishing shipped functionality, development candidates, and research findings. Each case study explains the problem, the engineering decisions, the validation performed, and the limitations that remain.
   </p>
-  <p class="filter-label">Filter by skill</p>
-  <div class="tags">
-    <span class="tag tag-all" data-filter="all">All Projects</span>
-    <span class="tag" data-filter="longevity">Longevity</span>
-    <span class="tag" data-filter="bioinformatics">Bioinformatics</span>
-    <span class="tag" data-filter="python">Python</span>
-    <span class="tag" data-filter="sql">SQL</span>
-    <span class="tag" data-filter="r">R</span>
-    <span class="tag" data-filter="ml">Machine Learning</span>
-    <span class="tag" data-filter="power-bi">Power BI</span>
-    <span class="tag" data-filter="tableau">Tableau</span>
-    <span class="tag" data-filter="flask">Flask</span>
-    <span class="tag" data-filter="pipelines">APIs &amp; Pipelines</span>
-    <span class="tag" data-filter="digital">Digital Analytics</span>
-    <span class="tag" data-filter="operational">Operational Systems</span>
-    <span class="tag" data-filter="healthcare">Healthcare</span>
+  <nav class="portfolio-nav" aria-label="Portfolio sections"><a href="#engineering">Software engineering</a><a href="#development">Product development</a><a href="#research">Computational biology</a><a href="#client-work">Client and healthcare analytics</a><a href="#foundations">Foundations</a></nav>
+  <p class="filter-label" id="filter-label">Filter by skill</p>
+  <div class="tags" role="group" aria-labelledby="filter-label">
+    <button type="button" class="tag tag-all" data-filter="all" aria-pressed="true">All Projects</button>
+    <button type="button" class="tag" data-filter="longevity" aria-pressed="false">Longevity</button>
+    <button type="button" class="tag" data-filter="bioinformatics" aria-pressed="false">Bioinformatics</button>
+    <button type="button" class="tag" data-filter="python" aria-pressed="false">Python</button>
+    <button type="button" class="tag" data-filter="sql" aria-pressed="false">SQL</button>
+    <button type="button" class="tag" data-filter="r" aria-pressed="false">R</button>
+    <button type="button" class="tag" data-filter="ml" aria-pressed="false">Machine Learning</button>
+    <button type="button" class="tag" data-filter="power-bi" aria-pressed="false">Power BI</button>
+    <button type="button" class="tag" data-filter="tableau" aria-pressed="false">Tableau</button>
+    <button type="button" class="tag" data-filter="flask" aria-pressed="false">Flask</button>
+    <button type="button" class="tag" data-filter="pipelines" aria-pressed="false">APIs &amp; Pipelines</button>
+    <button type="button" class="tag" data-filter="digital" aria-pressed="false">Digital Analytics</button>
+    <button type="button" class="tag" data-filter="operational" aria-pressed="false">Operational Systems</button>
+    <button type="button" class="tag" data-filter="healthcare" aria-pressed="false">Healthcare</button>
+  </div>
+  <p id="filter-status" class="filter-status" role="status" aria-live="polite">Showing all projects</p>
+</div>
+
+<div class="zone" id="engineering">
+  <div class="section-header">
+    <h2>Software Engineering</h2>
+  </div>
+  <p class="zone-sub">Web applications I designed, deployed, and continue to maintain for real users.</p>
+  <div class="projects">
+
+<a class="card" href="https://loadout-oracle.onrender.com" data-tags="flask python" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Flask - Python - OAuth 2.0 - REST API</span>
+      <span class="card-badge">Shipped</span>
+    </div>
+    <h3>Loadout Oracle: Destiny 2 Loadout Sharing</h3>
+    <p>Loadout Oracle is a web application that lets Destiny 2 players share complete character setups with one link. It connects securely to a player's game account, retrieves live inventory data, and scores thousands of possible equipment combinations based on what the player is trying to build. The project also gave me experience maintaining a live application after launch. When an outside bot protection service started blocking legitimate traffic, I had to identify the cause and change the application so users could access it again.</p>
+    <div class="card-footer">
+      <span class="pill">Flask</span>
+      <span class="pill">Python</span>
+      <span class="pill">OAuth 2.0</span>
+      <span class="pill">Bungie API</span>
+      <span class="pill">Render</span>
+    </div>
+  </a>
+
+<a class="card" href="https://craftpath.onrender.com" data-tags="flask python" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Flask - Python - REST API - Cloud Deploy</span>
+      <span class="card-badge">Shipped</span>
+    </div>
+    <h3>CraftPath: Path of Exile 2 Optimizer</h3>
+    <p>CraftPath helps players make better decisions in a game where crafting an item can involve a large number of possible outcomes. The application calculates the odds of those outcomes and helps users compare their options before spending valuable resources. It is available as a browser application and as a downloadable version that uses live market prices. Building the calculation engine was only part of the work. I also had to manage releases, maintain versioned downloads, publish the repository, and make sure both versions stayed usable as the project changed.</p>
+    <div class="card-footer">
+      <span class="pill">Flask</span>
+      <span class="pill">Python</span>
+      <span class="pill">REST API</span>
+      <span class="pill">Render</span>
+      <span class="pill">GitHub CLI</span>
+    </div>
+  </a>
+
   </div>
 </div>
 
-<div class="zone">
+<div class="zone" id="development">
+  <div class="section-header">
+    <h2>In Development</h2>
+  </div>
+  <p class="zone-sub">Unlaunched projects in active development. The code is private while the work is in progress, so each card links to a write-up of what is built, what is tested, and what is still planned.</p>
+  <div class="projects">
+
+<a class="card" href="case-study-beauty-platform.html" data-tags="flask python sql">
+    <div class="card-top">
+      <span class="card-type">Python - Flask - PostgreSQL - Private Preview</span>
+      <span class="card-badge">Write-up</span>
+    </div>
+    <h3>Beauty Storefront and Merchant Platform</h3>
+    <p>An online beauty store and the phone-friendly back office that runs it, built as two separate apps. Shoppers can browse, build routines, and try makeup shades on a photo in the browser, with photos staying on their own device. The owner manages products, stock, orders, and reports from a phone. I owned the product, the architecture decisions, the quality gates, and every release, and directed AI coding assistants to write the code. 1,408 automated tests passing locally as of Nov 23, 2026. Daily encrypted backups with a restore drill, and one full database recovery run and passed. Traced a database outage to a single background check and cut its data use from about 986 KB per call to about 12 bytes. Runs at $0 fixed monthly cost. Unlaunched. Code and preview are private.</p>
+    <div class="card-footer">
+      <span class="pill">Python</span>
+      <span class="pill">Flask</span>
+      <span class="pill">PostgreSQL</span>
+      <span class="pill">JavaScript</span>
+      <span class="pill">pytest</span>
+      <span class="pill">Playwright</span>
+    </div>
+  </a>
+
+<a class="card" href="case-study-unphucked.html" data-tags="python">
+    <div class="card-top">
+      <span class="card-type">React Native - Python - PostgreSQL - Private Beta</span>
+      <span class="card-badge">Write-up</span>
+    </div>
+    <h3>UNPHUCKED: Money, Body, and Life App</h3>
+    <p>A phone app that takes the mental load out of money, health, and daily routines: one place for bills and budgets, workouts and food, and recurring chores, with a short list of what to do next. Built for people who are not comfortable with technology. Phone app in React Native (Expo) and TypeScript, server in Python with PostgreSQL. The design rule is that private financial and health records are encrypted on the user's phone so that the operator cannot read them. Moving every feature to that model is the current work, and it has not yet had an independent security review. Private Android beta builds exist with a built-in updater. On-phone verification is in progress and there is no iPhone build yet. As of Nov 19, 2026: 484 server tests and 281 phone tests passing, plus 20 tests of the phone talking to a live test server. Every status report separates built, tested, and verified on a device. I directed product, privacy requirements, and release approval, with AI coding assistants writing the code. Unlaunched. Code is private.</p>
+    <div class="card-footer">
+      <span class="pill">React Native</span>
+      <span class="pill">TypeScript</span>
+      <span class="pill">Python</span>
+      <span class="pill">PostgreSQL</span>
+      <span class="pill">Privacy by Design</span>
+      <span class="pill">Automated Testing</span>
+    </div>
+  </a>
+
+<a class="card" href="case-study-night-shift.html" data-tags="unity">
+    <div class="card-top">
+      <span class="card-type">Unity - C# - Multiplayer - Pre-Alpha</span>
+      <span class="card-badge">Write-up</span>
+    </div>
+    <h3>Night Shift (working title): Co-op Physics Comedy Game</h3>
+    <p>A cooperative 3D comedy game where players are night staff at a haunted museum, rebuilding exhibits before the morning inspection while things go wrong around them. Designed for 1 to 6 players. Built in Unity 6 with C#, with Python and PowerShell tooling and a scripted Blender pipeline for 3D assets. One full round is playable from start to finish. In multiplayer, the host decides outcomes, so when two players grab the same object at once exactly one wins. That was tested with two copies of the game running against each other under added network delay. Disruptive events come from a seeded system, so the same seed replays the same sequence and bugs can be reproduced. As of Nov 19, 2026: 145 automated tests passing locally (72 logic, 73 in-game), about 45,000 lines of C#. Newer work is still in testing. I directed design, quality gates, and releases, with an AI coding assistant writing most of the code. Windows only so far. Unlaunched. Code is private.</p>
+    <div class="card-footer">
+      <span class="pill">Unity 6</span>
+      <span class="pill">C#</span>
+      <span class="pill">Netcode</span>
+      <span class="pill">Python</span>
+      <span class="pill">Blender</span>
+      <span class="pill">Automated Testing</span>
+    </div>
+  </a>
+
+<a class="card" href="case-study-genomic-ai.html" data-tags="bioinformatics python ml">
+    <div class="card-top">
+      <span class="card-type">Python - PyTorch - Bioinformatics - Early Research</span>
+      <span class="card-badge">Write-up</span>
+    </div>
+    <h3>Does Genomic AI Beat the Cheap Baselines?</h3>
+    <p>A self-funded research project testing whether a large AI model trained on DNA can predict the measured effect of DNA changes better than older, cheaper scoring methods. The first experiment used a public lab dataset of 3,893 single-letter changes in the BRCA1 gene (Findlay et al., Nature 2018). I ran a 7-billion-parameter DNA model (Evo 2) on one home graphics card, kept the big model frozen, and trained a small prediction layer on top. Scoring held out one whole region of the gene at a time across 12 regions, and every method was compared on the same 3,593 variants. Result: the established scores performed better. I reported that and stopped, with no tuning until something won. Data checks matched the published figures, with zero reference mismatches when placing variants on the genome. Computer analysis on lab data only, not clinical, not peer reviewed. AI assistants were used for engineering and review under my direction. Code is private.</p>
+    <div class="card-footer">
+      <span class="pill">Python</span>
+      <span class="pill">PyTorch</span>
+      <span class="pill">Evo 2</span>
+      <span class="pill">Bioinformatics</span>
+      <span class="pill">Research Methods</span>
+    </div>
+  </a>
+
+  </div>
+</div>
+
+<div class="zone" id="research">
+  <div class="section-header">
+    <h2>Longevity and Aging Analytics</h2>
+  </div>
+  <p class="zone-sub">Independent research using public health and biological data to study how aging can be measured, what it predicts, and where the evidence is still limited.</p>
+  <div class="projects">
+
+<a class="card featured" href="https://brandon-aging-clock.streamlit.app/" data-tags="longevity python ml bioinformatics" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Streamlit - Live demo - Bioinformatics</span>
+      <span class="card-badge">Live</span>
+    </div>
+    <h3>Interactive Biological Age Dashboard</h3>
+    <p>The age of your body can differ from the number of years since you were born. This dashboard estimates biological age from a blood sample and shows which measurements are driving the prediction. Users can move a slider and watch the estimated age change in real time. On people the model had not seen during training, its predictions were off by about 5.7 years on average. On a completely separate group of 689 people, the error was 6.4 years. That second result matters more because it shows how the model performed on data that played no role in building it, so it is the result I lead with.</p>
+    <div class="card-footer">
+      <span class="pill">Streamlit</span>
+      <span class="pill">Python</span>
+      <span class="pill">scikit-learn</span>
+      <span class="pill">Bioinformatics</span>
+    </div>
+  </a>
+
+<a class="card featured" href="https://nhanes-phenoage-ojehtwzrwtgcich4ehcxvu.streamlit.app/" data-tags="longevity python ml bioinformatics healthcare" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Streamlit - Survival analysis - Bioinformatics</span>
+      <span class="card-badge">Live</span>
+    </div>
+    <h3>Biological Age and Mortality Dashboard</h3>
+    <p>This project asks whether a body that appears older than its actual age is also at greater risk of dying. I tested that question using data from 28,510 adults in the United States who were followed by the government for as long as 19 years. The biological age estimate uses nine routine blood measurements available through a standard laboratory panel. Each additional year of biological age was associated with about a 4.4 percent higher mortality hazard (hazard ratio 1.044). Biological age also predicted survival better than chronological age alone. The dashboard lets users filter the population by age and sex and compare the survival curves directly.</p>
+    <div class="card-footer">
+      <span class="pill">Streamlit</span>
+      <span class="pill">lifelines</span>
+      <span class="pill">Cox PH</span>
+      <span class="pill">Kaplan-Meier</span>
+      <span class="pill">Bioinformatics</span>
+    </div>
+  </a>
+
+<a class="card featured" href="https://rnaseq-aging-de-jpkkcc38svluidpwzw3gag.streamlit.app/" data-tags="longevity python bioinformatics" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Streamlit - DESeq2 - Bioinformatics</span>
+      <span class="card-badge">Live</span>
+    </div>
+    <h3>RNA Sequencing Aging Explorer</h3>
+    <p>This project looks at which genes behave differently in older brain tissue compared with younger brain tissue. I found 119 genes whose activity changed reliably with age. Many of the strongest changes involved the material that insulates nerve fibers and helps signals move through the brain. The interactive explorer lets users search for any gene and see how its activity changed between the two groups. It also provides a plain language explanation of the gene's function using information pulled from the national genetics database.</p>
+    <div class="card-footer">
+      <span class="pill">Streamlit</span>
+      <span class="pill">DESeq2</span>
+      <span class="pill">pydeseq2</span>
+      <span class="pill">Plotly</span>
+      <span class="pill">Bioinformatics</span>
+    </div>
+  </a>
+
+<a class="card featured" href="https://longevity-evidence-explorer-puhhzncbka5z6vyox8mhzx.streamlit.app/" data-tags="longevity python bioinformatics" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Streamlit - Evidence grading - PubMed</span>
+      <span class="card-badge">Live</span>
+    </div>
+    <h3>Longevity Intervention Evidence Explorer</h3>
+    <p>Claims about supplements, diets, and fasting are everywhere, but the amount of attention an idea receives is not the same as the amount of evidence behind it. This tool grades longevity interventions using the same six criteria for every claim. It shows what has been tested in cells, animals, and humans, then compares the strength of that research with the intervention's popularity. Nothing receives the highest possible grade because that grade requires strong human research that follows people across an entire lifetime. No such study exists yet. Every score links back to the published research so users can review the evidence for themselves.</p>
+    <div class="card-footer">
+      <span class="pill">Streamlit</span>
+      <span class="pill">Plotly</span>
+      <span class="pill">Evidence grading</span>
+      <span class="pill">PubMed API</span>
+    </div>
+  </a>
+
+<a class="card featured" href="https://github.com/brandonduplantier-juice/aging-clock" data-tags="longevity python ml bioinformatics" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Python - scikit-learn - Bioinformatics</span>
+      <span class="card-badge">Repo</span>
+    </div>
+    <h3>DNA Methylation Aging Clock</h3>
+    <p>This is the modeling work behind the interactive aging clock. The project starts with roughly 450,000 chemical markers measured along the DNA of 656 people. The model narrows those markers down to 176 that are most useful for predicting age. On a completely separate group of 689 people, the average error was 6.4 years; on the held out portion of the training data it was 5.7 years. The separate group is the result that matters, because that data played no role in building the model. As an additional check, many of the markers selected by the model overlap with markers used by an established published aging clock. That overlap suggests the model identified a meaningful biological signal instead of only fitting patterns that were unique to its training data.</p>
+    <div class="card-footer">
+      <span class="pill">Python</span>
+      <span class="pill">scikit-learn</span>
+      <span class="pill">Elastic Net</span>
+      <span class="pill">pandas</span>
+      <span class="pill">Bioinformatics</span>
+    </div>
+  </a>
+
+<a class="card featured" href="https://brandon-single-cell-aging.streamlit.app/" data-tags="longevity python bioinformatics" target="_blank">
+    <div class="card-top">
+      <span class="card-type">Python - pydeseq2 - Bioinformatics</span>
+      <span class="card-badge">Live</span>
+    </div>
+    <h3>Single Cell Aging Pathway Analysis</h3>
+    <p>Aging does not affect every part of the body in the same way. It can even affect different cell types inside the same organ differently. This project examines mouse lung tissue one cell type at a time and compares age related changes across 11 cell types. The main methodological decision is just as important as the biological result. Individual cells from the same animal are not independent observations. Treating them as if they came from separate animals can make weak patterns appear statistically significant. This analysis groups the cells by animal and treats each animal as the unit of comparison, which avoids that mistake.</p>
+    <div class="card-footer">
+      <span class="pill">Python</span>
+      <span class="pill">pydeseq2</span>
+      <span class="pill">AnnData</span>
+      <span class="pill">Pseudobulk</span>
+      <span class="pill">Bioinformatics</span>
+    </div>
+  </a>
+
+  </div>
+</div>
+
+<div class="zone" id="client-work">
   <div class="section-header">
     <h2>Client Analytics, Business Intelligence and Healthcare</h2>
   </div>
@@ -416,230 +649,7 @@
   </div>
 </div>
 
-<div class="zone">
-  <div class="section-header">
-    <h2>Longevity and Aging Analytics</h2>
-  </div>
-  <p class="zone-sub">Independent research using public health and biological data to study how aging can be measured, what it predicts, and where the evidence is still limited.</p>
-  <div class="projects">
-
-<a class="card featured" href="https://brandon-aging-clock.streamlit.app/" data-tags="longevity python ml bioinformatics" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Streamlit - Live demo - Bioinformatics</span>
-      <span class="card-badge">Live</span>
-    </div>
-    <h3>Interactive Biological Age Dashboard</h3>
-    <p>The age of your body can differ from the number of years since you were born. This dashboard estimates biological age from a blood sample and shows which measurements are driving the prediction. Users can move a slider and watch the estimated age change in real time. On people the model had not seen during training, its predictions were off by about 5.7 years on average. On a completely separate group of 689 people, the error was 6.4 years. That second result matters more because it shows how the model performed on data that played no role in building it, so it is the result I lead with.</p>
-    <div class="card-footer">
-      <span class="pill">Streamlit</span>
-      <span class="pill">Python</span>
-      <span class="pill">scikit-learn</span>
-      <span class="pill">Bioinformatics</span>
-    </div>
-  </a>
-
-<a class="card featured" href="https://nhanes-phenoage-ojehtwzrwtgcich4ehcxvu.streamlit.app/" data-tags="longevity python ml bioinformatics healthcare" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Streamlit - Survival analysis - Bioinformatics</span>
-      <span class="card-badge">Live</span>
-    </div>
-    <h3>Biological Age and Mortality Dashboard</h3>
-    <p>This project asks whether a body that appears older than its actual age is also at greater risk of dying. I tested that question using data from 28,510 adults in the United States who were followed by the government for as long as 19 years. The biological age estimate uses nine routine blood measurements available through a standard laboratory panel. Each additional year of biological age was associated with about a 4.4 percent higher mortality hazard (hazard ratio 1.044). Biological age also predicted survival better than chronological age alone. The dashboard lets users filter the population by age and sex and compare the survival curves directly.</p>
-    <div class="card-footer">
-      <span class="pill">Streamlit</span>
-      <span class="pill">lifelines</span>
-      <span class="pill">Cox PH</span>
-      <span class="pill">Kaplan-Meier</span>
-      <span class="pill">Bioinformatics</span>
-    </div>
-  </a>
-
-<a class="card featured" href="https://rnaseq-aging-de-jpkkcc38svluidpwzw3gag.streamlit.app/" data-tags="longevity python bioinformatics" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Streamlit - DESeq2 - Bioinformatics</span>
-      <span class="card-badge">Live</span>
-    </div>
-    <h3>RNA Sequencing Aging Explorer</h3>
-    <p>This project looks at which genes behave differently in older brain tissue compared with younger brain tissue. I found 119 genes whose activity changed reliably with age. Many of the strongest changes involved the material that insulates nerve fibers and helps signals move through the brain. The interactive explorer lets users search for any gene and see how its activity changed between the two groups. It also provides a plain language explanation of the gene's function using information pulled from the national genetics database.</p>
-    <div class="card-footer">
-      <span class="pill">Streamlit</span>
-      <span class="pill">DESeq2</span>
-      <span class="pill">pydeseq2</span>
-      <span class="pill">Plotly</span>
-      <span class="pill">Bioinformatics</span>
-    </div>
-  </a>
-
-<a class="card featured" href="https://longevity-evidence-explorer-puhhzncbka5z6vyox8mhzx.streamlit.app/" data-tags="longevity python bioinformatics" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Streamlit - Evidence grading - PubMed</span>
-      <span class="card-badge">Live</span>
-    </div>
-    <h3>Longevity Intervention Evidence Explorer</h3>
-    <p>Claims about supplements, diets, and fasting are everywhere, but the amount of attention an idea receives is not the same as the amount of evidence behind it. This tool grades longevity interventions using the same six criteria for every claim. It shows what has been tested in cells, animals, and humans, then compares the strength of that research with the intervention's popularity. Nothing receives the highest possible grade because that grade requires strong human research that follows people across an entire lifetime. No such study exists yet. Every score links back to the published research so users can review the evidence for themselves.</p>
-    <div class="card-footer">
-      <span class="pill">Streamlit</span>
-      <span class="pill">Plotly</span>
-      <span class="pill">Evidence grading</span>
-      <span class="pill">PubMed API</span>
-    </div>
-  </a>
-
-<a class="card featured" href="https://github.com/brandonduplantier-juice/aging-clock" data-tags="longevity python ml bioinformatics" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Python - scikit-learn - Bioinformatics</span>
-      <span class="card-badge">Repo</span>
-    </div>
-    <h3>DNA Methylation Aging Clock</h3>
-    <p>This is the modeling work behind the interactive aging clock. The project starts with roughly 450,000 chemical markers measured along the DNA of 656 people. The model narrows those markers down to 176 that are most useful for predicting age. On a completely separate group of 689 people, the average error was 6.4 years; on the held out portion of the training data it was 5.7 years. The separate group is the result that matters, because that data played no role in building the model. As an additional check, many of the markers selected by the model overlap with markers used by an established published aging clock. That overlap suggests the model identified a meaningful biological signal instead of only fitting patterns that were unique to its training data.</p>
-    <div class="card-footer">
-      <span class="pill">Python</span>
-      <span class="pill">scikit-learn</span>
-      <span class="pill">Elastic Net</span>
-      <span class="pill">pandas</span>
-      <span class="pill">Bioinformatics</span>
-    </div>
-  </a>
-
-<a class="card featured" href="https://brandon-single-cell-aging.streamlit.app/" data-tags="longevity python bioinformatics" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Python - pydeseq2 - Bioinformatics</span>
-      <span class="card-badge">Live</span>
-    </div>
-    <h3>Single Cell Aging Pathway Analysis</h3>
-    <p>Aging does not affect every part of the body in the same way. It can even affect different cell types inside the same organ differently. This project examines mouse lung tissue one cell type at a time and compares age related changes across 11 cell types. The main methodological decision is just as important as the biological result. Individual cells from the same animal are not independent observations. Treating them as if they came from separate animals can make weak patterns appear statistically significant. This analysis groups the cells by animal and treats each animal as the unit of comparison, which avoids that mistake.</p>
-    <div class="card-footer">
-      <span class="pill">Python</span>
-      <span class="pill">pydeseq2</span>
-      <span class="pill">AnnData</span>
-      <span class="pill">Pseudobulk</span>
-      <span class="pill">Bioinformatics</span>
-    </div>
-  </a>
-
-  </div>
-</div>
-
-<div class="zone">
-  <div class="section-header">
-    <h2>Software Engineering</h2>
-  </div>
-  <p class="zone-sub">Web applications I designed, deployed, and continue to maintain for real users.</p>
-  <div class="projects">
-
-<a class="card" href="https://loadout-oracle.onrender.com" data-tags="flask python" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Flask - Python - OAuth 2.0 - REST API</span>
-      <span class="card-badge">Shipped</span>
-    </div>
-    <h3>Loadout Oracle: Destiny 2 Loadout Sharing</h3>
-    <p>Loadout Oracle is a web application that lets Destiny 2 players share complete character setups with one link. It connects securely to a player's game account, retrieves live inventory data, and scores thousands of possible equipment combinations based on what the player is trying to build. The project also gave me experience maintaining a live application after launch. When an outside bot protection service started blocking legitimate traffic, I had to identify the cause and change the application so users could access it again.</p>
-    <div class="card-footer">
-      <span class="pill">Flask</span>
-      <span class="pill">Python</span>
-      <span class="pill">OAuth 2.0</span>
-      <span class="pill">Bungie API</span>
-      <span class="pill">Render</span>
-    </div>
-  </a>
-
-<a class="card" href="https://craftpath.onrender.com" data-tags="flask python" target="_blank">
-    <div class="card-top">
-      <span class="card-type">Flask - Python - REST API - Cloud Deploy</span>
-      <span class="card-badge">Shipped</span>
-    </div>
-    <h3>CraftPath: Path of Exile 2 Optimizer</h3>
-    <p>CraftPath helps players make better decisions in a game where crafting an item can involve a large number of possible outcomes. The application calculates the odds of those outcomes and helps users compare their options before spending valuable resources. It is available as a browser application and as a downloadable version that uses live market prices. Building the calculation engine was only part of the work. I also had to manage releases, maintain versioned downloads, publish the repository, and make sure both versions stayed usable as the project changed.</p>
-    <div class="card-footer">
-      <span class="pill">Flask</span>
-      <span class="pill">Python</span>
-      <span class="pill">REST API</span>
-      <span class="pill">Render</span>
-      <span class="pill">GitHub CLI</span>
-    </div>
-  </a>
-
-  </div>
-</div>
-
-<div class="zone">
-  <div class="section-header">
-    <h2>In Development</h2>
-  </div>
-  <p class="zone-sub">Unlaunched projects in active development. The code is private while the work is in progress, so each card links to a write-up of what is built, what is tested, and what is still planned.</p>
-  <div class="projects">
-
-<a class="card" href="case-study-beauty-platform.html" data-tags="flask python sql">
-    <div class="card-top">
-      <span class="card-type">Python - Flask - PostgreSQL - Private Preview</span>
-      <span class="card-badge">Write-up</span>
-    </div>
-    <h3>Beauty Storefront and Merchant Platform</h3>
-    <p>An online beauty store and the phone-friendly back office that runs it, built as two separate apps. Shoppers can browse, build routines, and try makeup shades on a photo in the browser, with photos staying on their own device. The owner manages products, stock, orders, and reports from a phone. I owned the product, the architecture decisions, the quality gates, and every release, and directed AI coding assistants to write the code. 1,408 automated tests passing locally as of Nov 23, 2026. Daily encrypted backups with a restore drill, and one full database recovery run and passed. Traced a database outage to a single background check and cut its data use from about 986 KB per call to about 12 bytes. Runs at $0 fixed monthly cost. Unlaunched. Code and preview are private.</p>
-    <div class="card-footer">
-      <span class="pill">Python</span>
-      <span class="pill">Flask</span>
-      <span class="pill">PostgreSQL</span>
-      <span class="pill">JavaScript</span>
-      <span class="pill">pytest</span>
-      <span class="pill">Playwright</span>
-    </div>
-  </a>
-
-<a class="card" href="case-study-unphucked.html" data-tags="python">
-    <div class="card-top">
-      <span class="card-type">React Native - Python - PostgreSQL - Private Beta</span>
-      <span class="card-badge">Write-up</span>
-    </div>
-    <h3>UNPHUCKED: Money, Body, and Life App</h3>
-    <p>A phone app that takes the mental load out of money, health, and daily routines: one place for bills and budgets, workouts and food, and recurring chores, with a short list of what to do next. Built for people who are not comfortable with technology. Phone app in React Native (Expo) and TypeScript, server in Python with PostgreSQL. The design rule is that private financial and health records are encrypted on the user's phone so that the operator cannot read them. Moving every feature to that model is the current work, and it has not yet had an independent security review. Private Android beta builds exist with a built-in updater. On-phone verification is in progress and there is no iPhone build yet. As of Nov 19, 2026: 484 server tests and 281 phone tests passing, plus 20 tests of the phone talking to a live test server. Every status report separates built, tested, and verified on a device. I directed product, privacy requirements, and release approval, with AI coding assistants writing the code. Unlaunched. Code is private.</p>
-    <div class="card-footer">
-      <span class="pill">React Native</span>
-      <span class="pill">TypeScript</span>
-      <span class="pill">Python</span>
-      <span class="pill">PostgreSQL</span>
-      <span class="pill">Privacy by Design</span>
-      <span class="pill">Automated Testing</span>
-    </div>
-  </a>
-
-<a class="card" href="case-study-night-shift.html" data-tags="unity">
-    <div class="card-top">
-      <span class="card-type">Unity - C# - Multiplayer - Pre-Alpha</span>
-      <span class="card-badge">Write-up</span>
-    </div>
-    <h3>Night Shift (working title): Co-op Physics Comedy Game</h3>
-    <p>A cooperative 3D comedy game where players are night staff at a haunted museum, rebuilding exhibits before the morning inspection while things go wrong around them. Designed for 1 to 6 players. Built in Unity 6 with C#, with Python and PowerShell tooling and a scripted Blender pipeline for 3D assets. One full round is playable from start to finish. In multiplayer, the host decides outcomes, so when two players grab the same object at once exactly one wins. That was tested with two copies of the game running against each other under added network delay. Disruptive events come from a seeded system, so the same seed replays the same sequence and bugs can be reproduced. As of Nov 19, 2026: 145 automated tests passing locally (72 logic, 73 in-game), about 45,000 lines of C#. Newer work is still in testing. I directed design, quality gates, and releases, with an AI coding assistant writing most of the code. Windows only so far. Unlaunched. Code is private.</p>
-    <div class="card-footer">
-      <span class="pill">Unity 6</span>
-      <span class="pill">C#</span>
-      <span class="pill">Netcode</span>
-      <span class="pill">Python</span>
-      <span class="pill">Blender</span>
-      <span class="pill">Automated Testing</span>
-    </div>
-  </a>
-
-<a class="card" href="case-study-genomic-ai.html" data-tags="bioinformatics python ml">
-    <div class="card-top">
-      <span class="card-type">Python - PyTorch - Bioinformatics - Early Research</span>
-      <span class="card-badge">Write-up</span>
-    </div>
-    <h3>Does Genomic AI Beat the Cheap Baselines?</h3>
-    <p>A self-funded research project testing whether a large AI model trained on DNA can predict the measured effect of DNA changes better than older, cheaper scoring methods. The first experiment used a public lab dataset of 3,893 single-letter changes in the BRCA1 gene (Findlay et al., Nature 2018). I ran a 7-billion-parameter DNA model (Evo 2) on one home graphics card, kept the big model frozen, and trained a small prediction layer on top. Scoring held out one whole region of the gene at a time across 12 regions, and every method was compared on the same 3,593 variants. Result: the established scores performed better. I reported that and stopped, with no tuning until something won. Data checks matched the published figures, with zero reference mismatches when placing variants on the genome. Computer analysis on lab data only, not clinical, not peer reviewed. AI assistants were used for engineering and review under my direction. Code is private.</p>
-    <div class="card-footer">
-      <span class="pill">Python</span>
-      <span class="pill">PyTorch</span>
-      <span class="pill">Evo 2</span>
-      <span class="pill">Bioinformatics</span>
-      <span class="pill">Research Methods</span>
-    </div>
-  </a>
-
-  </div>
-</div>
-
-<div class="zone">
+<div class="zone" id="foundations">
   <div class="section-header">
     <h2>Data, Business Intelligence and Foundations</h2>
   </div>
@@ -721,7 +731,7 @@
 </div>
 
 <footer>
-  <p>Brandon Duplantier - Bioinformatics and Research Data Analyst - Dayton, OH - Open to remote roles</p>
+  <p>Brandon Duplantier - Software Engineering, Computational Biology &amp; Data Science - Dayton, OH - Open to remote roles</p>
   <p>
     <a href="mailto:brandon.duplantier@gmail.com">brandon.duplantier@gmail.com</a> -
     <a href="https://www.linkedin.com/in/charles-brandon-duplantier/" target="_blank">LinkedIn</a> -
@@ -733,25 +743,27 @@
 <script>
   const tags = document.querySelectorAll(".tag[data-filter]");
   const cards = document.querySelectorAll(".card[data-tags]");
-  let active = "all";
-  tags.forEach(tag => {
-    tag.addEventListener("click", () => {
-      active = tag.dataset.filter;
-      tags.forEach(t => { t.classList.remove("active"); if(t.dataset.filter==="all") t.classList.add("inactive"); });
-      tag.classList.add("active");
-      if(tag.dataset.filter==="all") tag.classList.remove("inactive");
-      let visible = 0;
-      cards.forEach(card => {
-        const ct = card.dataset.tags.split(" ");
-        if(active==="all" || ct.includes(active)) { card.classList.remove("hidden"); visible++; }
-        else card.classList.add("hidden");
-      });
-      document.querySelectorAll(".zone").forEach(z => {
-        const shown = z.querySelectorAll(".card[data-tags]:not(.hidden)").length;
-        z.classList.toggle("hidden", shown === 0);
-      });
+  function applyFilter(active) {
+    tags.forEach(tag => {
+      const selected = tag.dataset.filter === active;
+      tag.classList.toggle("active", selected);
+      tag.classList.toggle("inactive", tag.dataset.filter === "all" && !selected);
+      tag.setAttribute("aria-pressed", String(selected));
     });
-  });
+    let visible = 0;
+    cards.forEach(card => {
+      const show = active === "all" || card.dataset.tags.split(" ").includes(active);
+      card.classList.toggle("hidden", !show);
+      if (show) visible++;
+    });
+    document.querySelectorAll(".zone").forEach(zone => {
+      zone.classList.toggle("hidden", !zone.querySelector(".card[data-tags]:not(.hidden)"));
+    });
+    document.getElementById("filter-status").textContent = "Showing " + visible + " of " + cards.length + " projects";
+  }
+  tags.forEach(tag => tag.addEventListener("click", () => applyFilter(tag.dataset.filter)));
+  document.querySelectorAll(".portfolio-nav a").forEach(link => link.addEventListener("click", () => applyFilter("all")));
+  applyFilter("all");
 </script>
 </body>
 </html>
