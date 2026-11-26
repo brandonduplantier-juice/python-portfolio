@@ -47,3 +47,7 @@ Earlier exploratory and skill-building work, kept for completeness.
 The portfolio site (index.html) is served from this repository and deploys
 automatically to Netlify on push. It is the front door; the project cards link out to
 the flagship repos above and the folders here.
+
+## Project navigation
+
+- [Engineering guide](ENGINEERING.md): directory map, development workflow and review standards.
