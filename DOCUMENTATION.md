@@ -26,3 +26,7 @@ The following map points to existing resources; their contents and authority are
 - [Snowflake-Readmission-Analysis/](Snowflake-Readmission-Analysis/)
 - [LiveLab/](LiveLab/)
 - [WHERE-THESE-GO.txt](WHERE-THESE-GO.txt)
+
+## Release management
+
+- [Release and versioning policy](RELEASE_POLICY.md): verification, version naming, release evidence and rollback requirements.
